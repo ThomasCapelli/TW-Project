@@ -1,6 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: grey;
+}
+header nav {
+
+}
+header nav div:first-of-type a img{
+    max-height: 80%;
+    max-width: 80%;
+}
 header nav div a img{
-    width: 40px;
+    max-height: 70%;
+    max-width: 70%;
 }
-header nav div ul li a img{
-    width: 30px;
+header nav div {
+    height: 60px;
+    padding: 0;
+    display: inline-block;
 }
+header nav div:not(:first-of-type) {
+    padding-right: 10%;
+    float: right;
+}
+header nav div a p {
+    padding: 0;
+    margin: 0;
+}
+header nav div a, body > div ul li a {
+    text-decoration: none;
+    color: white;
+}
+body > div {
+    background-color:red;
+}
+div ul{
+    margin: 0;
+    padding: 0;
+}
+body > div nav {
+    height: 60px;
+}
+body > div ul li{
+    display: inline-block;
+    text-decoration: none;
+    width: 25%;
+    margin: 20px 0;
+    text-align: center;
+}
+main div{
+    background-color:lightgoldenrodyellow;
+}
+main div nav {
+    height:300px;
+}
+main div nav ul li {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+main div nav ul {
+    height: 100%;
+    width: 100%;
+}
+main section nav {
+    background-color: lightpink;
+    height: 250px;
+}
+main section nav ul{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+main section nav ul li{
+    display: inline-block;
+    text-decoration: none;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+
