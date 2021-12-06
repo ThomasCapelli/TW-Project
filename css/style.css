@@ -60,7 +60,7 @@ body > nav > ul > li > div > a:hover {
 main {
     margin-top: 50px;
 }
-main > section > nav > ul{
+main > section:first-of-type > nav > ul{
     height: 300px;
     background-color:lightgoldenrodyellow;
 }

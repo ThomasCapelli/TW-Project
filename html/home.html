@@ -2,72 +2,57 @@
 <html lang="it">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/> 
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="../css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 
     <script
 		src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-		crossorigin="anonymous"></script>
-	<script src="../js/home.js"></script>
-    
+		crossorigin="anonymous">
+    </script>
+
+    <link href="../css/style.css" rel="stylesheet">
     <link href="../icons/favicon.ico" rel="icon" type="image/x-icon" />
     <title>Aratri</title>
 </head>
 <body>
-    <div class="container-fluid p-0 overflow-hidden">
-        <div class="row">
-            <header>
-                <nav class="navbar navbar-expand bg-dark navbar-dark">
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="#"><img src="../icons/fleur-de-lis.png" alt="Website Logo" class="mx-auto d-block">Aratri.com</a>
-                      <!-- Links -->
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><img src="../icons/knight (1).png" alt="Login Logo" class="mx-auto d-block"><p>Login</p></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-        </div>
-        <div class="row">
-                <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-        <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            </div>
-  
-        <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../icons/trebuchet.jpg" alt="Los Angeles" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="../icons/catapult_large.jpg" alt="Chicago" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="../icons/catapult_large.jpg" alt="Chicago" class="d-block w-100">
-                </div>
-            </div>
-  
-    <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-    </div>
-    </div>
-    </div>
+    <header>
+        <!-- Menù iniziale con logo e login-->
+        <nav>
+            <div><a href="#" ><img src="../icons/fleur-de-lis.png" alt="Website logo" /><p>Aratri.com</p></a></div>
+            <div><a href="#" ><img src="../icons/soldier.png" alt="Login logo" /><p>Login</p></a></div>
+        </nav>
+    </header>
+    <!-- Menù categorie -->
+    <nav>
+        <ul>
+            <li><div><a href="#" ><img src="../icons/manuscript.png" alt="Kit category logo" /><p>Attrezzatura</p></a></div></li><li><div><a href="#" ><img src="../icons/swords.png" alt="Weapons category logo" /><p>Armamentario</p></a></div></li><li><div><a href="#" ><img src="../icons/horse.png" alt="Animals category logo" /><p>Bestiame</p></a></div></li><li><div><a href="#" ><img src="../icons/castle.png" alt="Kingdoms category logo" /><p>Regni</p></a></div></li>
+        </ul>
+    </nav>    
+    <main>
+        <section>
+            <h1>Christmas Sales</h1>
+            <!-- Carosello con elementi in vetrina -->
+            <nav>
+                <button type="button">&lt;</button>
+                <button type="button">&gt;</button>
+                <ul>
+                    <li>Placeholder</li>
+                </ul>
+            </nav>  
+        </section>
+        
+        <!-- Vetrina offerte -->
+        <section>
+            <h2>Offerte del mese</h2>
+            <nav>
+                <ul>
+                    <li>Placeholder</li><li>Placeholder</li><li>Placeholder</li><li>Placeholder</li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    <footer>
+        <p>Aratri.com</p>
+    </footer>
 </body>
 </html>
