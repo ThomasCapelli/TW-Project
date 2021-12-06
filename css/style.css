@@ -1,78 +1,79 @@
-body {
+body, ul, p{
     margin: 0;
     padding: 0;
-}
-header {
-    background-color: grey;
-}
-header nav {
-
-}
-header nav div:first-of-type a img{
-    max-height: 80%;
-    max-width: 80%;
-}
-header nav div a img{
-    max-height: 70%;
-    max-width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 header nav div {
-    height: 60px;
-    padding: 0;
     display: inline-block;
+    text-align: center;
+    margin: 5px;
 }
 header nav div:not(:first-of-type) {
-    padding-right: 10%;
     float: right;
 }
-header nav div a p {
-    padding: 0;
-    margin: 0;
+header nav div:first-of-type a img{
+    width: 40px;
 }
-header nav div a, body > div ul li a {
+header nav div a img{
+    width: 35px;
+}
+header nav div p{
+    font-weight: bold;
+    color: grey;
+}
+header nav div a, body > nav ul li a {
     text-decoration: none;
-    color: white;
+    color: grey;
 }
-body > div {
-    background-color:red;
+
+body > nav > ul{
+    position: fixed;
+    width: 100%;
 }
-div ul{
-    margin: 0;
-    padding: 0;
-}
-body > div nav {
-    height: 60px;
-}
-body > div ul li{
+body > nav ul li{
     display: inline-block;
     text-decoration: none;
     width: 25%;
-    margin: 20px 0;
+    height: 100%;
     text-align: center;
+    background-color: black;
+    box-sizing: border-box;
 }
-main div{
+body > nav ul li:not(:last-of-type) {
+    border-right: 1px solid white;
+}
+body > nav ul li div {
+    margin: 1%;
+}
+body > nav ul li img {
+    width: 25px;
+}
+body > nav > ul > li > div > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+body > nav > ul > li > div > a:hover {
+    color: white;
+}
+
+main {
+    margin-top: 50px;
+}
+main > section > nav > ul{
+    height: 300px;
     background-color:lightgoldenrodyellow;
 }
-main div nav {
-    height:300px;
-}
-main div nav ul li {
-    height: 100%;
-    width: 100%;
+main section nav ul li {
     text-align: center;
 }
-main div nav ul {
-    height: 100%;
-    width: 100%;
-}
+
 main section nav {
     background-color: lightpink;
     height: 250px;
 }
 main section nav ul{
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 main section nav ul li{
     display: inline-block;
@@ -80,5 +81,9 @@ main section nav ul li{
     width: 50%;
     height: 50%;
     text-align: center;
+}
+footer {
+    background-color: cadetblue;
+    padding: 20px;
 }
 
