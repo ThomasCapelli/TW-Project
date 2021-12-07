@@ -58,28 +58,65 @@ body > nav > ul > li > div > a {
 body > nav > ul > li > div > a:hover {
     color: white;
 }
-
+main {
+    margin-top: 50px;
+}
+main > section > h1{
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+main > section > nav > ul{
+    width: 100%;
+    background-color:lightgoldenrodyellow;
+}
 main section nav ul li {
     text-align: center;
 }
-
-main section nav {
-    background-color: lightpink;
-    height: 250px;
-}
-main section nav ul{
-    height: 100%;
-}
-main section nav ul li{
-    display: inline-block;
-    text-decoration: none;
-    width: 50%;
-    height: 50%;
+main > h2 {
     text-align: center;
 }
-footer {
-    background-color: cadetblue;
+article {
+    background-color: #f7f7f7 ;
+    margin-bottom: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+article > header {
     padding: 20px;
+    text-align: center;
+    height: 200px;
+
+}
+article  header  a  img {
+    max-height: 70%;
+    max-width: 70%;
+}
+article  header  a  img:hover {
+    max-width: 71%;
+    max-height: 71%;
+}
+article > footer {
+    text-align: center;
+    padding: 20px;
+}
+article > footer > a {
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+article > footer > a:hover {
+    padding: 6px 12px;
+    background-color: grey;
+}
+
+body > footer {
+    padding: 20px;
+    background-color: cadetblue;
 }
 main section:first-of-type{
     margin: 70px 0 40px 0;
