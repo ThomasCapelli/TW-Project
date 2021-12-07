@@ -28,7 +28,6 @@ header nav div a, body > nav ul li a {
 }
 
 body > nav > ul{
-    position: fixed;
     z-index: 1;
     width: 100%;
 }
