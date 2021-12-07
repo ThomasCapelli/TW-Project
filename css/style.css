@@ -1,4 +1,5 @@
 body, ul, p{
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -28,6 +29,7 @@ header nav div a, body > nav ul li a {
 
 body > nav > ul{
     position: fixed;
+    z-index: 1;
     width: 100%;
 }
 body > nav ul li{
@@ -57,13 +59,6 @@ body > nav > ul > li > div > a:hover {
     color: white;
 }
 
-main {
-    margin-top: 50px;
-}
-main > section:first-of-type > nav > ul{
-    height: 300px;
-    background-color:lightgoldenrodyellow;
-}
 main section nav ul li {
     text-align: center;
 }
@@ -86,4 +81,125 @@ footer {
     background-color: cadetblue;
     padding: 20px;
 }
+main section:first-of-type{
+    margin: 70px 0 40px 0;
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Make the images invisible by default */
+  .Containers {
+    display: none;
+    overflow: hidden;
+  }
+
+  .Containers img{
+    
+    width: 100%;
+    height: 600%;
+    object-fit: cover;
+  }
+
+main section:first-of-type div:not(:first-of-type){
+    text-align: center;
+}
+
+  /* forward & Back buttons */
+  .back, .forward {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+  }
+  
+  /* Place the "forward button" to the right */
+  .forward {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  /*when the user hovers,add a black background with some little opacity */
+  .back:hover, .forward:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption Info */
+  .Info {
+    color: #e3e3e3;
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Worknumbering (1/3 etc) */
+  .MessageInfo {
+    color: #f2f2f3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The circles or bullets and indicators */
+  .dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: #acc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+  
+  .enable, .dots:hover {
+    background-color: #717161;
+  }
+  
+  /* Faint animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+  
+  @keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  z-index: 1;
+	position: fixed;
+  top: 0px;
+}
+.content {
+  padding: 0px;
+}
+.sticky + .content {
+  padding-top: 73px;
+}
+
 

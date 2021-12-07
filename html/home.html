@@ -9,6 +9,8 @@
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		crossorigin="anonymous">
     </script>
+    <script src="../js/carousel.js" type="text/javascript"></script>
+    <script src="../js/sticky-nav.js" type="text/javascript"></script>
 
     <link href="../css/style.css" rel="stylesheet">
     <link href="../icons/favicon.ico" rel="icon" type="image/x-icon" />
@@ -24,23 +26,46 @@
     </header>
     <!-- Menù categorie -->
     <nav>
-        <ul>
+        <ul id="stickyNav">
             <li><div><a href="#" ><img src="../icons/manuscript.png" alt="Kit category logo" /><p>Attrezzatura</p></a></div></li><li><div><a href="#" ><img src="../icons/swords.png" alt="Weapons category logo" /><p>Armamentario</p></a></div></li><li><div><a href="#" ><img src="../icons/horse.png" alt="Animals category logo" /><p>Bestiame</p></a></div></li><li><div><a href="#" ><img src="../icons/castle.png" alt="Kingdoms category logo" /><p>Regni</p></a></div></li>
         </ul>
     </nav>    
-    <main>
+    <main class="content">
         <section>
-            <h1>Christmas Sales</h1>
-            <!-- Carosello con elementi in vetrina -->
-            <nav>
-                <button type="button">&lt;</button>
-                <button type="button">&gt;</button>
-                <ul>
-                    <li>Placeholder</li>
-                </ul>
-            </nav>  
+        <h2>Christmas Sales</h2>
+        <div class="slideshow-container fade">
+
+            <!-- Full images with numbers and message Info -->
+            <div class="Containers">
+              <div class="MessageInfo">1 / 3</div>
+              <img src="../icons/catapult_large.jpg">
+              <div class="Info">First caption</div>
+            </div>
+      
+            <div class="Containers">
+              <div class="MessageInfo">2 / 3</div>
+              <img src="../icons/catapult_mini.jpg">
+              <div class="Info">Second Caption</div>
+            </div>
+      
+            <div class="Containers">
+              <div class="MessageInfo">3 / 3</div>
+              <img src="../icons/trebuchet.jpg">
+              <div class="Info">Third Caption</div>
+            </div>
+      
+            <!-- Back and forward buttons -->
+            <a class="back">&#10094;</a>
+            <a class="forward">&#10095;</a>
+        </div>
+      
+          <!-- The circles/dots -->
+        <div>
+            <span class="dots first"></span>
+            <span class="dots second"></span>
+            <span class="dots third"></span>
+        </div> 
         </section>
-        
         <!-- Vetrina offerte -->
         <section>
             <h2>Offerte del mese</h2>
