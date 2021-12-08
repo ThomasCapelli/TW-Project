@@ -4,7 +4,6 @@ $(document).ready(function(){
     var sticky = navbar.offsetTop;
 
     function StickNav() {
-        console.log(sticky);
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
         } else {

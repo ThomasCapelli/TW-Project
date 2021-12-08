@@ -1,3 +1,4 @@
+
 body, ul, p{
     overflow-x: hidden;
     margin: 0;
@@ -26,7 +27,6 @@ header nav div a, body > nav ul li a {
     text-decoration: none;
     color: grey;
 }
-
 body > nav > ul{
     z-index: 1;
     width: 100%;
@@ -112,11 +112,45 @@ article > footer > a:hover {
     padding: 6px 12px;
     background-color: grey;
 }
-
+/*  BODY FOOTER */
 body > footer {
     padding: 20px;
     background-color: cadetblue;
 }
+body > footer div ul {
+  width: 100%;
+}
+body > footer div ul li {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  float: left;
+  padding-top: 24px;
+  list-style: none;
+}
+body > footer div ul li:not(:first-of-type) {
+  width: 100px;
+  padding: 0;
+  float: right;
+}
+body > footer div ul li a {
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  text-align: center;
+}
+body > footer div ul li a:hover {
+  color:white;
+}
+body > footer div ul li a img:hover {
+  width: 40px;
+  height: 40px;
+}
+body > footer div ul li a img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35px;
+}
+
 main section:first-of-type{
     margin: 70px 0 40px 0;
 }
@@ -231,11 +265,8 @@ main section:first-of-type div:not(:first-of-type){
 	position: fixed;
   top: 0px;
 }
-.content {
-  padding: 0px;
-}
 .sticky + .content {
-  padding-top: 73px;
+  padding-top: 60px;
 }
 
 
