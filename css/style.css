@@ -70,9 +70,15 @@ body > nav > ul > li > div > a:hover {
     color: red;
 }
 /*MAIN*/
+
+main section:first-of-type{
+  margin: 70px 0 40px 0;
+} 
+
 main > section > h2, main > h2{
     text-align: center;
 }
+
 /*FOR SALE PRODUCTS*/
 article {
     background-color: #f7f7f7 ;
@@ -122,46 +128,59 @@ article > footer > a:hover {
 
 body > footer {
     padding: 20px;
-    background-color: black;
+    background-color: white;
 }
-
-body > footer div ul {
-  width: 100%;
-}
-body > footer div ul li {
+body > footer section {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: white;
-  float: left;
-  padding-top: 24px;
-  list-style: none;
-}
-body > footer div ul li:not(:first-of-type) {
-  width: 100px;
-  padding: 0;
-  float: right;
-}
-body > footer div ul li a {
-  text-decoration: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: white;
+  color: black;
+  display: block;
   text-align: center;
 }
-body > footer div ul li a:hover {
-  color:red;
-}
-body > footer div ul li a img:hover {
-  width: 40px;
-  height: 40px;
-}
-body > footer div ul li a img{
+body > footer section + section:before {
+  content: "";
+  border-top: 1px solid black;
+  width: 40%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 35px;
+  margin: 0 auto;
+  /* border-top: ridge 1px black;
+  border-image: linear-gradient(to top, #000 50%, black); 
+  border-image-slice: 1; */
 }
-
-main section:first-of-type{
-    margin: 70px 0 40px 0;
+body > footer section a img{
+  padding-top: 15px;
+  width: 30px;
+}
+body > footer section a img:hover{
+  padding-top: 0;
+  width: 45px;
+  height: 45px;
+}
+body > footer section a{
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  body > footer {
+    text-align: center;
+  }
+  body > footer section {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    display: inline-block;
+    padding-left: 107px;
+  }
+  body > footer section:first-of-type {
+    float: left;
+    padding-left: 0;
+  }
+  body > footer section:last-of-type {
+    float: right;
+    padding-left: 0;
+  }
+  body > footer section + section:before {
+    border-top: hidden;
+  }
 }
 
 /* Slideshow container */
