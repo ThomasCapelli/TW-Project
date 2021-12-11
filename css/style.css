@@ -1,3 +1,13 @@
+:root {
+  --black: #000000;
+  --black_opacity_08: #000000cc;
+  --black_opacity_01: #0000001A;
+  --white: #ffffff;
+  --white_opacity_08: #ffffffcc;
+  --white-opacity_026: #ffffff42;
+  --violet: #5d3754;
+  --grey: #929292;
+}
 html, body, ul, p{
   overflow-x: hidden;
   margin: 0;
@@ -6,7 +16,9 @@ html, body, ul, p{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 /*HEADER OF THE PAGE*/
-
+header {
+  background: var(--white);
+}
 header nav div {
   display: inline-block;
   text-align: center;
@@ -18,7 +30,7 @@ header nav h1 {
   font-size: 20px;
   display: inline-block;
   margin: 23px 0;
-  color: black;
+  color: var(--black);
 }
 header nav div:first-of-type {
   float: left;
@@ -27,13 +39,13 @@ header nav div:not(:first-of-type) {
   float: right;
 }
 header nav div a {
-  color: grey;
+  color: var(--grey);
   text-decoration: none;
   max-width: 40%;
   max-height: 40%;
 }
 header > nav a:hover {
-  color: black;
+  color: var(--black);
 }
 header > nav > div > a:hover img{
   transform: rotate(360deg);
@@ -50,21 +62,88 @@ header nav div:first-of-type a img {
 header nav div a p {
   font-size: 12px;
 }
+/* HEADER-TOGGLE SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  top: 8px;
+}
+.switch p {
+  display: inline-block;
+  color: var(--grey);
+  font-size: 12px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--grey);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 0px;
+  bottom: 2px;
+  background-color: var(--white);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--black);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--black);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 /*STICKY NAVABAR*/
 
 body > nav > ul{
   list-style: none;
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
   white-space: nowrap;
   overflow: auto;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--white_opacity_08);
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px var(--black_opacity_01);
   backdrop-filter: blur(8.6px);
-  border: 1px solid rgba(255, 255, 255, 0.26);
+  border: 1px solid var(--white-opacity_026);
 }
 body > nav > ul::-webkit-scrollbar{
   display: none;
@@ -77,7 +156,7 @@ body > nav ul li{
   box-sizing: border-box;
 }
 body > nav ul li:not(:last-of-type) {
-  border-right: 1px solid black;
+  border-right: 1px solid var(--black);
 }
 body > nav ul li div {
   margin: 3px;
@@ -91,10 +170,15 @@ body > nav > ul > li > div > a {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
-
+body{
+  background: var(--white);
+}
 /*MAIN*/
+main {
+  background: var(--white);
+}
 
 main > section:first-of-type{
   margin: 70px 0 40px 0;
@@ -103,12 +187,13 @@ main > section:first-of-type{
 main > section > h2, main > h2{
   text-align: center;
   font-size: xx-large;
+  color: var(--black);
 }
 
 /*FOR SALE PRODUCTS*/
 main > article {
   width: 100%;
-  background-color: #3d3a50;
+  background-color: var(--violet);
   white-space: nowrap;
   overflow: auto;
 }
@@ -116,18 +201,18 @@ main > article::-webkit-scrollbar{
   display: none;
 }
 main > article > section {
-  background-color: #f4fcfe;
+  background-color: var(--white);
   max-width: 200px;
   height: 350px;
   margin: 40px 10px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  box-shadow: 2px 2px 8px var(--black_opacity_08);
   border-radius: 5px;
   display: inline-block;
 }
 main > article div {
   height: 60%;
   padding: 3%;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid var(--grey);
 }
 main > article img {
   max-width: 100%;
@@ -147,28 +232,28 @@ main > article a {
   margin-top: -30px;
   border-radius: 20px;
   background-color: #03a2f6;
-  color: #f4fcfe;
+  color: var(--white);
   display: block;
 }
 main > article a:hover {
-  background-color: #3d3a50;
+  background-color: var(--violet);
 }
 
 /*  BODY FOOTER */
 
 body > footer {
   padding: 20px;
-  background-color: white;
+  background-color: var(--white);
 }
 body > footer section {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: black;
+  color: var(--black);
   display: block;
   text-align: center;
 }
 body > footer section + section:before {
   content: "";
-  border-top: 1px solid black;
+  border-top: 1px solid var(--black);
   width: 40%;
   display: block;
   margin: 0 auto;
@@ -176,7 +261,7 @@ body > footer section + section:before {
 body > footer section a{
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: var(--black);
   margin-right: 5px;
   width: 70px;
 }
@@ -231,12 +316,12 @@ main section:first-of-type div:not(:first-of-type){
     top: 48%;
     margin-top: -23px;
     padding: 20px;
-    color: black;
+    color: var(--black);
     font-weight: bold;
     font-size: 15px;
     transition: 0.4s ease;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--black);
   }
   
   /* Place the "forward button" to the right */
@@ -246,13 +331,13 @@ main section:first-of-type div:not(:first-of-type){
   
   /*when the user hovers,add a black background with some little opacity */
   .back:hover, .forward:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
   }
   
   /* Caption Info */
   .Info {
-    color: black;
+    color: var(--black);
     font-size: 16px;
     position: absolute;
     bottom: 10px;
@@ -262,7 +347,7 @@ main section:first-of-type div:not(:first-of-type){
   
   /* Worknumbering (1/3 etc) */
   .MessageInfo {
-    color: black;
+    color: var(--black);
     font-size: 14px;
     padding: 10px 14px;
     position: absolute;
@@ -321,10 +406,10 @@ main section:first-of-type div:not(:first-of-type){
 }
 .selected {
   background-color: #2f6342;
-  color: white;
+  color: var(--white);
 }
 .selected a {
-  color: white;
+  color: var(--white);
 }
 .selected a img {
   filter: invert(100%);
@@ -335,11 +420,11 @@ main section:first-of-type div:not(:first-of-type){
   body > nav > ul > li:hover {
     transition-duration: 1s;
     transform-origin: bottom;
-    box-shadow: inset 0 -60px 0 0 black;
+    box-shadow: inset 0 -60px 0 0 var(--black);
   }
   body > nav > ul > li:hover a {
     transition-duration: 1s;
-    color: white
+    color: var(--white);
   }
   body > nav > ul > li:hover a img{
     transition-duration: 1s;
@@ -351,7 +436,7 @@ main section:first-of-type div:not(:first-of-type){
   }
   body > footer section {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
+    color: var(--black);
     display: inline-block;
     padding-left: 107px;
   }
