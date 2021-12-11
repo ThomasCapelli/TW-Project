@@ -2,24 +2,29 @@ $(document).ready(function(){
     $(".switch").click(function(){
         check = $("input[name='chk[]']").is(":checked");
         if(check){
-            var body = document.getElementsByTagName("body");
-            body.classList.addClass("dark_mode");
-            body.classList.removeClass("light_mode");
-
-            //Invert icon colors
+            $("body").addClass("dark_mode").removeClass("light_mode");
+           /*  $(".icon").each(function(){
+                $(this).css("filter","invert(100%)");
+            }); */
+            /* //Invert icon colors
             $(".icon").each(function(){
-                if($(this).css("filter")=="none"){
+                if($(this).css("filter")=="0%" || $(this).css("filter")=="none"){
                     $(this).css("filter","invert(100%)");
                 }
-            });
+                if($(this).css("filter")=="100%"){
+                    $(this).css("filter","none");
+                }
+            }); */
         }
         else{
-            body.classList.addClass("light_mode");
-            body.classList.removeClass("dark_mode");
-            //Invert icon colors
+            $("body").addClass("light_mode").removeClass("dark_mode");
+           /*  $(".icon").each(function(){
+                $(this).css("filter","");
+            });  */
+          /*   //Invert icon colors
             $(".icon").each(function(){
                 $(this).css("filter","");
-            });
+            }); */
         }
     });     
 });
