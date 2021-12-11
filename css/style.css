@@ -5,8 +5,14 @@ html, body, ul, p{
   width: 100%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+body {
+  background-color: var(--body_background);
+}
 /*HEADER OF THE PAGE*/
 
+header {
+  background-color: var(--header-background);
+}
 header nav div {
   display: inline-block;
   text-align: center;
@@ -18,7 +24,7 @@ header nav h1 {
   font-size: 20px;
   display: inline-block;
   margin: 23px 0;
-  color: black;
+  color: var(--text);
 }
 header nav div:first-of-type {
   float: left;
@@ -27,13 +33,13 @@ header nav div:not(:first-of-type) {
   float: right;
 }
 header nav div a {
-  color: grey;
+  color: var(--text);
   text-decoration: none;
   max-width: 40%;
   max-height: 40%;
 }
 header > nav a:hover {
-  color: black;
+  color: var(--header-hover);
 }
 header > nav > div > a:hover img{
   transform: rotate(360deg);
@@ -55,16 +61,14 @@ header nav div a p {
 
 body > nav > ul{
   list-style: none;
-  background-color: white;
   width: 100%;
   white-space: nowrap;
   overflow: auto;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: var(--stickynav-background);;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.6px);
-  border: 1px solid rgba(255, 255, 255, 0.26);
+  border: 1px solid var(--stikynav-border);
 }
 body > nav > ul::-webkit-scrollbar{
   display: none;
@@ -77,7 +81,7 @@ body > nav ul li{
   box-sizing: border-box;
 }
 body > nav ul li:not(:last-of-type) {
-  border-right: 1px solid black;
+  border-right: 1px solid --stickynav-split;
 }
 body > nav ul li div {
   margin: 3px;
@@ -91,16 +95,18 @@ body > nav > ul > li > div > a {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: black;
+  color: var(--text);
 }
 
 /*MAIN*/
 
 main > section:first-of-type{
-  margin: 70px 0 40px 0;
+  margin: 26px 0 30px 0;
 } 
 
 main > section > h2, main > h2{
+  color: var(--text);
+  margin-top: 0;
   text-align: center;
   font-size: xx-large;
 }
@@ -108,23 +114,23 @@ main > section > h2, main > h2{
 /*FOR SALE PRODUCTS*/
 main > article {
   width: 100%;
-  background-color: #3d3a50;
+  background-color: var(--sale-background); /*#5d3754 #52ab98*/
   white-space: nowrap;
   overflow: auto;
 }
-main > article::-webkit-scrollbar{
-  display: none;
-}
 main > article > section {
-  background-color: #f4fcfe;
+  background-color: var(--product-background);
   max-width: 200px;
-  height: 350px;
+  height: 270px;
   margin: 40px 10px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-  border-radius: 5px;
   display: inline-block;
 }
+main > article header {
+  border-radius: 5px;
+}
 main > article div {
+  background-color: var(--product-img-background);
   height: 60%;
   padding: 3%;
   border-bottom: 1px solid silver;
@@ -146,29 +152,29 @@ main > article a {
   padding: 5px;
   margin-top: -30px;
   border-radius: 20px;
-  background-color: #03a2f6;
-  color: #f4fcfe;
+  background-color: var(--product-button);
+  color: var(--product-text);
   display: block;
 }
 main > article a:hover {
-  background-color: #3d3a50;
+  background-color: var(--product-link-hover);
 }
 
 /*  BODY FOOTER */
 
 body > footer {
   padding: 20px;
-  background-color: white;
+  background-color: var(--footer-background);
 }
 body > footer section {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: black;
+  color: var(--text);
   display: block;
   text-align: center;
 }
 body > footer section + section:before {
   content: "";
-  border-top: 1px solid black;
+  border-top: 1px solid var(--text);
   width: 40%;
   display: block;
   margin: 0 auto;
@@ -176,7 +182,7 @@ body > footer section + section:before {
 body > footer section a{
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: var(--text);
   margin-right: 5px;
   width: 70px;
 }
@@ -191,7 +197,7 @@ body > footer section a img{
   max-width: 95%;
 }
 body > footer section:not(:last-of-type) a:hover {
-  color: #03a2f6;
+  color: var(--footer-link-hover);
 }
 body > footer section:not(:last-of-type) a:hover img{
   max-height: 100%;
@@ -229,13 +235,12 @@ main section:first-of-type div:not(:first-of-type){
     cursor: pointer;
     position: absolute;
     top: 48%;
-    margin-top: -23px;
-    padding: 20px;
+    margin: -23px 10px 0 10px;
+    padding: 20px 26px;
     color: black;
     font-weight: bold;
-    font-size: 15px;
     transition: 0.4s ease;
-    border-radius: 10px;
+    border-radius: 1000px;
     border: 1px solid black;
   }
   
@@ -320,16 +325,69 @@ main section:first-of-type div:not(:first-of-type){
   padding-top: 50px;
 }
 .selected {
-  background-color: #2f6342;
-  color: white;
+  background-color: var(--sticky-selected);
 }
 .selected a {
-  color: white;
+  color: var(--sticky-selected-color);
 }
 .selected a img {
   filter: invert(100%);
 }
 
+/*colors light-mode*/
+.light_mode {
+ --body_background: #f2f2f2;
+ --header-background: #fff;
+ --text: #000;
+ --header-hover: #52ab98;
+ --sticky-selected: #52ab98;
+ --sticky-selected-color: white;
+ --stickynav-background: rgba(255, 255, 255, 0.6);
+ --stickynav-split: black;
+ --stikynav-border: rgba(255, 255, 255, 0.26);
+ --sale-background: #2b6777;
+ --product-img-background: white;
+ --product-background: #c8d8e4;
+ --product-text: black;
+ --product-title: black;
+ --product-button: #03a2f6;
+ --product-link: white;
+ --product-link-hover: #52ab98;
+ --footer-background: white;
+ --footer-link: black;
+ --footer-link-hover: #03a2f6;
+ --filter: 100%;
+}
+/*--black_opacity_08: #000000cc;
+--black_opacity_01: #0000001A;
+--white: #ffffff;
+--white_opacity_08: #ffffffcc;
+--white-opacity_026: #ffffff42;
+--violet: #5d3754;
+--grey: #929292;
+*/
+.dark_mode {
+  --body_background: #161b22;
+  --header-background: #30363d;
+  --text: #c9d1d9;;
+  --header-hover: #52ab98;
+  --sticky-selected: #52ab98;
+  --sticky-selected-color: white;
+  --stickynav-background: rgba(255, 255, 255, 0.6);
+  --stickynav-split: black;
+  --sale-background: #2b6777;
+  --product-img-background: white;
+  --product-background: #c8d8e4;
+  --product-text: black;
+  --product-title: black;
+  --product-button: #03a2f6;
+  --product-link: white;
+  --product-link-hover: #52ab98;
+  --footer-background: white;
+  --footer-link: black;
+  --footer-link-hover: #03a2f6;
+  --filter: 0%;
+ }
 @media screen and (min-width: 768px) {
 
   body > nav > ul > li:hover {
