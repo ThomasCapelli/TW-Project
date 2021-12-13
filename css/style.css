@@ -436,14 +436,6 @@ main section:first-of-type div:not(:first-of-type){
  --grey: grey;
  --default: black;
 }
-/*--black_opacity_08: #000000cc;
---black_opacity_01: #0000001A;
---white: #ffffff;
---white_opacity_08: #ffffffcc;
---white-opacity_026: #ffffff42;
---violet: #5d3754;
---grey: #929292;
-*/
 .dark_mode {
   --body_background: #121212;
   --header-background: #121212;
