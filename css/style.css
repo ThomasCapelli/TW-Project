@@ -121,10 +121,10 @@ main > article {
   white-space: nowrap;
   overflow: auto;
 }
-main > article > section {
+main > article section {
   background-color: var(--product-background);
   max-width: 200px;
-  height: 270px;
+  /* height: 270px; */
   margin: 40px 10px;
   box-shadow: 2px 2px 8px var(--box_shadow_cc);
   display: inline-block;
@@ -437,6 +437,7 @@ main section:first-of-type div:not(:first-of-type){
   body > footer section + section:before {
     border-top: hidden;
   }
+<<<<<<< HEAD
   
   header {
     background-color: var(--header-background);
@@ -556,5 +557,33 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+=======
+  main > article section {
+    max-width: 400px;
+  }
+  .gridcontainer {
+    display: grid;
+    overflow: hidden;
+    margin: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "elem1grid elem2grid elem3grid elem4grid"
+    "elem5grid elem6grid elem7grid .";
+    justify-items: center;
+    align-items:stretch;
+}
+  .elem1grid { grid-area: elem1grid; }
+  .elem2grid { grid-area: elem2grid; }
+  .elem3grid { grid-area: elem3grid; }
+  .elem4grid { grid-area: elem4grid; }
+  .elem5grid { grid-area: elem5grid; margin-top: 0;}
+  .elem6grid { grid-area: elem6grid; margin-top: 0;}
+  .elem7grid { grid-area: elem7grid; margin-top: 0;}
+  main {
+    width: 80%;
+    margin: 5% 10%;
+  }
+>>>>>>> a2a060e64637993cdbe0c35cb0e386bda61cd166
 }
 
