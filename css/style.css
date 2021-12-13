@@ -19,6 +19,7 @@ body {
 
 header {
   background-color: var(--header-background);
+  min-height: 56px;
 }
 header nav {
   text-align: center;
@@ -38,11 +39,11 @@ header nav h1 {
   display: inline-block;
   color: var(--text);
 }
-header nav div:first-of-type {
-  float: left;
+header nav div:nth-child(3) {
+  float:right
 }
-header nav div:not(:first-of-type) {
-  float: right;
+header nav div:nth-child(2) {
+  float: left;
 }
 header nav div a {
   color: var(--text);
@@ -58,6 +59,11 @@ header > nav > div > a:hover img{
 header nav div a img {
   max-width: 60%;
   max-height: 60%;
+}
+
+header nav div:nth-child(1) a img {
+  max-width: 100%;
+  max-height: 100%;
 }
 header nav div a p {
   font-size: 12px;
