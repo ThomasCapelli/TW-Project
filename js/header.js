@@ -13,7 +13,7 @@ $(document).ready(function(){
             }
         });  
         if (window.innerWidth > 768 && canAdd == true) {
-            header.innerHTML += `<span class="removable"><a href="#"><h1>Aratri.com</h1></a></span>`;
+            header.innerHTML += `<span class="removable"><a href="home.html">Aratri.com</a></span>`;
             header.innerHTML += `<div class="removable">
             <label class="switch">
             <input type="checkbox" name="chk[]">
