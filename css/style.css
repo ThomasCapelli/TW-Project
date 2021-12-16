@@ -17,13 +17,15 @@ body {
 
 /*HEADER OF THE PAGE*/
 
-header {
+body > header {
   background-color: var(--header-background);
-  min-height: 56px;
+  border-bottom: 1px solid #e4e8ee;
+  box-sizing: border-box;
 }
 header nav {
   text-align: center;
   vertical-align: middle;
+  box-sizing: border-box;
 }
 header nav div {
   display: inline-block;
@@ -31,13 +33,6 @@ header nav div {
   margin: 3.5px 2px;
   width: 50px;
   height: 50px;
-  background: var(--stickynav-background);
-  border-radius: 5px;
-}
-header nav h1 {
-  font-size: 20px;
-  display: inline-block;
-  color: var(--text);
 }
 header nav div:nth-child(3) {
   float:right
@@ -76,101 +71,125 @@ body > nav > ul{
   width: 100%;
   white-space: nowrap;
   overflow: auto;
-  box-sizing: border-box;
-}
-body > nav > ul::-webkit-scrollbar{
-  display: none;
 }
 body > nav ul li{
   text-decoration: none;
   display: inline-block;
   width: 25%;
   text-align: center;
-  box-sizing: border-box;
 }
 body > nav ul li div {
   margin: 3px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.473);
-  background: var(--stickynav-background);
-  backdrop-filter: blur(8.6px);
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--stickynav-border);
+  background: hsla(236, 98%, 67%, 0.1);
+  backdrop-filter: blur(1000px);
 }
 body > nav ul li img {
   width: 30px;
 }
 body > nav > ul > li > div > a {
-  font-size: 12px;
   display: block;
   width: 100%;
   height: 100%;
   text-decoration: none;
   color: var(--text);
 }
+body > nav > ul > li > div p {
+  font-size: 14px;
+}
 /*MAIN*/
 
 main > section:first-of-type{
   margin: 26px 0 30px 0;
 } 
-
-main > section > h2, main > h2{
+main > section > h2{
   color: var(--text);
   margin-top: 0;
   text-align: center;
   font-size: xx-large;
-  color: var(--default);
 }
-
-/*FOR SALE PRODUCTS*/
+/*SALE PRODUCTS*/
 main > article {
-  width: 100%;
-  background-color: var(--sale-background); /*#5d3754 #52ab98*/
+  background-color: var(--sale-background);
+  
+}
+main > article > ul {
   white-space: nowrap;
   overflow: auto;
+  width: 100%;
 }
-main > article section {
-  background-color: var(--product-background);
-  max-width: 200px;
-  /* height: 270px; */
-  margin: 40px 10px;
-  box-shadow: 2px 2px 8px var(--box_shadow_cc);
+main > article > header {
+  background-color: var(--body_background);
+}
+main > article > header > h2 {
   display: inline-block;
+  color: var(--text);
+  margin: 0;
+  padding: 20px 0;
 }
-main > article header {
-  border-radius: 5px;
+main > article > header > a {
+  text-decoration: none;
+  float: right;
+  background-color: var(--header-main);
+  color: var(--header-hover);
+  padding: 15px;
+  margin: 10px 5px 0;
 }
-main > article div {
-  background-color: var(--product-img-background);
-  height: 60%;
-  padding: 3%;
-  border-bottom: 1px solid var(--grey);
+main > article > header > a:hover {
+  background-color: var(--sale-hover);
+  transition-duration: 0.5s;
 }
-main > article img {
+main > article > ul > li {
+  display: inline-block;
+  width: 200px;
+}
+main > article > ul > li > div {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 5px;
+  padding: 10px;
 }
-main > article footer {
-  padding: 10px 10px;
-}
-main > article footer h3 {
-  color: var(--product-title);
-  margin: 0;
-}
-main > article a {
-  float: right;
+main > article > ul > li > div > a {
+  background-color: var(--product-background);
+  color: var(--product-text);
   text-decoration: none;
-  padding: 5px;
-  margin-top: -30px;
-  border-radius: 20px;
-  background-color: var(--product-button);
-  color: var(--product-text);
+  text-align: center;
   display: block;
+  max-height: 100%;
+  max-width: 100%;
 }
-main > article section footer p {
-  color: var(--product-text);
+main > article > ul > li > div > a:hover {
+  transition-duration: 0.5s;
+  background-color: var(--header-hover);
 }
-main > article a:hover {
-  background-color: var(--product-link-hover);
+main > article > ul > li img {
+  max-width: 80%;
+  max-height: 80%;
+  padding-top: 10px;
+}
+main > article > ul > li a div {
+  background-color: white;
+  text-align: left;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px;
+}
+main > article > ul li div h3 {
+  margin: 10px 0 0 0;
+  float: left;
+}
+main > article > ul > li a div p:first-of-type {
+  margin-bottom: 10px;
+}
+main > article > ul > li a div p:not(:first-of-type), main > article > ul > li a div del {
+  display: inline;
+}
+main > article > ul > li a div del{
+  color: var(--grey);
+}
+main > article > ul > li a div p:not(:first-of-type) {
+  font-weight: bold;
 }
 
 /*  BODY FOOTER */
@@ -219,106 +238,128 @@ body > footer section:not(:last-of-type) a:hover img{
   filter: sepia(100%);
 }
 
+main > form {
+  display: block;
+  text-align: center;
+  margin-bottom: 100px;
+}
+main > form > ul {
+  list-style: none;
+}
+main > form > ul > li > input {
+  box-sizing: border-box;
+  display: block;
+  width: 80%;
+  height: 35px;
+  margin: 10px 10%;
+  padding: 5px 10px;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+}
+main > form > ul > li a {
+  text-decoration: none;
+}
+
 /* Slideshow container */
 .slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-  }
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
   
   /* Make the images invisible by default */
-  .Containers {
-    display: none;
-    overflow: hidden;
-  }
+.Containers {
+  display: none;
+  overflow: hidden;
+}
 
-  .Containers img{
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-  }
+.Containers img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
 
 main section:first-of-type div:not(:first-of-type){
   text-align: center;
 }
 
   /* forward & Back buttons */
-  .back, .forward {
-    cursor: pointer;
-    position: absolute;
-    top: 48%;
-    margin: -23px 12px 0 10px;
-    padding: 20px 26px;
-    color: black;
-    font-weight: bold;
-    transition: 0.4s ease;
-    border-radius: 1000px;
-    border: 1px solid black;
-  }
+.back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  margin: -23px 12px 0 10px;
+  padding: 20px 26px;
+  color: black;
+  font-weight: bold;
+  transition: 0.4s ease;
+  border-radius: 1000px;
+  border: 1px solid black;
+}
   
   /* Place the "forward button" to the right */
-  .forward {
-    right: 0;
-  }
+.forward {
+  right: 0;
+}
   
   /*when the user hovers,add a black background with some little opacity */
-  .back:hover, .forward:hover {
-    background-color: black;
-    color: white;
-  }
+.back:hover, .forward:hover {
+  background-color: black;
+  color: white;
+}
   
   /* Caption Info */
-  .Info {
-    color: black;
-    font-size: 16px;
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
-  }
+.Info {
+  color: black;
+  font-size: 16px;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
   
   /* Worknumbering (1/3 etc) */
-  .MessageInfo {
-    color: black;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
-  }
+.MessageInfo {
+  color: black;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
   
   /* The circles or bullets and indicators */
-  .dots {
-    cursor: pointer;
-    height: 16px;
-    width: 16px;
-    margin: 0 3px;
-    background-color: #acc;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.5s ease;
-  }
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
   
-  .enable, .dots:hover {
-    background-color: #717161;
-  }
+.enable, .dots:hover {
+  background-color: #717161;
+}
   
   /* Faint animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.4s;
-    animation-name: fade;
-    animation-duration: 1.4s;
-  }
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
   
-  @-webkit-keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-  }
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
   
-  @keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-  }
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -330,7 +371,7 @@ main section:first-of-type div:not(:first-of-type){
   display: none;
 }
 .sticky li div {
-  padding: 15px;
+  padding: 20px 0;
 }
 /* Class added to Main tag to prevent "lags" when scrolling */
 .content {
@@ -344,247 +385,4 @@ main section:first-of-type div:not(:first-of-type){
 }
 .selected a img {
   filter: invert(var(--filter));
-}
-
-/*colors light-mode*/
-.light_mode {
- --body_background: #f2f2f2;
- --header-background: #fff;
- --text: #000;
- --header-hover: #52ab98;
- --slider_background: #ffffff;
- --sticky-selected: #52ab98;
- --sticky-selected-color: white;
- --stickynav-background: rgba(255, 255, 255, 0.75);
- --stickynav-split: black;
- --stikynav-border: rgba(255, 255, 255, 0.26);
- --sale-background: #2b6777;
- --product-img-background: white;
- --product-background: #c8d8e4;
- --product-text: black;
- --product-title: black;
- --product-button: #03a2f6;
- --product-link: white;
- --product-link-hover: #52ab98;
- --footer-background: rgb(179, 179, 179);
- --footer-link: black;
- --footer-link-hover: #03a2f6;
- --filter: 0%;
- --filter_hover: 100%;
- --box_shadow_1a: #0000001a;
- --box_shadow_cc: #000000cc;
- --grey: grey;
- --default: black;
-}
-.dark_mode {
-  --body_background: #121212;
-  --header-background: #121212;
-  --text: #c9d1d9;;
-  --header-hover: #52ab98;
-  --slider_background : #121212;
-  --sticky-selected: #52ab98;
-  --sticky-selected-color: #121212;
-  --stickynav-background: #12121299;
-  --stickynav-split: white;
-  --sale-background: #142F43;
-  --product-img-background: #313030;
-  --product-background: #080808;
-  --product-text: #c9c6c6;
-  --product-title: white;
-  --product-button: #03a2f6;
-  --product-link: white;
-  --product-link-hover: #52ab98;
-  --footer-background: #1f1f1f;
-  --footer-link: black;
-  --footer-link-hover: #03a2f6;
-  --filter: 100%;
-  --filter_hover: 0%;
-  --box_shadow_1a: #ffffff1a;
-  --box_shadow_cc: #ffffffcc;
-  --grey: grey;
-  --default: white;
- }
-@media screen and (min-width: 768px) {
-
-  main {
-    margin-bottom: 5%;
-  }
-  main, body > nav > ul{
-    width: 80%;
-    margin-left: 10%;
-  }
-  body > nav > ul div:hover {
-    transition-duration: 1s;
-    transform-origin: bottom;
-    box-shadow: inset 0 -80px 0 0 var(--default);
-  }
-  body > nav > ul > li:hover a {
-    transition-duration: 1s;
-    color: var(--sticky-selected-color);
-  }
-  body > nav > ul > li:hover a img{
-    transition-duration: 1s;
-    transform-origin: bottom;
-    filter: invert(var(--filter_hover));
-  }
-  body > footer {
-    text-align: center;
-  }
-  body > footer section {
-    color: var(--default);
-    display: inline-block;
-    padding-left: 107px;
-  }
-  body > footer section:first-of-type {
-    float: left;
-    padding-left: 0;
-  }
-  body > footer section:last-of-type {
-    float: right;
-    padding-left: 0;
-  }
-  body > footer section + section:before {
-    border-top: hidden;
-  }
-
-  header {
-    background-color: var(--header-background);
-  }
-  header nav {
-    text-align: left;
-  }
-  header nav div {
-    display: inline-block;
-    text-align: center;
-    margin: 9.5px 2px;
-    width: 100px;
-    height: 50px;
-  }
-  header nav h1 {
-    font-size: 25px;
-    display: inline-block;
-    margin: 20px 0;
-    color: var(--text);
-  }
-  header nav div:first-of-type {
-    float: left;
-  }
-  header nav div:not(:first-of-type) {
-    float: right;
-    border: 1px solid var(--header-hover);
-  }
-  header nav div a {
-    color: var(--text);
-    text-decoration: none;
-  }
-  header > nav a:hover {
-    color: var(--header-hover);
-  }
-  header nav div:not(:first-of-type) a {
-    display: block;
-    padding-top: 12px;
-  }
-  header nav div:not(:first-of-type) a img {
-    max-width: 22%;
-    max-height: 22%;
-    vertical-align: bottom;
-  }
-  header nav div:first-of-type a img {
-    max-height: 100%;
-    max-width: 100%;
-  }
-  header nav div a p {
-    font-size: 14px;
-    display: inline;
-  }
-  /* HEADER-TOGGLE SWITCH */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 17px;
-  top: 8px;
-}
-.switch p {
-  display: inline-block;
-  color: var(--grey);
-  font-size: 9px;
-}
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--grey);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 0px;
-  bottom: 2px;
-  background-color: var(--slider_background);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: var(--default);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--default);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(17px);
-  -ms-transform: translateX(17px);
-  transform: translateX(17px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-main > article section {
-  max-width: 400px;
-}
-.gridcontainer {
-  display: grid;
-  overflow: hidden;
-  margin: auto;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  "elem1grid elem2grid elem3grid elem4grid"
-  "elem5grid elem6grid elem7grid .";
-  justify-items: center;
-  align-items:stretch;
-}
-.elem1grid { grid-area: elem1grid; }
-.elem2grid { grid-area: elem2grid; }
-.elem3grid { grid-area: elem3grid; }
-.elem4grid { grid-area: elem4grid; }
-.elem5grid { grid-area: elem5grid; margin-top: 0;}
-.elem6grid { grid-area: elem6grid; margin-top: 0;}
-.elem7grid { grid-area: elem7grid; margin-top: 0;}
-
 }
