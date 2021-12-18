@@ -127,3 +127,32 @@
 }
 
 /*Account navigation desktop version*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    height: 275px;
+    border: 2px solid var(--account_nav_background);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    right: 100%;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    text-align: left;
+    line-height: 35px;
+    color: var(--text);
+    padding: 10px 8px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a img {
+      width: 35px;
+      height: 35px;
+  }
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+      color: var(--account_nav_text);
+      background-color: var(--account_nav_main);
+    }

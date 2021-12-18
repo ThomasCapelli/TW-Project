@@ -103,6 +103,9 @@ header nav div:nth-child(2) {
   margin-right: 10px;
   background-color: var(--header-main);
 }
+header nav div:nth-child(2) .dropdown-content{
+  background-color: var(--account_nav_background);
+}
 header nav div a {
   color: var(--text);
   text-decoration: none;
@@ -121,6 +124,10 @@ header nav div:not(:first-of-type) a img {
   vertical-align: bottom;
   padding-top: 10px;
 }
+header nav div:not(:first-of-type) .dropdown-content a img {
+  padding:0;
+  margin-right: 50px;
+} 
 header nav div:first-of-type a img {
   max-height: 100%;
   max-width: 100%;
