@@ -1,5 +1,4 @@
 html, body, ul, p{
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -38,6 +37,7 @@ header nav div:nth-child(3) {
   float:right
 }
 header nav div:nth-child(2) {
+  position: relative;
   float: left;
 }
 header nav div a {
@@ -52,8 +52,8 @@ header > nav > div > a:hover img{
   transition-duration: 1s;
 }
 header nav div a img {
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 40%;
+  max-height: 40%;
 }
 
 header nav div:nth-child(1) a img {

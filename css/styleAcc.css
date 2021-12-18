@@ -1,0 +1,129 @@
+/*Account navigationbar mobile version*/
+.account_background{
+    margin: 9px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background: var(--account_nav_background);
+}
+.account_navigation ul li a img{
+    max-width: 50%;
+    max-height: 50%;
+}
+.account_navigation{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 400px;
+    height: 70px;
+    background-color: var(--account_nav_main);
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.account_navigation ul{
+    display: flex;
+    width: 350px;
+}
+.account_navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+}
+.account_navigation ul li a {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.account_navigation ul li a .icon_A_nav{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--account_nav_background);
+}
+.account_navigation ul li.active a .icon_A_nav{
+    transform: translateY(-35px);
+}
+.account_navigation ul li a .text_A_nav{
+    position: absolute;
+    color: var(--account_nav_text);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0.5;
+    transform: translateY(20px);
+}
+.account_navigation ul li.active a .text_A_nav{
+    opacity: 1;
+    transform: translateY(10px);
+
+}
+.indicator{
+    position: absolute;
+    top: -70%;
+    left: 18px;
+    width: 70px;
+    height: 70px;
+    background: rebeccapurple;
+    border-radius: 50%;
+    border: 6px solid var(--account_nav_background);
+    transition: 0.5s;
+}
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: 62%;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--account_nav_background);
+}
+.indicator::after{
+    content: '';
+    position: absolute;
+    top: 62%;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--account_nav_background);
+}
+.account_navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+    filter: hue-rotate(72deg);
+}
+.account_navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+    filter: hue-rotate(144deg);
+}
+.account_navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+    filter: hue-rotate(216deg);
+}
+.account_navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+    filter: hue-rotate(288deg);
+}
+.account_navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(70px * 4));
+    filter: hue-rotate(360deg);
+}
+
+/*Account navigation desktop version*/

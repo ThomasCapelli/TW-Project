@@ -18,6 +18,7 @@
     <link href="../css/colors.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/desktop.css" rel="stylesheet">
+    <link href="../css/styleAcc.css" rel="stylesheet">
     <link href="../icons/favicon.ico" rel="icon" type="image/x-icon" />
     <title>Aratri</title>
 </head>
@@ -26,7 +27,13 @@
         <!-- Menù iniziale con logo e login-->
         <nav>
             <div><a href="#" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a></div>
-            <div><a href="login.html" ><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Accedi</p></a></div>
+            <div class="login"><a><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Accedi</p></a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
             <div><a href="#" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p></a></div>
             <span class="removable"><a href="#">Aratri.com</a></span>
             <!-- Rounded switch -->
@@ -39,6 +46,44 @@
             </div>
         </nav>
     </header>
+    <!--Menù a comparsa quando si clicca sull'icona account-->
+    <div class="account_background">
+        <div class="account_navigation">
+            <ul>
+                <li class="list active">
+                    <a href=#>
+                        <span class="icon_A_nav"><img src="../icons/prince.png" alt="My account logo"/></span>
+                        <span class="text_A_nav">Profilo</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href=#>
+                        <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/></span>
+                        <span class="text_A_nav">Storico</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href=#>
+                        <span class="icon_A_nav"><img src="../icons/message.png" alt="My messages logo"/></span>
+                        <span class="text_A_nav">Messaggi</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href=#>
+                        <span class="icon_A_nav"><img src="../icons/candle.png" alt="Dark mode light logo"/></span>
+                        <span class="text_A_nav">Dark mode</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href=#>
+                        <span class="icon_A_nav"><img src="../icons/gate.png" alt="Logout logo"/></span>
+                        <span class="text_A_nav">Logout</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </div>
     <!-- Menù categorie -->
     <nav>
         <ul id="stickyNav">
@@ -186,5 +231,6 @@
             <a href="#"><div><img src="../icons/money-bag.png" alt="Cash Payment"/></div></a>
         </section>    
     </footer>
+    <script src="../js/account_nav.js"></script>
 </body>
 </html>
