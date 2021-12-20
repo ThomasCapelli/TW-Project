@@ -11,35 +11,26 @@ main, body > nav > ul{
 }
 
 /*STICKY NAV*/
-body > nav ul div {
-  padding: 8px 0;
-}
-body > nav > ul div p{
+body > nav > ul p{
   font-size: 20px;
 }
-
 body > nav ul li img {
   width: 35px;
 }
 /*fill effect of the navbar*/
-body > nav > ul div:hover {
+body > nav > ul a:hover {
   transition-duration: 1s;
   transform-origin: bottom;
-  box-shadow: inset 0 -80px 0 0 var(--default);
-}
-body > nav > ul > li:hover a {
-  transition-duration: 1s;
+  box-shadow: inset 0 -80px 0 0 var(--header-hover);
   color: var(--sticky-selected-color);
 }
-body > nav > ul > li:hover a img{
+body > nav > ul a:hover img{
   transition-duration: 1s;
   transform-origin: bottom;
   filter: invert(var(--filter_hover));
 }
-.sticky li div {
-  padding: 25px;
-}
-.sticky li div p {
+.sticky li p {
+  padding: 20px 0;
   font-size: 15px;
   font-weight: bold;
 }
@@ -68,38 +59,38 @@ body > footer section + section:before {
 
 /*HEADER*/
 
-header {
+body >header {
   background-color: var(--header-background);
 }
-header nav {
+body >header nav {
   text-align: left;
 }
-header nav div {
+body > header nav div {
   display: inline-block;
   text-align: center;
   width: 100px;
   height: 50px;
 }
-header nav span a {
-  padding: 20px 20px 20px 0;
+body > header nav span a {
+  padding: 17px 20px 17px 0;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
   display: inline-block;
   color: var(--text);
 }
-header nav span a:hover {
+body > header nav span a:hover {
   color: initial;
 }
-header nav div:first-of-type {
+body > header nav div:first-of-type {
   float: left;
 }
-header nav div:not(:first-of-type) {
+body > header nav div:not(:first-of-type) {
   box-sizing: border-box;
   float: right;
   border-radius: 20px;
 }
-header nav div:nth-child(2) {
+body > header nav div:nth-child(2) {
   margin-right: 10px;
   background-color: var(--header-main);
 }
@@ -112,13 +103,18 @@ header nav div a {
 }
 header > nav a:hover {
   color: var(--header-hover);
+  background-color: var(--header-main-button);
 }
-header > nav > div:nth-child(2) > a {
+body > header > nav > div:nth-child(2) > a {
   display: block;
   height: 100%;
   width: 100%;
 }
-header nav div:not(:first-of-type) a img {
+body > header nav div a {
+  color: var(--text);
+  text-decoration: none;
+}
+body > header nav div:not(:first-of-type) a img {
   max-width: 50%;
   max-height: 50%;
   vertical-align: bottom;
@@ -132,98 +128,54 @@ header nav div:first-of-type a img {
   max-height: 100%;
   max-width: 100%;
 }
-header nav div a p {
+body >header nav div p {
   font-size: 14px;
   display: inline;
+  color: var(--text);
 }
-
-/* HEADER-TOGGLE SWITCH */
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 17px;
-  top: 8px;
+/* HEADER DARK_MODE */
+.removable {
+  display: initial;
 }
-.switch p {
-  display: inline-block;
-  color: var(--grey);
-  font-size: 9px;
-}
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-      
-/* The slider */
-.slider {
-  position: absolute;
+header nav div:last-of-type img {
+  display:inline;
+  vertical-align: bottom;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--grey);
-  -webkit-transition: .4s;
-  transition: .4s;
-} 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 0px;
-  bottom: 2px;
-  background-color: var(--slider_background);
-  -webkit-transition: .4s;
-  transition: .4s;
-} 
-input:checked + .slider {
-  background-color: var(--default);
+  max-width: 50%;
+  max-height: 50%;
+  margin-top: 10px;
+  margin-right: 5px;
 }
-      
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--default);
+header nav div:last-of-type:hover {
+  cursor: pointer;
 }
-      
-input:checked + .slider:before {
-  -webkit-transform: translateX(17px);
-  -ms-transform: translateX(17px);
-  transform: translateX(17px);
+header nav div:last-of-type:hover p {
+  color: var(--header-hover);
 }
-      
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-      
-.slider.round:before {
-  border-radius: 50%;
-}
-main > article section {
-  max-width: 400px;
-}
-
 /*SALE PRODUCTS*/
 
-main > article > header > a {
+#forsale > header > a {
   margin: 10px 0px;
 }
-main > article > ul {
+#forsale > ul {
   overflow: hidden;
   white-space: normal;
   text-align: center;
 }
-main > article > ul > li {
+#forsale > ul > li {
   width: 25%;
   margin: 0;
 }
-main > article > ul > li:hover img  {
-  padding: 1px;
+#products> a {
+  width: 49.5%;
+  margin: 5px 0;
+  display: inline-block;
 }
+#products > a:nth-child(odd) {
+  float: right;
+}
+
+
 
       
 }

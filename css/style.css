@@ -10,15 +10,10 @@ html, body, ul, p{
 body {
   background-color: var(--body_background);
 }
-.switch {
-  display: none;
-}
-
 /*HEADER OF THE PAGE*/
 
 body > header {
   background-color: var(--header-background);
-  border-bottom: 1px solid #e4e8ee;
   box-sizing: border-box;
 }
 header nav {
@@ -44,18 +39,17 @@ header nav div a {
   color: var(--text);
   text-decoration: none;
 }
-header > nav a:hover {
+header > nav a:hover p{
   color: var(--header-hover);
 }
 header > nav > div > a:hover img{
   transform: rotate(360deg);
   transition-duration: 1s;
 }
-header nav div a img {
-  max-width: 40%;
-  max-height: 40%;
+header nav div img {
+  max-width: 60%;
+  max-height: 60%;
 }
-
 header nav div:nth-child(1) a img {
   max-width: 100%;
   max-height: 100%;
@@ -63,9 +57,10 @@ header nav div:nth-child(1) a img {
 header nav div a p {
   font-size: 12px;
 }
-
+.removable {
+  display: none;
+}
 /*STICKY NAVBAR*/
-
 body > nav > ul{
   list-style: none;
   width: 100%;
@@ -78,25 +73,23 @@ body > nav ul li{
   width: 25%;
   text-align: center;
 }
-body > nav ul li div {
-  margin: 3px;
+body > nav ul li a {
+  margin: 3px 2px;
   border-radius: 5px;
   box-sizing: border-box;
   border: 1px solid var(--stickynav-border);
-  background: hsla(236, 98%, 67%, 0.1);
-  backdrop-filter: blur(1000px);
+  background-color: var(--stickynav-background);
+  backdrop-filter: saturate(180%) blur(20px);
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  text-decoration: none;
+  color: var(--text);
 }
 body > nav ul li img {
   width: 30px;
 }
-body > nav > ul > li > div > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: var(--text);
-}
-body > nav > ul > li > div p {
+body > nav > ul > li p {
   font-size: 14px;
 }
 /*MAIN*/
@@ -110,48 +103,47 @@ main > section > h2{
   text-align: center;
   font-size: xx-large;
 }
+
 /*SALE PRODUCTS*/
-main > article {
+
+#forsale {
   background-color: var(--sale-background);
-  
 }
-main > article > ul {
+#forsale > ul {
   white-space: nowrap;
   overflow: auto;
   width: 100%;
 }
-main > article > header {
+#forsale > header {
   background-color: var(--body_background);
-}
-main > article > header > h2 {
   display: inline-block;
+  width: 100%;
+}
+#forsale > header > h2 {
+  float: left;
   color: var(--text);
   margin: 0;
   padding: 20px 0;
+  width: 40%;
 }
-main > article > header > a {
+#forsale > header > a {
   text-decoration: none;
   float: right;
-  background-color: var(--header-main);
+  background-color: var(--header-main-button);
   color: var(--header-hover);
   padding: 15px;
-  margin: 10px 5px 0;
+  margin: 10px 5px 0 0;
 }
-main > article > header > a:hover {
+#forsale > header > a:hover {
   background-color: var(--sale-hover);
   transition-duration: 0.5s;
 }
-main > article > ul > li {
+#forsale > ul > li {
   display: inline-block;
-  width: 200px;
+  width: 55%;
 }
-main > article > ul > li > div {
-  max-width: 100%;
-  max-height: 100%;
-  padding: 10px;
-}
-main > article > ul > li > div > a {
-  background-color: var(--product-background);
+#forsale > ul > li > a {
+  margin: 10px;
   color: var(--product-text);
   text-decoration: none;
   text-align: center;
@@ -159,37 +151,39 @@ main > article > ul > li > div > a {
   max-height: 100%;
   max-width: 100%;
 }
-main > article > ul > li > div > a:hover {
-  transition-duration: 0.5s;
-  background-color: var(--header-hover);
+#forsale > ul > li > a > article > header > div {
+  width: 100%;
+  height: 150px;
+  padding: 20px 0;
+  background-color: var(--product-background);
 }
-main > article > ul > li img {
-  max-width: 80%;
-  max-height: 80%;
-  padding-top: 10px;
-}
-main > article > ul > li a div {
-  background-color: white;
+#forsale > ul > li > a > article > section {
+  background-color: var(--product-text-background);
   text-align: left;
-  max-width: 100%;
-  max-height: 100%;
   padding: 10px;
 }
-main > article > ul li div h3 {
-  margin: 10px 0 0 0;
-  float: left;
+#forsale > ul > li > a article:hover div{
+  transition: 0.5s;
+  background-color: var(--header-hover);
 }
-main > article > ul > li a div p:first-of-type {
+#forsale > ul > li img {
+  border-radius: 20px;
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: fill;
+}
+#forsale > ul li h3 {
+  margin: 10px 0 0 0;
+}
+#forsale > ul > li a p:first-of-type {
   margin-bottom: 10px;
 }
-main > article > ul > li a div p:not(:first-of-type), main > article > ul > li a div del {
-  display: inline;
-}
-main > article > ul > li a div del{
+#forsale > ul > li a del{
   color: var(--grey);
 }
-main > article > ul > li a div p:not(:first-of-type) {
+#forsale > ul > li a p:not(:first-of-type) {
   font-weight: bold;
+  color: var(--product-text);
 }
 
 /*  BODY FOOTER */
@@ -197,6 +191,7 @@ main > article > ul > li a div p:not(:first-of-type) {
 body > footer {
   padding: 20px;
   background-color: var(--footer-background);
+  bottom: 0%;
 }
 body > footer section {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -218,15 +213,18 @@ body > footer section a{
   margin-right: 5px;
   width: 70px;
 }
-body > footer section a div {
+body > footer section div {
   display: inline-block;
   width: 30px;
   height: 30px;
   padding: 6%;
 }
-body > footer section a img{
+body > footer section img{
   max-height: 95%;
   max-width: 95%;
+}
+body > footer section p {
+  font-size: 14px;
 }
 body > footer section:not(:last-of-type) a:hover {
   color: var(--footer-link-hover);
@@ -237,8 +235,9 @@ body > footer section:not(:last-of-type) a:hover img{
   transition-duration: 0.2s;
   filter: sepia(100%);
 }
-
+/*FORM*/
 main > form {
+  color: var(--text);
   display: block;
   text-align: center;
   margin-bottom: 100px;
@@ -367,22 +366,81 @@ main section:first-of-type div:not(:first-of-type){
 	position: fixed;
   top: 0px;
 }
-.sticky li div a img {
+.sticky li a img {
   display: none;
 }
-.sticky li div {
-  padding: 20px 0;
+.sticky li p {
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: bold;
 }
 /* Class added to Main tag to prevent "lags" when scrolling */
 .content {
   padding-top: 50px;
 }
-.selected div {
-  background: linear-gradient(to top right, var(--sticky-selected), var(--sale-background));
-}
 .selected a {
+  background: linear-gradient(to top right, var(--footer-link-hover), var(--header-hover));
   color: var(--sticky-selected-color);
 }
 .selected a img {
-  filter: invert(var(--filter));
+  filter: invert(var(--filter_hover));
+}
+
+#products > header > h1 {
+  color: var(--text);
+}
+#products > a {
+  color: var(--product-text);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  max-height: 100%;
+  width: 98%;
+  margin: 10px 1%;
+}
+#products > a > article > header > div {
+  width: 100%;
+  height: 150px;
+  padding: 20px 0;
+  background-color: rgb(216, 216, 216);
+}
+#products > a > article > section {
+  background-color: var(--product-text-background);
+  text-align: left;
+  padding: 10px;
+}
+#products > a article:hover div{
+  transition: 0.5s;
+  background-color: var(--header-hover);
+}
+#products > a > article > header > div > img {
+  border-radius: 20px;
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: fill;
+}
+#products > a section > h3 {
+  margin-bottom: 5px;
+}
+#products > a p:not(:first-of-type) {
+  font-weight: bold;
+  color: var(--product-text);
+  margin-top: 10px;
+}
+#cartbutton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(20, 170, 20);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100px;
+}
+#cartbutton img {
+  width: 50px;
+  filter: invert(var(--filter_hover));
 }
