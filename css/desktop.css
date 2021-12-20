@@ -153,7 +153,7 @@ header nav div:last-of-type:hover p {
 }
 #products> a {
   width: 49.5%;
-  margin: 0;
+  margin: 5px 0;
   display: inline-block;
 }
 #products > a:nth-child(odd) {
