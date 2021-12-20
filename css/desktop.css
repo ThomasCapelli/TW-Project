@@ -151,11 +151,15 @@ header nav div:last-of-type:hover p {
   width: 25%;
   margin: 0;
 }
-#products > a {
-  width: 49.8%;
+#products> a {
+  width: 49.5%;
   margin: 0;
   display: inline-block;
 }
+#products > a:nth-child(odd) {
+  float: right;
+}
+
 
 
       
