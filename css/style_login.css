@@ -1,0 +1,114 @@
+table tr td a img{
+    width: 40px;
+    height: 40px;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    
+}
+main div{
+    margin: 5% 15%;
+}
+main div:not(:first-of-type){
+    border-top: 2px solid var(--default);
+}
+table tr:not(:first-of-type) td{
+    border-bottom: 1px solid var(--default);
+}
+table tr:last-of-type td{
+    border-bottom: none;
+}
+main div div p {
+    display: inline-block;
+    width: 150px;
+    top: 0;
+}
+
+main div div div {
+    display: inline-block;;
+    margin: 0 0 5% 20%;
+}
+  
+  
+@keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}  
+
+/* -- quantity box -- */
+
+.quantity {
+    display: inline-block; 
+}
+   
+.quantity .input-text.qty {
+    width: 35px;
+    height: 39px;
+    padding: 0 5px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #efefef;
+}
+   
+.quantity.buttons_added {
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: top; 
+}
+
+.quantity.buttons_added input {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    box-shadow: none;
+}
+   
+.quantity.buttons_added .minus,.quantity.buttons_added .plus {
+    padding: 7px 10px 8px;
+    height: 41px;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    cursor:pointer;
+}
+   
+.quantity.buttons_added .minus {
+    border-right: 0; 
+}
+   
+.quantity.buttons_added .plus {
+    border-left: 0; 
+}
+   
+.quantity.buttons_added .minus:hover,.quantity.buttons_added .plus:hover {
+    background: #eeeeee; 
+}
+   
+.quantity input::-webkit-outer-spin-button, .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0; 
+}
+    
+.quantity.buttons_added .minus:focus,.quantity.buttons_added .plus:focus {
+    outline: none; 
+}
+@media screen and (max-width: 768px){
+    main div:first-of-type{
+        margin:0;
+        margin-top: 10%;
+    }
+    p:not(:first-of-type){
+        padding-top: 25px;
+        
+    }
+}   

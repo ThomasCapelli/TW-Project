@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+    </script>
+    <script src="../js/shopping_cart.js"></script>
+    <link href="../css/style_login.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/colors.css" rel="stylesheet">
+    <title>Aratri</title>
+</head>
+<body class="light_mode">
+    <header>
+        <!-- Menù iniziale con logo e login-->
+        <nav>
+            <div><a href="#" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a></div>
+            <!-- Rounded switch -->
+        </nav>
+    </header>
+    <main>
+        <div>
+            <table>
+                <tr>
+                    <th>Prodotto</th>
+                    <th>Prezzo</th>
+                    <th>Quantità</th>
+                    <th>Totale</th>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="../icons/catapult.png" alt="catapulta" /></a></td>
+                    <td class="price">100$</td>
+                    <td> <div class="quantity buttons_added">
+                            <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                         </div>
+                    </td>
+                    <td name="Totale"></td>
+                </td>
+                <tr>
+                    <td><a href="#"><img src="../icons/catapult.png" alt="catapulta" /></a></td>
+                    <td class="price">100$</td>
+                    <td> <div class="quantity buttons_added">
+                            <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                         </div>
+                    </td>
+                    <td name="Totale"></td>
+                </td>
+                <tr>
+                    <td><a href="#"><img src="../icons/catapult.png" alt="catapulta" /></a></td>
+                    <td class="price">100$</td>
+                    <td> <div class="quantity buttons_added">
+                            <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                         </div>
+                    </td>
+                    <td name="Totale"></td>
+                </td>
+            </table>
+        </div>
+        <div>
+            <div>
+                <p>Scelta spedizione:</p>
+                <div>
+                    <input type="radio" id="carro_buoi" name="spedizione" value="Carro trainato da buoi"/>
+                    <label for="carro_buoi">Carro trainato da buoi(+5$)</label><br>
+                    <input type="radio" id="carro_cavalli" name="spedizione" value="Carro trainato da cavalli"/>
+                    <label for="carro_cavalli">Carro trainato da cavalli(+20$)</label><br>
+                </div>
+                <p>Totale</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <h3>Torna su</h3>
+            <a href="home.html" ><div><img src="../icons/shield_color.png" alt="Website Logo"/></div><p>Aratri.com</p></a>
+        </section>
+        <section>
+            <h3>Trovaci su</h3>
+            <a href="#"><div><img src="../icons/Instagram.png" alt="Medieval Instagram Logo"/></div><p>Pittura</p></a>
+            <a href="#"><div><img src="../icons/manuscript.png" alt="Medieval Facebook Logo"/></div><p>Faccialibro</p></a>
+            <a href="#"><div><img src="../icons/carrier-pigeon.png" alt="Medieval Twitter Logo"/></div><p>Cinguettio</p></a>
+        </section>
+        <section>
+            <h3>Metodi di pagamento</h3>
+            <a href="#"><div><img src="../icons/gem_color.png" alt="Gem Payment"/></div></a>
+            <a href="#"><div><img src="../icons/paypal.png" alt="Paypal Logo"/></div></a>
+            <a href="#"><div><img src="../icons/money-bag_color.png" alt="Cash Payment"/></div></a>
+        </section>    
+    </footer>
+</body>
+</html>
