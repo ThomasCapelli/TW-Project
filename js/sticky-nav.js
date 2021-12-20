@@ -14,9 +14,12 @@ $(document).ready(function(){
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
             $("main").addClass("content");
+            $("#cartbutton").css("display", "initial");
+            console.log($("#cartbutton"));
         } else {
             navbar.classList.remove("sticky");
             $("main").removeClass("content");
+            $("#cartbutton").css("display", "none");
         }
     }
 });
