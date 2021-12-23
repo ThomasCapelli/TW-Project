@@ -88,11 +88,10 @@ body > header nav div:first-of-type {
 body > header nav div:not(:first-of-type) {
   box-sizing: border-box;
   float: right;
-  border-radius: 20px;
 }
 body > header nav div:nth-child(2) {
   margin-right: 10px;
-  background-color: var(--header-main);
+  background-color: var(--header-main-button);
 }
 header nav div:nth-child(2) .dropdown-content{
   background-color: var(--account_nav_background);
@@ -103,7 +102,6 @@ header nav div a {
 }
 header > nav a:hover {
   color: var(--header-hover);
-  background-color: var(--header-main-button);
 }
 body > header > nav > div:nth-child(2) > a {
   display: block;
