@@ -40,8 +40,22 @@ function resetDrop(){
 $(".account_background").hide();
 $(".dropdown-content").hide();
 var w;
-var drop = document.querySelector(".login a");
+var drop = document.querySelector(".login");
+var modalMain = document.querySelector("main");
+var modalNav = document.querySelector("body > nav");
 var list = document.querySelectorAll(".list");
 list.forEach((item) => item.addEventListener("click",activeLink));
 drop.addEventListener("click",showAccNav);
 window.addEventListener("resize",resetDrop);
+modalNav.onclick = function(event) {
+    $(".account_background").hide();
+    $(".dropdown-content").hide();
+};
+modalMain.onclick = function(event) {
+    $(".account_background").hide();
+    $(".dropdown-content").hide();
+};
+$(window).scroll(function(){
+    $(".account_background").hide();
+    $(".dropdown-content").hide();
+});
