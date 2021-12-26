@@ -4,10 +4,10 @@
     --header-background: #fff;
     --text: #000;
     --header-hover: #5a65fd;
-    --header-main-button: #5a65fd1a;
+    --header-main-button: hsla(236, 98%, 67%, 0.15);
     --slider_background: #ffffff;
     --sticky-selected-color: white;
-    --stickynav-background:hsla(236, 98%, 67%, 0.1);
+    --stickynav-background:hsla(236, 98%, 67%, 0.15);
     --stickynav-border: rgba(255, 255, 255, 0.473);
     --sale-background: #2b6777;
     --sale-hover: rgba(90,101,253,0.5);
@@ -34,7 +34,7 @@
 
 /*colors dark-mode*/
 .dark_mode {
-    --header-main-button: #5a65fd1a;
+    --header-main-button: #5a65fd67;
     --header-hover: #5a65fd;
     --body_background: #121212f8;
     --header-background: #121212;

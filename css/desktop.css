@@ -59,10 +59,10 @@ body > footer section + section:before {
 
 /*HEADER*/
 
-body >header {
+body > header {
   background-color: var(--header-background);
 }
-body >header nav {
+body > header nav {
   text-align: left;
 }
 body > header nav div {
@@ -78,9 +78,6 @@ body > header nav span a {
   font-weight: bold;
   display: inline-block;
   color: var(--text);
-}
-body > header nav span a:hover {
-  color: initial;
 }
 body > header nav div:first-of-type {
   float: left;
@@ -100,7 +97,7 @@ header nav div a {
   color: var(--text);
   text-decoration: none;
 }
-header > nav a:hover {
+header > nav div > a:hover {
   color: var(--header-hover);
 }
 body > header > nav > div:nth-child(2) > a {
