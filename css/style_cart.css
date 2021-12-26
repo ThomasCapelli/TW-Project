@@ -1,3 +1,4 @@
+/* -- products table -- */
 table tr td a img{
     width: 40px;
     height: 40px;
@@ -6,45 +7,57 @@ table tr td a img{
 table{
     width: 100%;
     text-align: center;
+    color: var(--text);
     
-}
-main div{
-    margin: 5% 15%;
-}
-main div:not(:first-of-type){
-    border-top: 2px solid var(--default);
 }
 table tr:not(:first-of-type) td{
     border-bottom: 1px solid var(--default);
+    color: var(--text);
 }
 table tr:last-of-type td{
     border-bottom: none;
-}
-main div div p {
-    display: inline-block;
-    width: 150px;
-    top: 0;
+    color: var(--text);
 }
 
-main div div div {
-    display: inline-block;;
-    margin: 0 0 5% 20%;
+/* -- main with cart buy "footer" -- */
+main{
+    width: 100%;
+    height: 100%;
 }
-  
-  
-@keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-}  
+main div{
+    margin: 5% 10% 5% 10%;
+    color: var(--text);
+}
+main div:not(:first-of-type){
+    border: 3px solid var(--default);
+    bottom: 0;
+    width: 80%; 
+    position: fixed;
+    padding: 0;
+    height: 200px;
+    margin-bottom: 0;;
+}
+main div:not(:first-of-type) div{
+    margin-top: 0;
+    padding-top: 15px;
+}
+main div:not(:first-of-type) div div:not(:first-of-type){
+    border: none;
+    padding: 0;
+    display: block;
+    margin: 0;
+    position: relative;
+    height: 100px;
+}
+main div:not(:first-of-type) div div:first-of-type{
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    float: right;
+    border: none;
+}
 
-/* -- quantity box -- */
+/* -- quantity box buttons -- */
 
 .quantity {
     display: inline-block; 
@@ -56,7 +69,7 @@ main div div div {
     padding: 0 5px;
     text-align: center;
     background-color: transparent;
-    border: 1px solid #efefef;
+    border: 1px solid var(--text);
 }
    
 .quantity.buttons_added {
@@ -71,26 +84,29 @@ main div div div {
     margin: 0;
     vertical-align: top;
     box-shadow: none;
+    color: var(--text);
 }
    
 .quantity.buttons_added .minus,.quantity.buttons_added .plus {
     padding: 7px 10px 8px;
     height: 41px;
-    background-color: #ffffff;
-    border: 1px solid #efefef;
+    background-color: var(--product-text-background);
+    border: 1px solid var(--default);
     cursor:pointer;
 }
    
 .quantity.buttons_added .minus {
     border-right: 0; 
+    color: var(--default);
 }
    
 .quantity.buttons_added .plus {
     border-left: 0; 
+    color: var(--text);
 }
    
 .quantity.buttons_added .minus:hover,.quantity.buttons_added .plus:hover {
-    background: #eeeeee; 
+    background: var(--default); 
 }
    
 .quantity input::-webkit-outer-spin-button, .quantity input::-webkit-inner-spin-button {
@@ -102,6 +118,46 @@ main div div div {
 .quantity.buttons_added .minus:focus,.quantity.buttons_added .plus:focus {
     outline: none; 
 }
+
+/* -- buy button -- */
+.button-buy {
+    align-self: center;
+    background-color: var(--header-background);
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: var(--default) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: var(--default);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+.button-buy:hover {
+    box-shadow: var(--default) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+  
+.button-buy:focus {
+    box-shadow: var(--default) 2px 8px 4px -6px;
+}
+
 @media screen and (max-width: 768px){
     main div:first-of-type{
         margin:0;
@@ -111,4 +167,16 @@ main div div div {
         padding-top: 25px;
         
     }
-}   
+    main div:not(:first-of-type){
+        margin-left: 0;
+        margin-right: 0;
+        width: 98.7%;
+    }
+    .button-buy{
+        margin-right: 25px;
+    }
+    .quantity.buttons_added {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}
