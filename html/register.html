@@ -10,7 +10,7 @@
 		crossorigin="anonymous">
     </script>
     <script src="../js/dark-mode.js"></script>
-    
+    <script src="../js/form.js"></script>
     
     <link href="../css/colors.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
@@ -38,22 +38,45 @@
             <h2>Registrati</h2>
             <ul>
                 <li>
-                    <input type="text" id="nome" name="nome" placeholder="Nome"/>
+                    <div>
+                        <input type="text" id="nome" name="nome" required="true"/>
+                        <span>Nome</span>
+                    </div>
                 </li>
                 <li>
-                    <input type="text" id="cognome" name="cognome" placeholder="Cognome"/>
+                    <div>
+                        <input type="text" id="cognome" name="cognome" required/>
+                        <span>Cognome</span>
+                    </div>
                 </li>
                 <li>
-                    <input type="text" id="email" name="email" placeholder="Email"/>
+                    <div>
+                        <input type="text" id="email" name="email" required/>
+                        <span>Email</span>
+                    </div>
                 </li>
                 <li>
-                    <input type="text" id="username" name="username" placeholder="Username"/>
+                    <div>
+                        <input type="text" id="username" name="username" required/>
+                        <span>Username</span>
+                    </div>
                 </li>
                 <li>
-                    <input type="password" id="password" name="password" placeholder="Password"/>
+                    <div>
+                        <input type="password" id="password" name="password" required/>
+                        <span>Password</span>
+                    </div>
                 </li>
                 <li>
-                    <input type="submit" name="submit" value="Registrati" />
+                    <div>
+                        <input type="password" id="confirm" name="confirm" required/>
+                        <span>Conferma password</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="submit" name="submit" value="Registrati" disabled/>
+                    </div>
                 </li>
             </ul>
         </form>

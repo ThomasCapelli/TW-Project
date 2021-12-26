@@ -10,7 +10,6 @@
 		crossorigin="anonymous">
     </script>
     <script src="../js/dark-mode.js"></script>
-    <script src="../js/form.js"></script>
     
     <link href="../css/colors.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
@@ -38,13 +37,21 @@
             <h2>Accedi</h2>
             <ul>
                 <li>
-                    <input type="text" id="username" name="username" placeholder="Username"/>
+                    <div>
+                        <input type="text" id="username" name="username"/>
+                        <span>Username</span>
+                    </div>
                 </li>
                 <li>
-                    <input type="password" id="password" name="password" placeholder="Password"/>
+                    <div>
+                        <input type="password" id="password" name="password"/>
+                        <span>Password</span>
+                    </div>
                 </li>
                 <li>
-                    <input type="submit" name="submit" value="Accedi" />
+                    <div>
+                        <input type="submit" name="submit" value="Accedi"/>
+                    </div>          
                 </li>
                 <li>
                     <p>Non hai ancora un profilo? <a href="register.html">Registrati qui!</a></p>

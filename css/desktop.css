@@ -86,11 +86,12 @@ body > header nav div:not(:first-of-type) {
   box-sizing: border-box;
   float: right;
 }
-body > header nav div:nth-child(2) {
+body > header nav div.login{
   margin-right: 10px;
+  cursor: pointer;
   background-color: var(--header-main-button);
 }
-header nav div:nth-child(2) .dropdown-content{
+header nav div .dropdown-content{
   background-color: var(--account_nav_background);
 }
 header nav div a {
@@ -100,7 +101,7 @@ header nav div a {
 header > nav div > a:hover {
   color: var(--header-hover);
 }
-body > header > nav > div:nth-child(2) > a {
+body > header > nav > div:not(:first-of-type) > a {
   display: block;
   height: 100%;
   width: 100%;
@@ -115,8 +116,8 @@ body > header nav div:not(:first-of-type) a img {
   vertical-align: bottom;
   padding-top: 10px;
 }
-header nav div:not(:first-of-type) .dropdown-content a img {
-  padding:0;
+header nav div.login .dropdown-content a img {
+  padding: 0;
   margin-right: 50px;
 } 
 header nav div:first-of-type a img {
@@ -128,24 +129,8 @@ body >header nav div p {
   display: inline;
   color: var(--text);
 }
-/* HEADER DARK_MODE */
 .removable {
   display: initial;
-}
-header nav div:last-of-type img {
-  display:inline;
-  vertical-align: bottom;
-  cursor: pointer;
-  max-width: 50%;
-  max-height: 50%;
-  margin-top: 10px;
-  margin-right: 5px;
-}
-header nav div:last-of-type:hover {
-  cursor: pointer;
-}
-header nav div:last-of-type:hover p {
-  color: var(--header-hover);
 }
 /*SALE PRODUCTS*/
 
