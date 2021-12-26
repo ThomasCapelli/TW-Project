@@ -86,10 +86,12 @@ body > nav ul li a {
   overflow: hidden;
 }
 body > nav ul li img {
+  padding-top: 5px;
   width: 30px;
 }
 body > nav > ul > li p {
   font-size: 14px;
+  padding-bottom: 5px;
 }
 /*MAIN*/
 
@@ -160,6 +162,10 @@ main > section > h2{
   background-color: var(--product-text-background);
   text-align: left;
   padding: 10px;
+}
+#forsale > ul > li > a article:hover {
+  transition: 0.5s;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
 }
 #forsale > ul > li > a article:hover div{
   transition: 0.5s;

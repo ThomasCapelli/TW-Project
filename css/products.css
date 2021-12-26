@@ -21,7 +21,11 @@
     text-align: left;
     padding: 10px;
 }
-#products > a article:hover div{
+#products > a article:hover {
+    transition: 0.5s;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+#products > a article:hover div {
     transition: 0.5s;
     background-color: var(--header-hover);
 }
