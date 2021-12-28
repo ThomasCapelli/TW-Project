@@ -62,7 +62,7 @@ body > footer section + section:before {
 body > header {
   background-color: var(--header-background);
 }
-body > header nav {
+body > header > nav {
   text-align: left;
 }
 body > header nav div {
@@ -71,7 +71,7 @@ body > header nav div {
   width: 100px;
   height: 50px;
 }
-body > header nav span a {
+body > header > nav > span > a {
   padding: 17px 20px 17px 0;
   text-decoration: none;
   font-size: 20px;
@@ -79,52 +79,45 @@ body > header nav span a {
   display: inline-block;
   color: var(--text);
 }
-body > header nav div:first-of-type {
+body > header > nav > div#logo {
   float: left;
 }
-body > header nav div:not(:first-of-type) {
+body > header > nav > div#login, header > nav > div#cart {
   box-sizing: border-box;
   float: right;
 }
-body > header nav div.login{
+body > header > nav > div#login{
   margin-right: 10px;
   cursor: pointer;
   background-color: var(--header-main-button);
 }
-header nav div .dropdown-content{
-  background-color: var(--account_nav_background);
-}
-header nav div a {
+header > nav > div > a {
   color: var(--text);
   text-decoration: none;
 }
-header > nav div > a:hover {
+header > nav > div > a:hover {
   color: var(--header-hover);
 }
-body > header > nav > div:not(:first-of-type) > a {
+body > header > nav > div:not(#logo) > a {
   display: block;
   height: 100%;
   width: 100%;
 }
-body > header nav div a {
+body > header > nav > div > a {
   color: var(--text);
   text-decoration: none;
 }
-body > header nav div:not(:first-of-type) a img {
+body > header > nav > div:not(:first-of-type) > a > img {
   max-width: 50%;
   max-height: 50%;
   vertical-align: bottom;
   padding-top: 10px;
 }
-header nav div.login .dropdown-content a img {
-  padding: 0;
-  margin-right: 50px;
-} 
-header nav div:first-of-type a img {
+header > nav > div:first-of-type > a > img {
   max-height: 100%;
   max-width: 100%;
 }
-body >header nav div p {
+body > header > nav > div p {
   font-size: 14px;
   display: inline;
   color: var(--text);

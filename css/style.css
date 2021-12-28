@@ -16,44 +16,44 @@ body > header {
   background-color: var(--header-background);
   box-sizing: border-box;
 }
-header nav {
+header > nav {
   text-align: center;
   vertical-align: middle;
   box-sizing: border-box;
 }
-header nav div {
+header > nav > div {
   display: inline-block;
   text-align: center;
   margin: 3.5px 2px;
   width: 50px;
   height: 50px;
 }
-header nav div.cart {
+header > nav > div#cart {
   float: right
 }
-header nav div.login {
+header > nav > div#login {
   float: left;
 }
-header nav div a {
+header > nav > div > a {
   color: var(--text);
   text-decoration: none;
 }
-header > nav a:hover p{
+header > nav > div > a:hover > p{
   color: var(--header-hover);
 }
-header > nav > div > a:hover img{
+header > nav > div > a:hover > img{
   transform: rotate(360deg);
   transition-duration: 1s;
 }
-header nav div img {
+header > nav > div > a > img {
   max-width: 60%;
   max-height: 60%;
 }
-header nav div:nth-child(1) a img {
+header > nav > div#logo > a > img {
   max-width: 100%;
   max-height: 100%;
 }
-header nav div a p {
+header > nav > div > a > p {
   font-size: 12px;
 }
 .removable {

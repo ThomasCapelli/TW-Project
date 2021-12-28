@@ -130,13 +130,16 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 200px;
-    height: 325px;
+    width: 80%;
+    height: 100%;
+    margin: 0 10%;
     background: var(--account_nav_background);
     border: 2px solid var(--account_nav_background);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 3;
-    right: 100%;
+    left: 0;
+    transition: 2s;
+    transform-origin: top;
   }
   
   /* Links inside the dropdown */
@@ -147,9 +150,11 @@
     padding: 10px 8px;
     text-decoration: none;
     display: block;
+    border-bottom: 1px solid white;
   }
   .dropdown-content a img {
-      padding-right:20px;
+      vertical-align: middle;
+      padding-right: 10px;
       width: 35px;
       height: 35px;
   }
