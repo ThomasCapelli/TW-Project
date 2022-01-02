@@ -82,11 +82,11 @@ body > header > nav > span > a {
 body > header > nav > div#logo {
   float: left;
 }
-body > header > nav > div#login, header > nav > div#cart {
+body > header > nav > div.login, header > nav > div#cart {
   box-sizing: border-box;
   float: right;
 }
-body > header > nav > div#login{
+body > header > nav > div.login{
   margin-right: 10px;
   cursor: pointer;
   background-color: var(--header-main-button);
@@ -131,13 +131,15 @@ body > header > nav > div p {
   margin: 10px 0px;
 }
 #forsale > ul {
-  overflow: hidden;
   white-space: normal;
   text-align: center;
 }
 #forsale > ul > li {
   width: 25%;
   margin: 0;
+}
+#forsale > ul > li h3, #forsale > ul > li p:first-of-type {
+  white-space: nowrap;
 }
 #products> a {
   width: 49.5%;

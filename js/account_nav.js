@@ -39,7 +39,7 @@ function resetDrop(){
 $(".account_background").hide();
 $(".dropdown-content").hide();
 var w;
-var drop = document.querySelector("#login");
+var drop = document.querySelector(".login");
 var modalMain = document.querySelector("main");
 var modalNav = document.querySelector("body > nav");
 var list = document.querySelectorAll(".list");

@@ -61,16 +61,16 @@ $(document).ready(function(){
         } else if($(this).is("#confirm")) {
             passwordConfirmCheck($(this));
         }
-        if(isValuePresent($(this))) {
-            $(this).next().addClass("moved");
-            if(getError($(this)).val() === undefined) {
-                $(this).addClass("isCorrect");
-            } else {
-                $(this).removeClass("isCorrect");
-            }
-        } 
+        if(isValuePresent($(this)) && getError($(this)).val() === undefined) {
+            $(this).addClass("isCorrect");
+        }
+        else {
+            $(this).removeClass("isCorrect");
+        }
         if(canEnable(input)) {
             $("input[type=submit]").attr("disabled", false);
+        } else {
+            $("input[type=submit]").attr("disabled", true);
         }
     });
     
