@@ -8,7 +8,13 @@ table{
     width: 100%;
     text-align: center;
     color: var(--text);
-    
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.144);
+    transition: all .4s ease;   
+}
+table:hover{
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.219);
 }
 table tr:not(:first-of-type) td{
     border-bottom: 1px solid var(--default);
@@ -28,35 +34,30 @@ main div{
     margin: 5% 10% 5% 10%;
     color: var(--text);
 }
-main div:not(:first-of-type){
-    border: 3px solid var(--default);
-    bottom: 0;
-    width: 80%; 
-    position: fixed;
-    padding: 0;
-    height: 200px;
-    margin-bottom: 0;;
+.footer > div:first-child{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-bottom: 100px;
 }
-main div:not(:first-of-type) div{
-    margin-top: 0;
-    padding-top: 15px;
-}
-main div:not(:first-of-type) div div:not(:first-of-type){
-    border: none;
-    padding: 0;
+.footer div div span{
     display: block;
-    margin: 0;
-    position: relative;
-    height: 100px;
 }
-main div:not(:first-of-type) div div:first-of-type{
-    margin: 0;
-    margin-top: 50px;
-    padding: 0;
-    float: right;
-    border: none;
+.footer div div {
+    background: var( --body_background);
+    padding-left: 20px;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.144);
+    transition: all .4s ease;
 }
-
+.footer div div:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.219);
+}
+#indirizzo {
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
 /* -- quantity box buttons -- */
 
 .quantity {
@@ -98,15 +99,17 @@ main div:not(:first-of-type) div div:first-of-type{
 .quantity.buttons_added .minus {
     border-right: 0; 
     color: var(--default);
+    border-bottom-left-radius: 50%;
 }
    
 .quantity.buttons_added .plus {
     border-left: 0; 
     color: var(--text);
+    border-top-right-radius: 50%;
 }
    
 .quantity.buttons_added .minus:hover,.quantity.buttons_added .plus:hover {
-    background: var(--default); 
+    background: var(--qty-btn-hover); 
 }
    
 .quantity input::-webkit-outer-spin-button, .quantity input::-webkit-inner-spin-button {
@@ -119,44 +122,126 @@ main div:not(:first-of-type) div div:first-of-type{
     outline: none; 
 }
 
+/* -- sticky bottom part -- */
+.sticky-bottom{
+    overflow: hidden;
+    background-color: var(--sticky-cart-bottom);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.sticky-bottom p {
+    overflow: hidden;
+    display: inline-block;
+    font-size: 2rem;
+    width: 40%;
+    padding-top: 1%;
+}
+
+
 /* -- buy button -- */
 .button-buy {
-    align-self: center;
-    background-color: var(--header-background);
-    background-image: none;
-    background-position: 0 90%;
-    background-repeat: repeat no-repeat;
-    background-size: 4px 3px;
-    border-style: solid;
-    border-width: 2px;
-    box-shadow: var(--default) 15px 28px 25px -18px;
-    box-sizing: border-box;
-    color: var(--default);
-    cursor: pointer;
     display: inline-block;
-    font-size: 1rem;
-    line-height: 23px;
-    outline: none;
-    padding: .75rem;
-    text-decoration: none;
-    transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    background: var(--sticky-cart-bottom);
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    margin: 0;
   }
   
-.button-buy:hover {
-    box-shadow: var(--default) 2px 8px 8px -5px;
-    transform: translate3d(0, 2px, 0);
-}
+  .effect1 {
+    color: var(--default);
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+    right: 0%;
+    padding: 10px 50px 10px 20px;
   
-.button-buy:focus {
-    box-shadow: var(--default) 2px 8px 4px -6px;
-}
+    -webkit-transition: all 0.3s;
+  
+    -o-transition: all 0.3s;
+  
+    transition: all 0.3s;
+  
+    -webkit-transform: scale(1);
+  
+        -ms-transform: scale(1);
+  
+            transform: scale(1); /*change scale(3) to scale(1)*/
+  }
+  
+  .effect1 .bg {
+    background: var(--default);
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
+    z-index: -1;
+  
+    -webkit-transition: all 0.3s;
+  
+    -o-transition: all 0.3s;
+  
+    transition: all 0.3s;
+  }
+  
+  .effect1:hover {
+    padding-right: 20px;
+    color: var(--buy-btn-text);
+  }
+  
+  .effect1:hover .bg {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  
+  .effect1 .bg:before, .effect1 .bg:after {
+    content: '';
+    height: 2px;
+    width: 10px;
+    background: var(--default);
+    position: absolute;
+    right: -2px;      
+    -webkit-transition: all 0.3s;      
+    -o-transition: all 0.3s;      
+    transition: all 0.3s;
+  }
+  
+  .effect1 .bg:before {
+    bottom: 3px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .effect1 .bg:after{
+    top: 3px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  
+  .effect1:hover .bg:before,
+  .effect1:hover .bg:after{
+    right: 0;
+  }
+  
+  .effect1:hover .bg:before{
+    bottom: 6px;
+  }
+  
+  .effect1:hover .bg:after{
+    top: 6px;
+  }
 
 @media screen and (max-width: 768px){
     main div:first-of-type{
@@ -165,18 +250,22 @@ main div:not(:first-of-type) div div:first-of-type{
     }
     p:not(:first-of-type){
         padding-top: 25px;
-        
     }
     main div:not(:first-of-type){
-        margin-left: 0;
-        margin-right: 0;
-        width: 98.7%;
-    }
-    .button-buy{
-        margin-right: 25px;
+        margin-left: 0%;
+        margin-right: 0%;
     }
     .quantity.buttons_added {
         margin-top: 12px;
         margin-bottom: 12px;
+    }
+    .footer div div{
+        box-shadow: none;
+    }
+    table {
+        box-shadow: none;
+    }
+    .sticky-bottom p {
+        width: max-content;
     }
 }
