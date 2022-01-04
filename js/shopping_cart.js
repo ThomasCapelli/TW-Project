@@ -4,15 +4,15 @@ function totalUpdate(){
         tot = tot + parseFloat($(this).html()); 
     });
     if(document.getElementById("carro_buoi").checked){
-        $("main div div p:last-of-type").html("Totale:");
+        $(".sticky-bottom p").html("Totale:");
         tot = tot + 5;
-        $("main div div p:last-of-type").html($("main div div p:last-of-type").html()+" "+tot+"$");
+        $(".sticky-bottom p").html($(".sticky-bottom p").html()+" "+tot+"$");
         tot=0;
     }
     if(document.getElementById("carro_cavalli").checked){
-        $("main div div p:last-of-type").html("Totale:");
+        $(".sticky-bottom p").html("Totale:");
         tot = tot + 20;
-        $("main div div p:last-of-type").html($("main div div p:last-of-type").html()+" "+tot+"$");
+        $(".sticky-bottom p").html($(".sticky-bottom p").html()+" "+tot+"$");
         tot=0;
     }
 }

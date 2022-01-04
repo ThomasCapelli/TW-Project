@@ -37,7 +37,7 @@ main div{
 .footer > div:first-child{
     border-top: 1px solid;
     border-bottom: 1px solid;
-    bottom: 0;
+    margin-bottom: 100px;
 }
 .footer div div span{
     display: block;
@@ -58,50 +58,6 @@ main div{
     margin-top: 5px;
     margin-bottom: 10px;
 }
-.footer div div:last-of-type {
-    border: none;
-    box-shadow: none;
-    display: inline-block;
-    margin-bottom: 5px;
-    box-sizing: border-box;
-    padding-bottom: 20px;
-    padding-left: 0%;
-}
-.footer div p {
-    display: inline-block;
-    font-size: 2rem;
-    width: 40%;
-}
-
-/* main div:not(:first-of-type){
-    border: 3px solid var(--default);
-    bottom: 0;
-    width: 80%; 
-    position: fixed;
-    padding: 0;
-    height: 200px;
-    margin-bottom: 0;;
-}
-main div:not(:first-of-type) div{
-    margin-top: 0;
-    padding-top: 15px;
-}
-main div:not(:first-of-type) div div:not(:first-of-type){
-    border: none;
-    padding: 0;
-    display: block;
-    margin: 0;
-    position: relative;
-    height: 100px;
-}
-main div:not(:first-of-type) div div:first-of-type{
-    margin: 0;
-    margin-top: 50px;
-    padding: 0;
-    float: right;
-    border: none;
-} */
-
 /* -- quantity box buttons -- */
 
 .quantity {
@@ -153,7 +109,7 @@ main div:not(:first-of-type) div div:first-of-type{
 }
    
 .quantity.buttons_added .minus:hover,.quantity.buttons_added .plus:hover {
-    background: var(--default); 
+    background: var(--qty-btn-hover); 
 }
    
 .quantity input::-webkit-outer-spin-button, .quantity input::-webkit-inner-spin-button {
@@ -166,22 +122,36 @@ main div:not(:first-of-type) div div:first-of-type{
     outline: none; 
 }
 
+/* -- sticky bottom part -- */
+.sticky-bottom{
+    overflow: hidden;
+    background-color: var(--sticky-cart-bottom);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.sticky-bottom p {
+    overflow: hidden;
+    display: inline-block;
+    font-size: 2rem;
+    width: 40%;
+    padding-top: 1%;
+}
+
+
 /* -- buy button -- */
 .button-buy {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: right;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    background: var(--body_background);
-    margin-right: 0%;
-    margin-left: 37%;
+    display: inline-block;
+    background: var(--sticky-cart-bottom);
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    margin: 0;
   }
   
   .effect1 {
@@ -198,9 +168,9 @@ main div:not(:first-of-type) div div:first-of-type{
   
     transition: all 0.3s;
   
-    -webkit-transform: scale(3);
+    -webkit-transform: scale(1);
   
-        -ms-transform: scale(3);
+        -ms-transform: scale(1);
   
             transform: scale(1); /*change scale(3) to scale(1)*/
   }
@@ -224,7 +194,7 @@ main div:not(:first-of-type) div div:first-of-type{
   
   .effect1:hover {
     padding-right: 20px;
-    color: var(--account_nav_text);
+    color: var(--buy-btn-text);
   }
   
   .effect1:hover .bg {
@@ -272,43 +242,6 @@ main div:not(:first-of-type) div div:first-of-type{
   .effect1:hover .bg:after{
     top: 6px;
   }
-/* .button-buy {
-    align-self: center;
-    background-color: var(--header-background);
-    background-image: none;
-    background-position: 0 90%;
-    background-repeat: repeat no-repeat;
-    background-size: 4px 3px;
-    border-style: solid;
-    border-width: 2px;
-    box-shadow: var(--default) 15px 28px 25px -18px;
-    box-sizing: border-box;
-    color: var(--default);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1rem;
-    line-height: 23px;
-    outline: none;
-    padding: .75rem;
-    text-decoration: none;
-    transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-.button-buy:hover {
-    box-shadow: var(--default) 2px 8px 8px -5px;
-    transform: translate3d(0, 2px, 0);
-}
-  
-.button-buy:focus {
-    box-shadow: var(--default) 2px 8px 4px -6px;
-} */
 
 @media screen and (max-width: 768px){
     main div:first-of-type{
@@ -317,12 +250,10 @@ main div:not(:first-of-type) div div:first-of-type{
     }
     p:not(:first-of-type){
         padding-top: 25px;
-        
     }
     main div:not(:first-of-type){
         margin-left: 0%;
         margin-right: 0%;
-        width: 98.7%;
     }
     .quantity.buttons_added {
         margin-top: 12px;
@@ -334,16 +265,7 @@ main div:not(:first-of-type) div div:first-of-type{
     table {
         box-shadow: none;
     }
-    .button-buy{
-        display: flex;
-        justify-content: center;
-        margin-left: 0%;
-        margin-right: 0%;
-        padding-left: 60%;
-    }
-    .footer div p {
-        display: inline;
-        font-size: 2rem;
-        width: 25%;
+    .sticky-bottom p {
+        width: max-content;
     }
 }

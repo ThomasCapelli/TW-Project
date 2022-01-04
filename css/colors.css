@@ -28,8 +28,11 @@
     --grey: grey;
     --default: black;
     --account_nav_background: #d0d3d4;
-    --account_nav_main: #003b49;
+    --account_nav_main: hsl(192, 100%, 14%);
     --account_nav_text: white;
+    --buy-btn-text: white;
+    --qty-btn-hover: #52ab98;
+    --sticky-cart-bottom: #52ab98;
 }
 
 /*colors dark-mode*/
@@ -66,4 +69,7 @@
     --account_nav_background: #222831;
     --account_nav_main: #892CDC;
     --account_nav_text: white;
+    --buy-btn-text: black;
+    --qty-btn-hover: #8a2cdcb6;
+    --sticky-cart-bottom: #892CDC;
 }
