@@ -180,20 +180,22 @@ main > section > h2{
   padding: auto;
 }
 #forsale > ul li h3 {
-  margin: 10px 0 0 0;
+  margin: 10px 0 5px 0;
   overflow-x: hidden;
 }
 #forsale > ul > li a p:first-of-type {
   margin-bottom: 10px;
+  overflow-x: hidden;
 }
 #forsale > ul > li a del{
   color: var(--grey);
-  display: inline-block;
+  display: inline;
 }
 #forsale > ul > li a p:not(:first-of-type) {
   font-weight: bold;
   color: #eb0037;
-  display: inline-block;
+  display: inline;
+  margin-left: 5px;
 }
 
 /*  BODY FOOTER */
@@ -259,7 +261,7 @@ main > form > ul > li div{
   width: 80%;
   margin: 10px 10%;
 }
-main > form > ul > li > div span {
+main > form > ul > li > div label {
   position: absolute;
   display: block;
   margin: -33px 11px;
@@ -276,12 +278,12 @@ main > form > ul > li > div span {
   border: 1px solid #de071c;
   background-color: #fef0f0;
 }
-.isError + span {
+.isError + label {
   color: #de071c;
 }
 .isCorrect {
   border: 1px solid #5cc253;
-  background-color: #d7fdd4;
+  background-color: #e0fbde;
 }
 main > form > ul > li > div input {
   box-sizing: border-box;
