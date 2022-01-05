@@ -25,7 +25,7 @@
 <section id="forsale">
             <header>
                 <h2>Ultime offerte</h2>
-                <a href="">Vedi tutte</a>
+                <a href="product.php?categoryName=Saldi">Vedi tutte</a>
             </header>
             <ul>
                 <?php foreach($templateParams["scontati"] as $scontato): ?>

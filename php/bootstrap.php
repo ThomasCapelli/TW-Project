@@ -5,4 +5,5 @@
     require_once("../utils/functions.php");
     $dbh = new DatabaseHelper("localhost", "root", "", "e_commerce", 3306);
     $templateParams["webtitle"] = "NewEvo";
+    $templateParams["categorie"] = $dbh->getCategories();
 ?>

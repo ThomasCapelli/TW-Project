@@ -18,7 +18,6 @@ if(isUserLoggedIn()){
 else{
     $templateParams["titolo"] = "NewEvo - Login";
     $templateParams["nome"] = "login-form.php";
-    $templateParams["categorie"] = $dbh->getCategories();
 }
 require '../template/base.php';
 ?>

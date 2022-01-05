@@ -77,12 +77,10 @@
     </div>
     <!-- Menù categorie -->
     <nav>
-    <nav>
         <ul id="stickyNav">
-            <?php foreach($templateParams["categorie"] as $categoria): ?><li><a href="product.php?categoryid=<?php echo $categoria["IdCategoria"]; ?>"><img src="<?php echo UPLOAD_DIR.$categoria["ImmagineCategoria"]; ?>" alt="<?php echo $categoria["NomeCategoria"]; ?> category logo" class="icon" /><p><?php echo $categoria["NomeCategoria"]; ?></p></a></li><?php endforeach; ?>
+            <?php foreach($templateParams["categorie"] as $categoria): ?><li><a href="product.php?categoryName=<?php echo $categoria["NomeCategoria"]; ?>"><img src="<?php echo UPLOAD_DIR.$categoria["ImmagineCategoria"]; ?>" alt="<?php echo $categoria["NomeCategoria"]; ?> category logo" class="icon" /><p><?php echo $categoria["NomeCategoria"]; ?></p></a></li><?php endforeach; ?>
         </ul>
     </nav>
-    </nav>   
     <main >
         <?php
             if(isset($templateParams["nome"])){

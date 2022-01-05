@@ -17,12 +17,17 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function getSales($n = 6) {
-        $stmt = $this->db->prepare("SELECT NomeProdotto, Prezzo, Descrizione_Breve, Sconto 
+    public function getSales($n = -1) {
+        $query = "SELECT NomeProdotto, Prezzo, Descrizione_Breve, Sconto 
         FROM prodotto WHERE Sconto > 0 
-        ORDER BY Prezzo ASC
-        LIMIT ?");
-        $stmt->bind_param("i", $n);
+        ORDER BY Prezzo ASC";
+        if($n > 0){
+            $query .= " LIMIT ?";
+        }
+        $stmt = $this->db->prepare($query);
+        if($n > 0){
+            $stmt->bind_param('i',$n);
+        }
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -46,22 +51,20 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function getProductsByCategory($categoryId) {
-        $stmt = $this->db->prepare("SELECT * FROM prodotto WHERE IdCategoria = ?");
-        $stmt->bind_param("i", $categoryId);
+    public function getProductsByCategory($NomeCategoria) {
+        $stmt = $this->db->prepare("SELECT * FROM prodotto p, categoria c WHERE c.NomeCategoria = ? AND c.IdCategoria = p.IdCategoria");
+        $stmt->bind_param("s", $NomeCategoria);
         $stmt->execute();
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function getCategoryById($categoryId) {
-        $stmt = $this->db->prepare("SELECT * FROM categoria WHERE IdCategoria = ?");
-        $stmt->bind_param("i", $categoryId);
+    public function getProducts() {
+        $stmt = $this->db->prepare("SELECT * FROM prodotto");
         $stmt->execute();
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-
 }
 ?>
