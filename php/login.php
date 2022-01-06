@@ -1,6 +1,6 @@
 <?php
 require_once 'bootstrap.php';
-$templateParams["js"] = array("../js/jquery-3.4.1.min.js", "../js/form.js", "../js/sticky-nav.js","../js/account_nav.js");
+$templateParams["js"] = array("../js/jquery-3.4.1.min.js", "../js/form.js");
 if(isset($_POST["username"]) && isset($_POST["password"])){
     $login_result = $dbh->checkLogin($_POST["username"], $_POST["password"]);
     if(count($login_result)==0){
@@ -17,7 +17,7 @@ if(isUserLoggedIn()){
 }
 else{
     $templateParams["titolo"] = "NewEvo - Login";
-    $templateParams["nome"] = "login-form.php";
+    $templateParams["nome"] = "../template/login-form.php";
 }
 require '../template/base.php';
 ?>

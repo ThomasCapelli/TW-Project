@@ -21,11 +21,18 @@ function passwordConfirmCheck(element) {
             element.parent().append("<p id='error'>Le password inserite non corrispondono</p>");
         }
     }  
-    else if(isValuePresent(element)){
-        element.addClass("isCorrect");
-        element.removeClass("isError");
-        getError(element).remove();
-   }
+    else {
+        if (isValuePresent(element)) {
+            element.removeClass("isError");
+            element.addClass("isCorrect");
+            getError(element).remove();
+        } else {
+            element.removeClass("isError");
+            element.removeClass("isCorrect");
+            getError(password).remove();
+        }
+    }
+    
     
 }
 function isValuePresent(element) {
@@ -35,7 +42,7 @@ function isValuePresent(element) {
     return false;
 }
 function getError(element) {
-    return element.next().next().filter("#error");
+    return element.next().filter("#error");
 }
 function canEnable(input) {
     let canEnable = true;
@@ -52,7 +59,7 @@ $(document).ready(function(){
         $(this).prev().addClass("moved");
     });
     input.focusout(function(){
-        if(!isValuePresent($(this))) {
+        if(!$(this).is("#data") && !isValuePresent($(this))) {
             $(this).prev().removeClass("moved");
         }
     });

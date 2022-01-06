@@ -14,5 +14,4 @@
     function isUserLoggedIn(){
         return !empty($_SESSION["email"]);
     }
-
 ?>

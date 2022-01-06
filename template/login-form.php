@@ -5,21 +5,15 @@
     <?php endif; ?>
     <ul>
         <li>
-            <div>
-                <input type="text" id="username" name="username"/>
-                <label for="username">Username</label>
-            </div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"/>
         </li>
         <li>
-            <div>
-                <input type="password" id="password" name="password"/>
-                <label for="password">Password</label>
-            </div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
         </li>
         <li>
-            <div>
-                <input type="submit" name="submit" value="Accedi"/>
-            </div>          
+            <input type="submit" name="submit" value="Accedi"/>      
         </li>
         <li>
             <p>Non hai ancora un profilo? <a href="sign.php">Registrati qui!</a></p>

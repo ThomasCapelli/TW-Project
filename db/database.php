@@ -73,5 +73,14 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function SignUp($nomeUtente, $email, $nome, $cognome, $data, $password, $indirizzo) {
+        $stmt = $this->db->prepare("INSERT INTO utente
+        '(?, ?, ?, ?, ?, ?, ?)'");
+        $stmt->bind_param("sssssss", $nomeUtente, $email, $nome, $cognome, $data, $password, $indirizzo);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 ?>

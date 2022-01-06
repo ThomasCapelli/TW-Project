@@ -21,7 +21,7 @@
     <link href="../css/styleAcc.css" rel="stylesheet">
     <title><?php echo $templateParams["titolo"]; ?></title>
 </head>
-<body class="light_mode">
+<body class="light_mode"?>
     <header>
         <!-- Menù iniziale con logo e login-->
         <nav>
@@ -76,11 +76,13 @@
         </div>
     </div>
     <!-- Menù categorie -->
-    <nav>
-        <ul id="stickyNav">
-            <?php foreach($templateParams["categorie"] as $categoria): ?><li><a href="product.php?categoryName=<?php echo $categoria["NomeCategoria"]; ?>"><img src="<?php echo UPLOAD_DIR.$categoria["ImmagineCategoria"]; ?>" alt="<?php echo $categoria["NomeCategoria"]; ?> category logo" class="icon" /><p><?php echo $categoria["NomeCategoria"]; ?></p></a></li><?php endforeach; ?>
-        </ul>
-    </nav>
+    <?php if($templateParams["nome"] != "../template/login-form.php" && $templateParams["nome"] != "../template/signUp-form.php"):?>
+        <nav>
+            <ul id="stickyNav">
+                <?php foreach($templateParams["categorie"] as $categoria): ?><li><a href="product.php?categoryName=<?php echo $categoria["NomeCategoria"]; ?>"><img src="<?php echo UPLOAD_DIR.$categoria["ImmagineCategoria"]; ?>" alt="<?php echo $categoria["NomeCategoria"]; ?> category logo" class="icon" /><p><?php echo $categoria["NomeCategoria"]; ?></p></a></li><?php endforeach; ?>
+            </ul>
+        </nav>
+    <?php endif;?>
     <main >
         <?php
             if(isset($templateParams["nome"])){
@@ -91,7 +93,7 @@
     <footer>
         <section>
             <h3>Torna su</h3>
-            <a href="#" ><div><img src="../icons/shield_color.png" alt="Website Logo"/></div><p>Aratri.com</p></a>
+            <a href="#" ><div><img src="../icons/shield_color.png" alt="Website Logo"/></div><p><?php echo $templateParams["webtitle"]; ?></p></a>
         </section>
         <section>
             <h3>Trovaci su</h3>

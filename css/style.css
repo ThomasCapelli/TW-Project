@@ -203,7 +203,7 @@ main > section > h2{
 body > footer {
   padding: 20px;
   background-color: var(--footer-background);
-  bottom: 0;
+  bottom: 0%;
 }
 body > footer section {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -212,7 +212,6 @@ body > footer section {
   text-align: center;
 }
 body > footer section + section:before {
-  content: "";
   border-top: 1px solid var(--text);
   width: 40%;
   display: block;
@@ -257,11 +256,11 @@ main > form {
 main > form > ul {
   list-style: none;
 }
-main > form > ul > li div{
+main > form > ul > li {
   width: 80%;
   margin: 10px 10%;
 }
-main > form > ul > li > div label {
+main > form > ul > li > label {
   position: absolute;
   display: block;
   margin: 12px 11px;
@@ -285,7 +284,7 @@ main > form > ul > li > div label {
   border: 1px solid #5cc253;
   background-color: #e0fbde;
 }
-main > form > ul > li > div input {
+main > form > ul > li > input {
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
@@ -294,22 +293,22 @@ main > form > ul > li > div input {
   border: 1px solid var(--grey);
   border-radius: 5px;
 }
-main > form > ul > li > div input[type=submit] {
+main > form > ul > li > input[type=submit] {
   padding-top: 0;
   background-color: #0070c9;
   color: white;
   cursor: pointer;
 }
-main > form > ul > li > div input[type=submit]:disabled {
+main > form > ul > li > input[type=submit]:disabled {
   background-color: #006fc95b;
   color: var(--grey);
 }
-main > form > ul > li > div input:focus {
+main > form > ul > li > input:focus {
   border: 1px solid #0070c9;
   outline: 0;
   box-shadow: 0 0 0 3px #56acf37a;
 }
-main > form > ul > li > div a {
+main > form > ul > li > a {
   text-decoration: none;
 }
 #error {

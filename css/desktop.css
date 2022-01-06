@@ -38,9 +38,6 @@ body > nav > ul a:hover img{
 
 body > footer {
   text-align: center;
-  bottom:0;
-  position: fixed;
-  width: 100%;
 }
 body > footer section {
   color: var(--default);

@@ -2,7 +2,7 @@
 .account_background{
     margin: 9px 0;
     position: relative;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;
