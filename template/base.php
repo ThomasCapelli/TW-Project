@@ -28,8 +28,8 @@
             <div id="logo"><a href="index.php" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a></div>
             <span class="removable"><a href="index.php"><?php echo $templateParams["webtitle"]; ?></a></span>
             <?php if(isUserLoggedIn()): ?>
-                <div class="login"><a><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $_SESSION["nomeutente"]; ?></p></a></div>
-                <div id="cart"><a href="shopping_cart.html" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p></a></div>
+                <div class="account"><a><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $_SESSION["nomeutente"]; ?></p></a></div>
+                <div id="cart"><a href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p></a></div>
             <?php elseif(basename($_SERVER['PHP_SELF'])=="login.php"): ?>
                 <div class="login"><a href="sign.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Registrati</p></a></div>
             <?php else: ?>
