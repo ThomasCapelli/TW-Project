@@ -45,6 +45,9 @@
     display: inline;
     color: var(--grey);
 }
+#products > a del + p {
+    color: red !important;
+}
 #products > a p:not(:first-of-type) {
     font-weight: bold;
     display: inline;

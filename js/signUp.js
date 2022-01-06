@@ -49,11 +49,11 @@ function canEnable(input) {
 $(document).ready(function(){
     var input = $("main form input");
     input.focus(function(){
-        $(this).next().addClass("moved");
+        $(this).prev().addClass("moved");
     });
     input.focusout(function(){
         if(!isValuePresent($(this))) {
-            $(this).next().removeClass("moved");
+            $(this).prev().removeClass("moved");
         }
     });
     input.keyup(function(e) {

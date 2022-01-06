@@ -264,21 +264,21 @@ main > form > ul > li div{
 main > form > ul > li > div label {
   position: absolute;
   display: block;
-  margin: -33px 11px;
+  margin: 12px 11px;
   pointer-events: none;
 }
 .moved {
   transform-origin: right;
   transition-duration: 0.3s;
   font-size: 12px;
-  margin: -38px 11px;
+  margin: 8px 11px;
   color: var(--grey);
 }
 .isError {
   border: 1px solid #de071c;
   background-color: #fef0f0;
 }
-.isError + label {
+.isError ~ label {
   color: #de071c;
 }
 .isCorrect {
