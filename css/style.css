@@ -31,7 +31,7 @@ header > nav > div {
 header > nav > div#cart {
   float: right
 }
-header > nav > div.login {
+header > nav > div.login , header > nav > div.account {
   float: left;
 }
 header > nav > div > a {
@@ -203,7 +203,7 @@ main > section > h2{
 body > footer {
   padding: 20px;
   background-color: var(--footer-background);
-  bottom: 0%;
+  bottom: 0;
 }
 body > footer section {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

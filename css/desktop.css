@@ -9,7 +9,6 @@ main, body > nav > ul{
   width: 80%;
   margin-left: 10%;
 }
-
 /*STICKY NAV*/
 body > nav > ul p{
   font-size: 20px;
@@ -39,6 +38,9 @@ body > nav > ul a:hover img{
 
 body > footer {
   text-align: center;
+  bottom:0;
+  position: fixed;
+  width: 100%;
 }
 body > footer section {
   color: var(--default);
@@ -82,11 +84,11 @@ body > header > nav > span > a {
 body > header > nav > div#logo {
   float: left;
 }
-body > header > nav > div.login, header > nav > div#cart {
+body > header > nav > div.login, header > nav > div#cart, body > header > nav >div.account {
   box-sizing: border-box;
   float: right;
 }
-body > header > nav > div.login{
+body > header > nav > div.login, body > header > nav >div.account{
   margin-right: 10px;
   cursor: pointer;
   background-color: var(--header-main-button);

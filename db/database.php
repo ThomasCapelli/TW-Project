@@ -66,5 +66,12 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function getCarrello() {
+        $stmt = $this->db->prepare("SELECT * FROM dettaglio_ordine");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 ?>
