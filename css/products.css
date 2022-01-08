@@ -1,7 +1,15 @@
-#products > header > h1 {
+#products ul {
+    list-style: none;
+}
+#products ul > li > header > h2 {
     color: var(--text);
 }
-#products > a {
+#products ul > li  {
+    max-height: 100%;
+    width: 98%;
+    margin: 10px 1%;
+}
+#products ul > li > a {
     color: var(--product-text);
     text-decoration: none;
     text-align: center;
@@ -10,45 +18,45 @@
     width: 98%;
     margin: 10px 1%;
 }
-#products > a > article > header > div {
+#products ul > li > a > article > header > div {
     width: 100%;
     height: 150px;
     padding: 20px 0;
     background-color: rgb(216, 216, 216);
 }
-#products > a > article > section {
+#products ul > li > a > article > section {
     background-color: var(--product-text-background);
     text-align: left;
     padding: 10px;
 }
-#products > a article:hover {
+#products ul > li > a article:hover {
     transition: 0.5s;
     box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
 }
-#products > a article:hover div {
+#products ul > li > a article:hover div {
     transition: 0.5s;
     background-color: var(--header-hover);
 }
-#products > a > article > header > div > img {
+#products > ul > li > a > article > header > div > img {
     border-radius: 20px;
     max-width: 90%;
     max-height: 100%;
     object-fit: fill;
 }
-#products > a p:first-of-type {
+#products > ul > li > a p:first-of-type {
     margin-bottom: 5px;
 }
-#products > a section > h3 {
+#products > ul > li > a section > h3 {
     margin-bottom: 5px;
 }
-#products > a del {
+#products > ul > li > a del {
     display: inline;
     color: var(--grey);
 }
-#products > a del + p {
+#products > ul > li> a del + p {
     color: red !important;
 }
-#products > a p:not(:first-of-type) {
+#products ul > li > a p:not(:first-of-type) {
     font-weight: bold;
     display: inline;
     color: var(--product-text);

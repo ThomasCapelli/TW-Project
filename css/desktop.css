@@ -124,7 +124,7 @@ body > header > nav > div p {
 .removable {
   display: initial;
 }
-/*SALE PRODUCTS*/
+/*PRODUCTS*/
 
 #forsale > header > a {
   margin: 10px 0px;
@@ -140,12 +140,12 @@ body > header > nav > div p {
 #forsale > ul > li h3, #forsale > ul > li p:first-of-type {
   white-space: nowrap;
 }
-#products> a {
-  width: 49.5%;
+#products > ul > li {
+  width: 49.8%;
   margin: 5px 0;
   display: inline-block;
 }
-#products > a:nth-child(odd) {
+#products ul > li:nth-child(even) {
   float: right;
 }
 

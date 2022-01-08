@@ -18,7 +18,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     public function getSales($n = -1) {
-        $query = "SELECT NomeProdotto, Prezzo, Descrizione_Breve, Sconto 
+        $query = "SELECT *
         FROM prodotto WHERE Sconto > 0 
         ORDER BY Prezzo ASC";
         if($n > 0){
@@ -43,7 +43,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }    
     public function getBestSellers($n = 3) {
-        $stmt = $this->db->prepare("SELECT NomeProdotto, Prezzo, Descrizione_Breve
+        $stmt = $this->db->prepare("SELECT *
         FROM prodotto ORDER BY Prezzo DESC LIMIT ?");
         $stmt->bind_param("i", $n);
         $stmt->execute();
@@ -66,6 +66,14 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function getProductById($idProdotto, $idcategoria) {
+        $stmt = $this->db->prepare("SELECT * FROM prodotto WHERE IdProdotto = ? AND IdCategoria = ?");
+        $stmt->bind_param("ii", $idProdotto, $idcategoria);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function getCarrello() {
         $stmt = $this->db->prepare("SELECT * FROM dettaglio_ordine");
         $stmt->execute();
@@ -73,10 +81,31 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function SignUp($nomeUtente, $email, $nome, $cognome, $data, $password, $indirizzo) {
+    public function signUp($nomeUtente, $email, $nome, $cognome, $data, $password, $indirizzo) {
         $stmt = $this->db->prepare("INSERT INTO utente
-        '(?, ?, ?, ?, ?, ?, ?)'");
+        VALUES (?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssss", $nomeUtente, $email, $nome, $cognome, $data, $password, $indirizzo);
+        return $stmt->execute();
+    }
+    public function validateEmail($email) {
+        $stmt = $this->db->prepare("SELECT Email FROM utente WHERE Email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function getOpzioni($idprodotto, $idcategoria) {
+        $stmt = $this->db->prepare("SELECT * FROM `opzioni_prodotto` WHERE IdCategoria = ? AND IdProdotto = ?");
+        $stmt->bind_param("ii", $idcategoria, $idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function getSize($idprodotto, $idcategoria, $colore) {
+        $stmt = $this->db->prepare("SELECT * FROM Taglia WHERE IdProdotto = ? AND IdCategoria = ? AND Colore = ?");
+        $stmt->bind_param("iis", $idprodotto, $idcategoria, $colore);
         $stmt->execute();
         $result = $stmt->get_result();
 

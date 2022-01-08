@@ -7,6 +7,9 @@
                 <li>
                     <label for="email">Email*</label>
                     <input type="text" id="email" name="email" required/>
+                    <?php if(isset($templateParams["erroreEmail"])): ?>
+                        <p><?php echo $templateParams["erroreEmail"]; ?></p>
+                    <?php endif; ?>
                 </li>
                 <li>
                     <label for="nome">Nome*</label>
