@@ -19,9 +19,10 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/desktop.css" rel="stylesheet">
     <link href="../css/styleAcc.css" rel="stylesheet">
+    <link href="../css/product_Card.css" rel="stylesheet">
     <title><?php echo $templateParams["titolo"]; ?></title>
 </head>
-<body class="light_mode"?>
+<body class="light_mode">
     <header>
         <!-- Menù iniziale con logo e login-->
         <nav>

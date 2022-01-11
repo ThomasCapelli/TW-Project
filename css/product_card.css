@@ -54,6 +54,12 @@ main > article > section > h1 {
 main > article > section > p:first-of-type {
     margin: 5px 0;
 }
+main > article > section > del {
+    color: var(--grey);
+}
+main > article > section > p:not(:first-of-type) {
+    color: red;
+}
 main > article > footer {
     text-align: center;
     padding: 15px 0;
