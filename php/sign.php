@@ -9,7 +9,7 @@
         }
         else {
             if(isset($_POST["email"]) && isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["data"]) && isset($_POST["password"]) && isset($_POST["indirizzo"])) {
-                $signup_result = $dbh->signUp($_POST["email"], $_POST["email"],$_POST["nome"], $_POST["cognome"], $_POST["data"], $_POST["password"], $_POST["indirizzo"]);
+                $signup_result = $dbh->signUp($_POST["email"],$_POST["nome"], $_POST["cognome"], $_POST["data"], $_POST["password"], $_POST["indirizzo"]);
                 if($signup_result) {
                     header("Location:"."login.php");
                 }
