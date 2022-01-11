@@ -38,10 +38,10 @@
                 </tr>
                 <?php foreach($templateParams["ordini"] as $ordine): ?>
                 <tr>
-                    <td><a href="#"><img src="<?php echo $ordine["Immagine"] ?> alt="Product image" /></a></td>
-                    <td class="price"><?php echo $ordine["Prezzo"] ?></td>
+                    <td><a href="#"><img src="<?php echo $ordine["Immagine"];?> alt="Product image" /></a><p>"<?php echo $ordine["NomeProdotto"];?> Taglia:<?php echo $ordine["Taglia"];?> Colore:<?php echo $ordine["Colore"];?>"</td>
+                    <td class="price"><?php echo $ordine["Prezzo"]; ?></td>
                     <td><div class="quantity buttons_added">
-                            <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="<?php echo $ordine["Quantità"] ?>" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                            <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="<?php echo $ordine["Quantità"]; ?>" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
                         </div>
                     </td>
                     <td name="Totale"></td>
