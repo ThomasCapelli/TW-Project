@@ -27,25 +27,8 @@
                 <h2>Ultime offerte</h2>
                 <a href="product.php?categoryName=Saldi">Vedi tutte</a>
             </header>
-            <ul>
-                <?php foreach($templateParams["scontati"] as $scontato): ?>
-                <li>
-                    <a href="" >
-                        <article>
-                            <header>
-                                <div>
-                                    <img src="../icons/fleur-de-lis.png"/>
-                                        </div>
-                            </header>
-                            <section>
-                                <h3><?php echo $scontato["NomeProdotto"]; ?></h3>
-                                <p><?php echo $scontato["Descrizione_Breve"]; ?></p>
-                                <del><?php echo $scontato["Prezzo"]; ?></del>
-                                <p><?php echo calculatePrice($scontato["Prezzo"], $scontato["Sconto"]) ?></p>
-                            </section>
-                        </article>
-                    </a>     
-                </li> 
-                <?php endforeach; ?>         
-            </ul>
+            <?php if(isset($templateParams["prod"])) {
+                require($templateParams["prod"]);
+            }
+            ?>
 </section>

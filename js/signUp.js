@@ -4,7 +4,7 @@ function passwordCheck(password) {
         if(getError(password).val() === undefined)
           {
               password.addClass("isError");
-              password.parent().append("<p id='error'>Password non valida. La password deve contenere almeno 8 caratteri, 1 lettera maiuscola e 1 numero</p>");
+              password.parent().append("<p id='error'>Password non valida. La password deve contenere almeno 8 caratteri e 1 numero</p>");
           }
      }
      else {
@@ -20,20 +20,14 @@ function passwordConfirmCheck(element) {
             element.addClass("isError");
             element.parent().append("<p id='error'>Le password inserite non corrispondono</p>");
         }
-    }  
+    } 
     else {
-        if (isValuePresent(element)) {
+        if(isValuePresent(element)) {
             element.removeClass("isError");
-            element.addClass("isCorrect");
             getError(element).remove();
-        } else {
-            element.removeClass("isError");
-            element.removeClass("isCorrect");
-            getError(password).remove();
+            element.addClass("isCorrect");
         }
     }
-    
-    
 }
 function isValuePresent(element) {
     if(element.val().length > 0) {
@@ -42,7 +36,7 @@ function isValuePresent(element) {
     return false;
 }
 function getError(element) {
-    return element.next().filter("#error");
+    return element.next("p#error");
 }
 function canEnable(input) {
     let canEnable = true;
@@ -58,6 +52,22 @@ $(document).ready(function(){
     input.focus(function(){
         $(this).prev().addClass("moved");
     });
+    if(input.is("#data")) {
+        input.change(function() {
+            if ($(this).is("#data") && isValuePresent($(this))){
+                canEnable($(this));
+                $(this).addClass("isCorrect");
+            }
+            else if($(this).is("#data")) {
+                $(this).removeClass("isCorrect");
+            }
+            if(canEnable(input)) {
+                $("input[type=submit]").attr("disabled", false);
+            } else {
+                $("input[type=submit]").attr("disabled", true);
+            }
+        });
+    }
     input.focusout(function(){
         if(!$(this).is("#data") && !isValuePresent($(this))) {
             $(this).prev().removeClass("moved");
