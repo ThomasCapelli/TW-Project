@@ -20,7 +20,7 @@
         $templateParams["nome"] = "../template/signUp-form.php";
     }
     $templateParams["titolo"] = "NewEvo - SignUp";
-    $templateParams["js"] = array("../js/jquery-3.4.1.min.js", "../js/dark-mode.js", "../js/signUp.js");
+    $templateParams["js"] = array("../js/jquery-3.4.1.min.js", "../js/dark-mode.js", "../js/signUp.js", "../js/menu.js");
 
     require '../template/base.php';
 ?>

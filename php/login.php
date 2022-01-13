@@ -1,6 +1,6 @@
 <?php
 require_once 'bootstrap.php';
-$templateParams["js"] = array("../js/jquery-3.4.1.min.js", "../js/form.js");
+$templateParams["js"] = array("../js/jquery-3.4.1.min.js", "../js/form.js", "../js/menu.js");
 if(isset($_POST["username"]) && isset($_POST["password"])){
     $login_result = $dbh->checkLogin($_POST["username"], $_POST["password"]);
     if(count($login_result)==0){

@@ -1,6 +1,7 @@
 <?php
     function calculatePrice($prezzo, $sconto){
-        return $prezzo - ($prezzo * ($sconto / 100));
+        $price = $prezzo - ($prezzo * ($sconto / 100));
+        return number_format($price, 2);
     }
     function isActive($pagename){
         if(basename($_SERVER['PHP_SELF'])==$pagename){
@@ -13,5 +14,11 @@
     }
     function isUserLoggedIn(){
         return !empty($_SESSION["email"]);
+    }
+    function logOut(){
+        if (isset($_SESSION["email"])) {
+            unset($_SESSION["email"]);
+            unset($_SESSION["nomeutente"]);
+        } 
     }
 ?>

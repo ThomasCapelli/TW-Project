@@ -9,7 +9,20 @@ class DatabaseHelper{
             die("connessione al DB fallita");
         }
     }
-    
+    public function changeMode($mode, $email) {
+        $stmt = $this->db->prepare("UPDATE utente
+        SET DarkMode = ? WHERE Email = ?");
+        $stmt->bind_param('is', $mode, $email);
+        return $stmt->execute();;
+    }
+    public function getMode($email) {
+        $stmt = $this->db->prepare("SELECT DarkMode FROM utente WHERE Email = ?");
+        $stmt->bind_param('s',$email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function getCategories() {
         $stmt = $this->db->prepare("SELECT * FROM categoria");
         $stmt->execute();
@@ -69,6 +82,14 @@ class DatabaseHelper{
     public function getProductById($idProdotto, $idcategoria) {
         $stmt = $this->db->prepare("SELECT * FROM prodotto WHERE IdProdotto = ? AND IdCategoria = ?");
         $stmt->bind_param("ii", $idProdotto, $idcategoria);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function getFirstOption($idProdotto) {
+        $stmt = $this->db->prepare("SELECT Colore FROM opzioni_prodotto WHERE IdProdotto = ? LIMIT 1");
+        $stmt->bind_param("i", $idProdotto);
         $stmt->execute();
         $result = $stmt->get_result();
 

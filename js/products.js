@@ -12,6 +12,11 @@ $(document).ready(function(){
             $(".size").addClass("visible");
         }
     });
+    $("main > article > header > ul > li").click(function () {
+        $(this).nextAll().removeClass("imageselected");
+        $(this).prevAll().removeClass("imageselected");
+        $(this).addClass("imageselected");
+    });
     $(".size li:first-of-type").click(function () {
         remove();
     });

@@ -14,30 +14,53 @@
     endif;
     ?>
 
-    <link href="../css/products.css" rel="stylesheet">
+    <link href="../css/product_page.css" rel="stylesheet">
     <link href="../css/colors.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/desktop.css" rel="stylesheet">
     <link href="../css/styleAcc.css" rel="stylesheet">
-    <link href="../css/product_Card.css" rel="stylesheet">
+    <link href="../css/single_product.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
+    <link href="../css/menu.css" rel="stylesheet">
+    <?php if(basename($_SERVER['PHP_SELF'])=="cart.php"): ?>
+        <link href="../css/style_cart.css" rel="stylesheet">
+    <?php endif; ?>
     <title><?php echo $templateParams["titolo"]; ?></title>
 </head>
-<body class="light_mode">
+<body class="<?php echo $templateParams["mode"]; ?>">
     <header>
         <!-- Menù iniziale con logo e login-->
         <nav>
-            <div id="logo"><a href="index.php" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a></div>
+            <div class="logo"><a href="index.php" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a></div>
             <span class="removable"><a href="index.php"><?php echo $templateParams["webtitle"]; ?></a></span>
             <?php if(isUserLoggedIn()): ?>
                 <div class="account"><a><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $_SESSION["nomeutente"]; ?></p></a></div>
-                <div id="cart"><a href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p></a></div>
+                <div class="cart"><a href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p></a></div>
             <?php elseif(basename($_SERVER['PHP_SELF'])=="login.php"): ?>
                 <div class="login"><a href="sign.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Registrati</p></a></div>
             <?php else: ?>
                 <div class="login"><a href="login.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Accedi</p></a></div>
             <?php endif; ?> 
+            <div class="menu"><a><img src="../icons/menu.png" alt="General menu logo" class="icon" /><p>Menu</p></a></div>
         </nav>
     </header>
+    <!--Menù categorie a comparsa-->
+    <ul class="menu">
+        <li>
+            <div><img src="../icons/menu_close.png" alt="Close general menu icon" class="icon"></div>
+        </li>
+        <li>
+            <a href="product.php?categoryName=All">Tutti i prodotti</a>
+        </li>
+        <?php foreach($templateParams["categorie"] as $categoria): ?>
+        <li>
+            <a href="product.php?categoryName=<?php echo $categoria["NomeCategoria"];?>"><?php echo $categoria["NomeCategoria"];?></a>
+        </li>
+        <?php endforeach; ?>
+        <li>
+            <a href="product.php?categoryName=Saldi">Saldi</a>
+        </li>
+    </ul>
     <!--Menù a comparsa quando si clicca sull'icona account-->
     <div class="account_background">
         <div class="account_navigation">
@@ -67,7 +90,7 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href=#>
+                    <a href="logout.php" >
                         <span class="icon_A_nav"><img src="../icons/gate.png" alt="Logout logo"/></span>
                         <span class="text_A_nav">Logout</span>
                     </a>
@@ -77,7 +100,7 @@
         </div>
     </div>
     <!-- Menù categorie -->
-    <?php if($templateParams["nome"] != "../template/login-form.php" && $templateParams["nome"] != "../template/signUp-form.php"):?>
+    <?php if($templateParams["nome"] != "../template/login-form.php" && $templateParams["nome"] != "../template/signUp-form.php" && $templateParams["nome"] != "../template/shopping_cart.php") :?>
         <nav>
             <ul id="stickyNav">
                 <?php foreach($templateParams["categorie"] as $categoria): ?><li><a href="product.php?categoryName=<?php echo $categoria["NomeCategoria"]; ?>"><img src="<?php echo UPLOAD_DIR.$categoria["ImmagineCategoria"]; ?>" alt="<?php echo $categoria["NomeCategoria"]; ?> category logo" class="icon" /><p><?php echo $categoria["NomeCategoria"]; ?></p></a></li><?php endforeach; ?>

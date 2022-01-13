@@ -20,7 +20,6 @@
                 <span class="dots"></span>
             <?php endforeach; ?>
         </div>
-        
 </section>
 <section id="forsale">
             <header>
