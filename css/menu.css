@@ -13,7 +13,10 @@ body > ul.menu {
 body > ul.menu li:first-of-type {
     margin-top: 5px;
     text-align: right;
+<<<<<<< HEAD
     border-bottom: 1px solid var(--text) ;
+=======
+>>>>>>> dce52e6b803971258300e9212a3a4ff5f64b8fb3
 }
 body > ul.menu li:first-of-type > div {
     height: 40px;

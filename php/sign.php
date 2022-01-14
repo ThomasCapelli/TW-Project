@@ -19,5 +19,6 @@
         }
     }
     $templateParams["nome"] = "../template/signUp-form.php";
+
     require '../template/base.php';
 ?>

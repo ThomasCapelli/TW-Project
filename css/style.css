@@ -35,6 +35,9 @@ header > nav > div.cart, header > nav > div.menu{
 header > nav > div.login , header > nav > div.account {
   float: left;
 }
+header > nav > div.logo {
+  margin-left: 55px;
+}
 header > nav > div > a {
   color: var(--text);
   text-decoration: none;
