@@ -9,7 +9,20 @@ class DatabaseHelper{
             die("connessione al DB fallita");
         }
     }
-    
+    public function changeMode($mode, $email) {
+        $stmt = $this->db->prepare("UPDATE utente
+        SET DarkMode = ? WHERE Email = ?");
+        $stmt->bind_param('is', $mode, $email);
+        return $stmt->execute();;
+    }
+    public function getMode($email) {
+        $stmt = $this->db->prepare("SELECT DarkMode FROM utente WHERE Email = ?");
+        $stmt->bind_param('s',$email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function getCategories() {
         $stmt = $this->db->prepare("SELECT * FROM categoria");
         $stmt->execute();
@@ -74,6 +87,14 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function getFirstOption($idProdotto) {
+        $stmt = $this->db->prepare("SELECT Colore FROM opzioni_prodotto WHERE IdProdotto = ? LIMIT 1");
+        $stmt->bind_param("i", $idProdotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function getCarrello() {
         $stmt = $this->db->prepare("SELECT * FROM dettaglio_ordine");
         $stmt->execute();
@@ -84,7 +105,7 @@ class DatabaseHelper{
     public function signUp($email, $nome, $cognome, $data, $password, $indirizzo) {
         $stmt = $this->db->prepare("INSERT INTO utente
         VALUES (?, ?, ?, ?, ?, ?, ?, 0, 0)");
-        $stmt->bind_param("sssssss",$nome, $email, $nome, $cognome, $data, $password, $indirizzo);
+        $stmt->bind_param("sssssss",$email, $email, $nome, $cognome, $data, $password, $indirizzo);
         return $stmt->execute();
     }
     public function validateEmail($email) {

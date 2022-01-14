@@ -1,6 +1,6 @@
 /*colors light-mode*/
 .light_mode {
-    --body_background: #f2f2f2;
+    --body_background: #f2f2f2f1;
     --header-background: #fff;
     --text: #000;
     --header-hover: #5a65fd;

@@ -22,6 +22,13 @@ function StickNav(navbar, sticky) {
 $(document).ready(function(){
     var navbar = document.getElementById("stickyNav");
     var sticky = navbar.offsetTop;
+    window.onresize = function() {
+        if($(window).width() > 768 || ($(window).width() < 768 && $(".cart").val() === undefined)) {
+            $(".logo").css("margin-left", "0");
+        } else if($(window).width() <= 768) {
+            $(".logo").css("margin-left", "55px");
+        }
+    };
     window.onscroll = function() {
         StickNav(navbar, sticky);
     };
