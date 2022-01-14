@@ -8,11 +8,11 @@
         </tr>
         <?php foreach($templateParams["ordini"] as $ordine): ?>
         <tr>
-        <td><a href="#"><img src="<?php echo $ordine["Immagine"];?> alt="Product image" /></a><p>"<?php echo $ordine["NomeProdotto"];?> Taglia:<?php echo $ordine["Taglia"];?> Colore:<?php echo $ordine["Colore"];?>"</td>
+        <td><a href="#"><img src="<?php echo $ordine["URL"];?>" alt="Product image" /></a><p><?php echo $ordine["NomeProdotto"];?> Taglia:<?php echo $ordine["Taglia"];?> Colore:<?php echo $ordine["Colore"];?></p></td>
             <td class="price"><?php echo $ordine["Prezzo"]; ?></td>
                 <td>
                     <div class="quantity buttons_added">
-                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="<?php echo $ordine["Quantità"]; ?>" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="<?php echo $ordine["Quantita"]; ?>" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
                     </div>
                 </td>
             <td name="Totale"></td>
@@ -47,6 +47,6 @@
 <div class="sticky-bottom">
     <p>Totale:</p>
     <div class="button-buy">
-        <a class="effect1" href="#">Compra!<span class="bg"></span></a>
+        <a class="effect1" href="index.php">Compra!<span class="bg"></span></a>
     </div>
 </div>

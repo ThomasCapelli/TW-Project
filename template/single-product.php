@@ -1,3 +1,17 @@
+<script>
+    $(document).ready(function(){
+        $('.addToCart').click(function() {
+            var activeColor = $(".colorName").text();
+            var activeSize = $("input[name='size']:checked").val();
+            var idProd = "<?php echo $templateParams["prodotto"][0]["IdProdotto"] ?>";
+            var idCat = "<?php echo $templateParams["prodotto"][0]["IdCategoria"] ?>";
+            var idPdr = "<?php echo $templateParams["prodotto"][0]["IdProduttore"] ?>";
+            var ajaxurl = '../php/order.php';
+            var data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat), "idProduttore": parseInt(idPdr)};
+            $.post(ajaxurl, data);
+        });
+});
+</script>
 <article>
         <header>
             <div>
@@ -33,7 +47,7 @@
                     <img <?php if($templateParams["maincolor"][0]["Colore"] == $opzione["Colore"]): ?>
                         <?php echo "class='activate'"; ?>
                         <?php endif;?> src="../Icons/candle.png" alt=""></a>
-                    <p><?php echo $opzione["Colore"];?></p>
+                    <p <?php if($templateParams["maincolor"][0]["Colore"] == $opzione["Colore"]): ?> <?php echo "class='colorName'"; ?><?php endif;?>><?php echo $opzione["Colore"];?></p>
                 </li>
             <?php endforeach;?>
             </ul>
@@ -49,6 +63,6 @@
                 </li>
                 <?php endforeach;?>
             </ul>
-                <button type="button">Aggiungi al carrello</button>
+                <button class="addToCart" type="button">Aggiungi al carrello</button>
         </footer>
 </article>

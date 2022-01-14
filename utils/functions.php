@@ -19,6 +19,7 @@
         if (isset($_SESSION["email"])) {
             unset($_SESSION["email"]);
             unset($_SESSION["nomeutente"]);
+            unset($_SESSION["sessionCartToken"]);
         } 
     }
 ?>
