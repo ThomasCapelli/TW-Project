@@ -19,15 +19,19 @@ function StickNav(navbar, sticky) {
         $("#cartbutton").css("display", "none");
     }
 }
+function adaptHeader() {
+    if($(window).width() > 768 || ($(window).width() < 768 && $(".cart").val() === undefined)) {
+        $(".logo").css("margin-left", "0");
+    } else if($(window).width() <= 768) {
+        $(".logo").css("margin-left", "55px");
+    }
+}
 $(document).ready(function(){
     var navbar = document.getElementById("stickyNav");
     var sticky = navbar.offsetTop;
+    adaptHeader();
     window.onresize = function() {
-        if($(window).width() > 768 || ($(window).width() < 768 && $(".cart").val() === undefined)) {
-            $(".logo").css("margin-left", "0");
-        } else if($(window).width() <= 768) {
-            $(".logo").css("margin-left", "55px");
-        }
+        adaptHeader();
     };
     window.onscroll = function() {
         StickNav(navbar, sticky);
