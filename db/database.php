@@ -174,5 +174,10 @@ class DatabaseHelper{
         $stmt->bind_param("dsi", $totale, $nome, $token);
         $stmt->execute();
     }
+    public function updateQuantity($idprodotto, $idcategoria, $idproduttore){
+        $stmt = $this->db->prepare("UPDATE dettaglio_ordine SET Quantita = Quantita + 1 WHERE IdProdotto = ? AND IdCategoria = ? AND IdProduttore = ?");
+        $stmt->bind_param("iii", $idprodotto, $idcategoria, $idproduttore);
+        $stmt->execute();
+    }
 }
 ?>
