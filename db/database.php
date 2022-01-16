@@ -138,7 +138,7 @@ class DatabaseHelper{
     public function signUp($email, $nome, $cognome, $data, $password, $indirizzo) {
         $stmt = $this->db->prepare("INSERT INTO utente
         VALUES (?, ?, ?, ?, ?, ?, ?, 0, 0)");
-        $stmt->bind_param("sssssss",$nome, $email, $nome, $cognome, $data, $password, $indirizzo);
+        $stmt->bind_param("sssssss",$email, $email, $nome, $cognome, $data, $password, $indirizzo);
         return $stmt->execute();
     }
     public function validateEmail($email) {

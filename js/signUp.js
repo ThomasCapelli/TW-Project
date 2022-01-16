@@ -1,4 +1,5 @@
 const pattern = /^(?:[0-9]+[a-z]|[a-z]+[0-9])[a-z0-9]*$/i;
+const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 function passwordCheck(password) {
     if(password.val()===undefined || password.val().length < 8 || !pattern.test(password.val())) {
         if(getError(password).val() === undefined)
@@ -27,6 +28,18 @@ function passwordConfirmCheck(element) {
             getError(element).remove();
             element.addClass("isCorrect");
         }
+    }
+}
+function emailCheck(email) {
+    if(email.val() === undefined || !emailPattern.test(email.val())) {
+        if(getError(email).val() === undefined) {
+            email.addClass("isError");
+            email.parent().append("<p id='error'>Inserire un email valida</p>");
+        }
+    }
+    else {
+        email.removeClass("isError");
+        getError(email).remove();
     }
 }
 function isValuePresent(element) {
@@ -79,6 +92,8 @@ $(document).ready(function(){
             passwordConfirmCheck($("#confirm"));
         } else if($(this).is("#confirm")) {
             passwordConfirmCheck($(this));
+        } else if($(this).is("#email")) {
+            emailCheck($(this));
         }
         if(isValuePresent($(this)) && getError($(this)).val() === undefined) {
             $(this).addClass("isCorrect");
