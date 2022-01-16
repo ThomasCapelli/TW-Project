@@ -1,7 +1,7 @@
 <?php
     require_once '../php/bootstrap.php';
     $templateParams["titolo"] = "NewEvo - SignUp";
-    $templateParams["js"] = array("../js/jquery-3.4.1.min.js", "../js/dark-mode.js", "../js/signUp.js", "../js/menu.js");
+    $templateParams["js"] = array("../js/jquery-3.4.1.min.js", "../js/dark-mode.js", "../js/signUp.js", "../js/menu.js", "../js/header.js");
     if(isset($_POST["email"])){
         $email_result = $dbh->validateEmail($_POST["email"]);
         if(count($email_result) != 0){

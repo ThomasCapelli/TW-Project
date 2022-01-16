@@ -125,7 +125,16 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     public function getSize($idprodotto, $idcategoria, $colore) {
-        $stmt = $this->db->prepare("SELECT * FROM Taglia WHERE IdProdotto = ? AND IdCategoria = ? AND Colore = ?");
+        $stmt = $this->db->prepare("SELECT * FROM Taglia WHERE IdProdotto = ? AND IdCategoria = ? AND Colore = ? AND Quantita > 0");
+        $stmt->bind_param("iis", $idprodotto, $idcategoria, $colore);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getImages($idprodotto, $idcategoria, $colore) {
+        $stmt = $this->db->prepare("SELECT URL FROM immagine_opzione WHERE IdProdotto = ? AND IdCategoria = ? AND Colore = ?");
         $stmt->bind_param("iis", $idprodotto, $idcategoria, $colore);
         $stmt->execute();
         $result = $stmt->get_result();

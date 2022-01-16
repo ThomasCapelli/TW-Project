@@ -47,9 +47,6 @@
     <!--Menù categorie a comparsa-->
     <ul class="menu">
         <li>
-            <div><img src="../icons/menu_close.png" alt="Close general menu icon" class="icon"></div>
-        </li>
-        <li>
             <a href="product.php?categoryName=All">Tutti i prodotti</a>
         </li>
         <?php foreach($templateParams["categorie"] as $categoria): ?>
@@ -72,13 +69,13 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href=#>
+                    <a href="notify.php">
                         <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/></span>
                         <span class="text_A_nav">Storico</span>
                     </a>
                 </li>
                 <li class="list">
-                    <a href=#>
+                    <a href="#">
                         <span class="icon_A_nav"><img src="../icons/message.png" alt="My messages logo"/></span>
                         <span class="text_A_nav">Messaggi</span>
                     </a>

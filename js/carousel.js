@@ -31,7 +31,9 @@ function SlideShow(n) {
 } 
 $(document).ready(function(){
     SlideShow(slidePosition);
-
+    window.setInterval(function() {
+        SlideShow(slidePosition += 1);
+    }, 4000);
     $("a").click(function(){
         if($(this).attr("class")=="back"){
             SlideShow(slidePosition += -1);
