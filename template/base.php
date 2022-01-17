@@ -35,7 +35,7 @@
             <span class="removable"><a href="index.php"><?php echo $templateParams["webtitle"]; ?></a></span>
             <?php if(isUserLoggedIn()): ?>
                 <div class="account"><a><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $_SESSION["nomeutente"]; ?></p></a></div>
-                <div class="cart"><a href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p></a></div>
+                <div class="cart"><a href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p><span class="badge"><?php echo $templateParams["cartnumber"]; ?></span></a></div>
             <?php elseif(basename($_SERVER['PHP_SELF'])=="login.php"): ?>
                 <div class="login"><a href="sign.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Registrati</p></a></div>
             <?php else: ?>
@@ -45,6 +45,7 @@
         </nav>
     </header>
     <!--Menù categorie a comparsa-->
+    <nav>
     <ul class="menu">
         <li>
             <a href="product.php?categoryName=All">Tutti i prodotti</a>
@@ -58,6 +59,7 @@
             <a href="product.php?categoryName=Saldi">Saldi</a>
         </li>
     </ul>
+    </nav>
     <!--Menù a comparsa quando si clicca sull'icona account-->
     <div class="account_background">
         <div class="account_navigation">
@@ -96,9 +98,10 @@
             </ul>
         </div>
     </div>
+    <div class="snackbar">Some text some message..</div>
     <!-- Menù categorie -->
     <?php if($templateParams["nome"] != "../template/login-form.php" && $templateParams["nome"] != "../template/signUp-form.php" && $templateParams["nome"] != "../template/shopping_cart.php") :?>
-        <nav>
+        <nav class="stickynav">
             <ul id="stickyNav">
                 <?php foreach($templateParams["categorie"] as $categoria): ?><li><a href="product.php?categoryName=<?php echo $categoria["NomeCategoria"]; ?>"><img src="<?php echo UPLOAD_DIR.$categoria["ImmagineCategoria"]; ?>" alt="<?php echo $categoria["NomeCategoria"]; ?> category logo" class="icon" /><p><?php echo $categoria["NomeCategoria"]; ?></p></a></li><?php endforeach; ?>
             </ul>

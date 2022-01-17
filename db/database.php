@@ -158,7 +158,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     public function getSize($idprodotto, $idcategoria, $colore) {
-        $stmt = $this->db->prepare("SELECT * FROM Taglia WHERE IdProdotto = ? AND IdCategoria = ? AND Colore = ? AND Quantita > 0");
+        $stmt = $this->db->prepare("SELECT * FROM Taglia WHERE IdProdotto = ? AND IdCategoria = ? AND Colore = ?");
         $stmt->bind_param("iis", $idprodotto, $idcategoria, $colore);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -187,6 +187,21 @@ class DatabaseHelper{
         $stmt = $this->db->prepare("UPDATE dettaglio_ordine SET Quantita = Quantita + 1 WHERE IdProdotto = ? AND IdCategoria = ? AND IdProduttore = ?");
         $stmt->bind_param("iii", $idprodotto, $idcategoria, $idproduttore);
         $stmt->execute();
+    }
+    public function getNumber($token) {
+        $stmt = $this->db->prepare("SELECT COUNT('*') FROM dettaglio_ordine WHERE IdOrdine = ?");
+        $stmt->bind_param("i", $token);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function getProducers(){
+        $stmt = $this->db->prepare("SELECT * FROM produttore");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 ?>

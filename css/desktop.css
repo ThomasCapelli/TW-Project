@@ -5,25 +5,25 @@
 main {
   margin-bottom: 5%;
 }
-main, body > nav > ul{
+main, body > nav.stickynav > ul{
   width: 80%;
   margin-left: 10%;
 }
 /*STICKY NAV*/
-body > nav > ul p{
+body > nav.stickynav > ul p{
   font-size: 20px;
 }
-body > nav ul li img {
+body > nav.stickynav ul li img {
   width: 35px;
 }
 /*fill effect of the navbar*/
-body > nav > ul a:hover {
+body > nav.stickynav > ul a:hover {
   transition-duration: 1s;
   transform-origin: bottom;
   box-shadow: inset 0 -80px 0 0 var(--header-hover);
   color: var(--sticky-selected-color);
 }
-body > nav > ul a:hover img{
+body > nav.stickynav > ul a:hover img{
   transition-duration: 1s;
   transform-origin: bottom;
   filter: invert(var(--filter_hover));
@@ -92,6 +92,11 @@ body > header > nav > div.login, body > header > nav >div.account{
   margin-right: 10px;
   cursor: pointer;
   background-color: var(--header-main-button);
+}
+header > nav > div.cart span{
+  top: 5px;
+  right: 170px;
+
 }
 header > nav > div > a {
   color: var(--text);

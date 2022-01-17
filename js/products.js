@@ -16,9 +16,10 @@ $(document).ready(function(){
         $(this).nextAll().removeClass("imageselected");
         $(this).prevAll().removeClass("imageselected");
         $(this).addClass("imageselected");
-    });
-    $(".size li:first-of-type").click(function () {
         remove();
+    });
+    $(".size li").click(function () {
+        $(".size").removeClass("visible");
     });
     $(window).scroll(function(){
         remove();

@@ -1,4 +1,4 @@
-body > ul.menu {
+body > nav ul.menu {
     position: fixed;
     list-style: none;
     background-color: var(--body_background);
@@ -9,20 +9,20 @@ body > ul.menu {
     z-index: 3;
     transition: 0.15s; 
 }
-body > ul.menu li:first-of-type {
+body > nav ul.menu li:first-of-type {
     border-top: 1px solid var(--text);
 }
-body > ul.menu li {
+body > nav ul.menu li {
     margin: 0px 10px 0px 10px;
 }
-body > ul.menu li:hover {
-    background-color: var(--grey);
-}
-body > ul.menu > li:last-of-type a{
-    color: red;
+body > nav ul.menu li:hover {
     font-weight: bold;
+    background-color: white;
 }
-body > ul.menu > li > a {
+body > nav ul.menu > li:last-of-type a{
+    color: red;
+}
+body > nav ul.menu > li > a {
     text-decoration: none;
     color: var(--text);
     display: block;

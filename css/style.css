@@ -32,6 +32,16 @@ header > nav > div {
 header > nav > div.cart, header > nav > div.menu{
   float: right
 }
+header > nav > div.cart span{
+  position: absolute;
+  top: 5px;
+  background-color: green;
+  border-radius: 100%;
+  padding: 1px 4px;
+  font-size: 11px;
+  color: white;
+
+}
 header > nav > div.login , header > nav > div.account {
   float: left;
 }
@@ -62,19 +72,19 @@ header > nav > div > a > p {
   display: none;
 }
 /*STICKY NAVBAR*/
-body > nav > ul{
+body > nav.stickynav > ul{
   list-style: none;
   width: 100%;
   white-space: nowrap;
   overflow: auto;
 }
-body > nav ul li{
+body > nav.stickynav ul li{
   text-decoration: none;
   display: inline-block;
   width: 25%;
   text-align: center;
 }
-body > nav ul li a {
+body > nav.stickynav ul li a {
   margin: 2px 0.5px;
   box-sizing: border-box;
   border: 1px solid var(--stickynav-border);
@@ -87,13 +97,12 @@ body > nav ul li a {
   color: var(--text);
   overflow: hidden;
 }
-body > nav ul li img {
+body > nav.stickynav ul li img {
   padding-top: 5px;
   width: 30px;
 }
-body > nav > ul > li p {
+body > nav.stickynav > ul > li p {
   font-size: 14px;
-  padding-bottom: 5px;
 }
 /*MAIN*/
 
@@ -199,7 +208,19 @@ main > section > h2{
   display: inline;
   margin-left: 5px;
 }
-
+/*SNACKBAR*/
+.snackbar {
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+  background-color: #333;
+  padding: 15px 0;
+  color: white;
+  width: 70%;
+  margin: 10px 15%;
+  border-radius: 5px;
+  text-align: center;
+}
 /*  BODY FOOTER */
 
 body > footer {

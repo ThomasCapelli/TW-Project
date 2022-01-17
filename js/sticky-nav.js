@@ -1,5 +1,5 @@
 function selected() {
-    var item = document.querySelectorAll("body nav ul li a");
+    var item = document.querySelectorAll("body nav.stickynav ul li a");
     for(let i = 0; i < item.length; i++) {
         if(item[i].href === location.href) {
             $(item[i]).addClass("selected");

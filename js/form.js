@@ -5,7 +5,15 @@ function isValuePresent(element) {
     return false;
 }
 $(document).ready(function () {
-    var input = $("main form input");
+    var input = $("main form input:not([type=radio])");
+    $("textarea").focus(function(){
+        $(this).prev().addClass("moved");
+    });
+    $("textarea").focusout(function(){
+        if(!isValuePresent($(this))) {
+            $(this).prev().removeClass("moved");
+        }
+    });
     input.focus(function(){
         $(this).prev().addClass("moved");
     });
