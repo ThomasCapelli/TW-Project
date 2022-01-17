@@ -4,6 +4,7 @@ function totalUpdate(){
         if($(this).html()==''){
             tot = tot + parseFloat($(this).parent().find('[name="quantity"]').val()) * parseFloat($(this).parent().find('.price').html());
             $(this).html($(this).html()+" "+tot+"$");
+            tot=0;
         }
         else{
             tot = tot + parseFloat($(this).html());
