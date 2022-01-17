@@ -1,18 +1,3 @@
-<script>
-    $(document).ready(function(){
-        $('.addToCart').click(function() {
-            var activeColor = $(".colorName").text();
-            var activeSize = $("input[name='size']:checked").val();
-            var idProd = "<?php echo $templateParams["prodotto"][0]["IdProdotto"] ?>";
-            var idCat = "<?php echo $templateParams["prodotto"][0]["IdCategoria"] ?>";
-            var idPdr = "<?php echo $templateParams["prodotto"][0]["IdProduttore"] ?>";
-            var ajaxurl = '../php/order.php';
-            var data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat), "idProduttore": parseInt(idPdr)};
-            console.log(data);
-            $.post(ajaxurl, data);
-        });
-});
-</script>
 <article>
         <header>
             <div>

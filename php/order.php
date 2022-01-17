@@ -22,15 +22,16 @@
         }
         $templateParams["carrello"]=$dbh->getCarrello($_SESSION["nomeutente"]);
         $flag=1;
-        debug_to_console($flag);
         foreach($templateParams["carrello"] as $elementoCart){
-            if($elementoCart["IdProdotto"]==$_POST["idProdotto"] && $elementoCart["IdCategoria"]==$_POST["idCategoria"] && $elementoCart["IdProduttore"]==$_POST["idProduttore"] && $elementoCart["Taglia"]==$_POST["size"] && $elementoCart["Colore"]== $_POST["color"]){
-                $dbh->updateQuantity($_POST["idProdotto"],$_POST["idCategoria"],$_POST["idProduttore"]);
+            if($elementoCart["IdProdotto"]==$_POST["idProdotto"] && $elementoCart["IdCategoria"]==$_POST["idCategoria"] && $elementoCart["Taglia"]==$_POST["size"] && $elementoCart["Colore"]== $_POST["color"]){
+                $dbh->updateQuantity($_POST["idProdotto"],$_POST["idCategoria"],$elementoCart["IdDettaglioOrdine"]);
                 $flag=0;
             }
         }
         if($flag==1){
-            $dbh->placeOrder($_POST["idCategoria"],$_POST["idProduttore"],$_POST["idProdotto"],$idDettaglioOrdine,$quantita, $_POST["size"], $_POST["color"], $_SESSION["nomeutente"],$_SESSION["sessionCartToken"]);
+            $templateParams["prodotto"]=$dbh->getProductById($_POST["idProdotto"],$_POST["idCategoria"]);
+            $prodotto=$templateParams["prodotto"][0];
+            $dbh->placeOrder($_POST["idCategoria"],$prodotto["IdProduttore"],$_POST["idProdotto"],$idDettaglioOrdine,$quantita, $_POST["size"], $_POST["color"], $_SESSION["nomeutente"],$_SESSION["sessionCartToken"]);
         }
     }         
 ?>

@@ -183,9 +183,14 @@ class DatabaseHelper{
         $stmt->bind_param("dsi", $totale, $nome, $token);
         $stmt->execute();
     }
-    public function updateQuantity($idprodotto, $idcategoria, $idproduttore){
-        $stmt = $this->db->prepare("UPDATE dettaglio_ordine SET Quantita = Quantita + 1 WHERE IdProdotto = ? AND IdCategoria = ? AND IdProduttore = ?");
-        $stmt->bind_param("iii", $idprodotto, $idcategoria, $idproduttore);
+    public function updateQuantity($idprodotto, $idcategoria,$idDO){
+        $stmt = $this->db->prepare("UPDATE dettaglio_ordine SET Quantita = Quantita + 1 WHERE IdProdotto = ? AND IdCategoria = ? AND IdDettaglioOrdine = ?");
+        $stmt->bind_param("iii", $idprodotto, $idcategoria, $idDO);
+        $stmt->execute();
+    }
+    public function removeFromCart($idDO){
+        $stmt = $this->db->prepare("DELETE FROM dettaglio_ordine WHERE IdDettaglioOrdine = ?");
+        $stmt->bind_param("i", $idDO);
         $stmt->execute();
     }
     public function getNumber($token) {
