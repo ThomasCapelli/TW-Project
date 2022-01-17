@@ -1,7 +1,13 @@
 function totalUpdate(){
     var tot = 0;
     $("table tr td:last-of-type").each(function(){
-        tot = tot + parseFloat($(this).html()); 
+        if($(this).html()==''){
+            tot = tot + parseFloat($(this).parent().find('[name="quantity"]').val()) * parseFloat($(this).parent().find('.price').html());
+            $(this).html($(this).html()+" "+tot+"$");
+        }
+        else{
+            tot = tot + parseFloat($(this).html());
+        }
     });
     if(document.getElementById("carro_buoi").checked){
         $(".sticky-bottom p").html("Totale:");
@@ -27,8 +33,8 @@ String.prototype.getDecimals || (String.prototype.getDecimals = function() {
         b = ("" + a).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
     return b ? Math.max(0, (b[1] ? b[1].length : 0) - (b[2] ? +b[2] : 0)) : 0
 }), jQuery(document).ready(function() {
+    totalUpdate(); 
     wcqib_refresh_quantity_increments()
-    $("td:last-of-type").html($(".price").html());
 
     $("main div div div input").click(totalUpdate);
 }), jQuery(document).on("updated_wc_div", function() {
@@ -47,7 +53,9 @@ String.prototype.getDecimals || (String.prototype.getDecimals = function() {
         e = a.attr("step");
     b && "" !== b && "NaN" !== b || (b = 0), "" !== c && "NaN" !== c || (c = ""), "" !== d && "NaN" !== d || (d = 0), "any" !== e && "" !== e && void 0 !== e && "NaN" !== parseFloat(e) || (e = 1), jQuery(this).is(".plus") ? c && b >= c ? a.val(c) : a.val((b + parseFloat(e)).toFixed(e.getDecimals())) : d && b <= d ? a.val(d) : b > 0 && a.val((b - parseFloat(e)).toFixed(e.getDecimals())), a.trigger("change");
     var sign = jQuery(this).is(".minus")? -1 : +1;
+    console.log(tot);
     var tot = (b + sign) * parseFloat(price);
+    console.log(tot);
     if(a.val()==1){
         tot = parseFloat(price);
     }
