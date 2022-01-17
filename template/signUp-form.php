@@ -13,7 +13,7 @@
                 </li>
                 <li>
                     <label for="nome">Nome*</label>
-                    <input type="text" id="nome" name="nome" required="true"/>
+                    <input type="text" id="nome" name="nome" required/>
                 </li>
                 <li>
                     <label for="cognome">Cognome*</label>

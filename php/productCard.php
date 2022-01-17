@@ -18,7 +18,8 @@
     } else {
         $templateParams["maincolor"] = $dbh->getFirstOption($idprodotto);
     }
-    $templateParams["taglie"] =  $dbh->getSize($idprodotto, $idcategoria, $templateParams["maincolor"][0]["Colore"]);
- 
+    $templateParams["taglie"] =  $dbh->getSize($idprodotto, $idcategoria, $templateParams["maincolor"][0]["Colore"]); 
+    $templateParams["images"] = $dbh->getImages($idprodotto, $idcategoria, $templateParams["maincolor"][0]["Colore"]);
+
     require '../template/base.php';
 ?>

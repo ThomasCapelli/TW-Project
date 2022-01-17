@@ -15,26 +15,22 @@
 <article>
         <header>
             <div>
-                <img src="../Icons/fleur-de-lis.png" alt="">
+                <img src="<?php echo UPLOAD_DIR.$templateParams["images"][0]["URL"]; ?>" alt="">
             </div>
             <ul class="images">
+                <?php foreach($templateParams["images"] as $image): ?>
                 <li>
-                    <img src="../Icons/candle.png" alt="">
+                    <img src="<?php echo UPLOAD_DIR.$image["URL"]; ?>" alt="">
                 </li>
-                <li>
-                    <img src="../Icons/fleur-de-lis.png" alt="">
-                </li>
-                <li>
-                    <img src="../Icons/fleur-de-lis.png" alt="">
-                </li>
+                <?php endforeach; ?>
             </ul>
         </header>
         <section>
-            <h1><?php echo $templateParams["prodotto"][0]["NomeProdotto"]; ?></h1>
+            <h2><?php echo $templateParams["prodotto"][0]["NomeProdotto"]; ?></h2>
             <p><?php echo $templateParams["prodotto"][0]["Descrizione"]; ?></p>
             <?php if($templateParams["prodotto"][0]["Sconto"] != 0):?>
-                <del><?php echo $templateParams["prodotto"][0]["Prezzo"]; ?>&#8364</del>
-                <p><?php echo calculatePrice($templateParams["prodotto"][0]["Prezzo"], $templateParams["prodotto"][0]["Sconto"]) ?>&#8364</p>
+                <del><?php echo $templateParams["prodotto"][0]["Prezzo"]; ?>&#8364;</del>
+                <p><?php echo calculatePrice($templateParams["prodotto"][0]["Prezzo"], $templateParams["prodotto"][0]["Sconto"]) ?>&#8364;</p>
             <?php else:?>
                 <p><?php echo $templateParams["prodotto"][0]["Prezzo"]; ?></p>
             <?php endif;?>
