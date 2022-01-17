@@ -8,7 +8,6 @@
             var idPdr = "<?php echo $templateParams["prodotto"][0]["IdProduttore"] ?>";
             var ajaxurl = '../php/order.php';
             var data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat), "idProduttore": parseInt(idPdr)};
-            console.log(data);
             $.post(ajaxurl, data);
         });
 });

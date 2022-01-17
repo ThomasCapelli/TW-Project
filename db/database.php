@@ -179,5 +179,10 @@ class DatabaseHelper{
         $stmt->bind_param("iii", $idprodotto, $idcategoria, $idproduttore);
         $stmt->execute();
     }
+    public function removeFromCart($idDO){
+        $stmt = $this->db->prepare("DELETE FROM dettaglio_ordine WHERE IdDettaglioOrdine = ?");
+        $stmt->bind_param("i", $idDO);
+        $stmt->execute();
+    }
 }
 ?>

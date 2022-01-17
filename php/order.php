@@ -22,7 +22,6 @@
         }
         $templateParams["carrello"]=$dbh->getCarrello($_SESSION["nomeutente"]);
         $flag=1;
-        debug_to_console($flag);
         foreach($templateParams["carrello"] as $elementoCart){
             if($elementoCart["IdProdotto"]==$_POST["idProdotto"] && $elementoCart["IdCategoria"]==$_POST["idCategoria"] && $elementoCart["IdProduttore"]==$_POST["idProduttore"] && $elementoCart["Taglia"]==$_POST["size"] && $elementoCart["Colore"]== $_POST["color"]){
                 $dbh->updateQuantity($_POST["idProdotto"],$_POST["idCategoria"],$_POST["idProduttore"]);
