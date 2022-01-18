@@ -8,7 +8,7 @@
         </tr>
         <?php foreach($templateParams["ordini"] as $ordine): ?>
         <tr>
-        <td><button type="button" name="<?php echo $ordine["IdDettaglioOrdine"];?>" title="Rimuovi elemento" class="remove_button">X</button><a href="#"><img src="<?php echo $ordine["URL"];?>" alt="Product image" /></a><p><?php echo $ordine["NomeProdotto"];?> Taglia:<?php echo $ordine["Taglia"];?> Colore:<?php echo $ordine["Colore"];?></p></td>
+        <td><button type="button" name="<?php echo $ordine["IdDettaglioOrdine"];?>" title="Rimuovi elemento" class="remove_button">X</button><a href="#"><img src="<?php echo UPLOAD_DIR.$ordine["URL"];?>" alt="Product image" /></a><p><?php echo $ordine["NomeProdotto"];?> Taglia:<?php echo $ordine["Taglia"];?> Colore:<?php echo $ordine["Colore"];?></p></td>
             <td class="price"><?php echo $ordine["Prezzo"]; ?></td>
                 <td>
                     <div class="quantity buttons_added">
@@ -42,11 +42,17 @@
             <input type="radio" id="paypal" name="pagamento" value="Paypal"/>
             <label for="Paypal">Paypal (**Strumento del demonio utilizzabile solo previa benedizione del vescovo locale)</label><br>
         </div>
+        <div>
+            <span>Email:</span>
+            <input type="text" id="emailPaypal" name="emailPaypal"/>
+            <span>Password:</span>
+            <input type="password" id="passwordPaypal" name="passwordPaypal"/>
+        </div>
     </div>
 </div>
 <div class="sticky-bottom">
     <p>Totale:</p>
     <div class="button-buy">
-        <a class="effect1" href="index.php">Compra!<span class="bg"></span></a>
+        <a class="effect1" href="">Compra!<span class="bg"></span></a>
     </div>
 </div>
