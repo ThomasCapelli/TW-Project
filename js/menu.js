@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+    var history = $("ul.history");
     var menu = $("ul.menu");
     var notify = $("ul.notify");
     $("header > nav > div.menu").click(function () {
@@ -17,6 +18,16 @@ $(document).ready(function(){
     });
     $("ul.notify li:first-of-type").click(function () { 
         notify.removeClass("visible");
+    });
+    $("ul.history li:first-of-type").click(function () { 
+        history.removeClass("visible");
+    });
+    $("#storico").click(function () {
+        if(history.hasClass("visible")) {
+            history.removeClass("visible");
+        } else {
+            history.addClass("visible");
+        }
     });
     $("#messaggi").click(function () {
         if(notify.hasClass("visible")) {

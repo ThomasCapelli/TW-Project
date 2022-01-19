@@ -33,7 +33,7 @@ body > nav ul.menu > li > a {
 }
 
 /*NOTIFICATION*/
-ul.notify {
+ul.notify, ul.history {
     list-style: none;
     max-height: 100%;
     width: 100%;
@@ -44,34 +44,34 @@ ul.notify {
     height: 0;
     top: 0;
     overflow-y: scroll;
-    z-index: 3;
+    z-index: 1;
 }
-ul.notify li:not(:first-of-type){
+ul.notify li:not(:first-of-type),  ul.history li:not(:first-of-type){
     padding: 10px 5px 0 5px;
     height: 100px;
 }
-ul.notify li {
+ul.notify li, ul.history li {
     border-bottom: 1px solid rgb(231, 231, 231);
 }
-ul.notify li:first-of-type {
+ul.notify li:first-of-type, ul.history li:first-of-type {
     padding: 10px 5px;
 }
 .new {
     border-left: 5px solid green;
 }
 @media screen and (min-width: 768px) {
-    ul.notify {
+    ul.notify, ul.history {
         max-height: 40%;
         width: 30%;
         right: 30%;
         top: 200px;
     }
-    ul.notify li:not(:first-of-type){
+    ul.notify li:not(:first-of-type),  ul.history li:not(:first-of-type){
         border-bottom: 1px solid rgb(231, 231, 231);
         padding: 10px 5px 0 15px;
         height: 100px;
     }
-    ul.notify li:first-of-type {
+    ul.notify li:first-of-type, ul.history li:first-of-type {
         padding: 10px 5px;
         cursor: pointer;
     }

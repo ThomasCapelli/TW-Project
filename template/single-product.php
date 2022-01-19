@@ -12,7 +12,7 @@
             </ul>
         </header>
         <section>
-            <h2><?php echo $templateParams["prodotto"][0]["NomeProdotto"]; ?></h2>
+            <h2 class="productName"><?php echo $templateParams["prodotto"][0]["NomeProdotto"]; ?></h2>
             <p><?php echo $templateParams["prodotto"][0]["Descrizione"]; ?></p>
             <?php if($templateParams["prodotto"][0]["Sconto"] != 0):?>
                 <del><?php echo $templateParams["prodotto"][0]["Prezzo"]; ?>&#8364;</del>

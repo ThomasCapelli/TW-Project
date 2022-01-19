@@ -22,7 +22,9 @@ $(document).ready(function(){
             $(".account_background").hide();
         };
         $(window).scroll(function(){
-            $(".account_background").hide();
+            if(!$("ul.history").hasClass("visible")){
+                $(".account_background").hide();
+            }
         });    
     }
 });
