@@ -42,11 +42,17 @@
             <input type="radio" id="paypal" name="pagamento" value="Paypal"/>
             <label for="Paypal">Paypal (**Strumento del demonio utilizzabile solo previa benedizione del vescovo locale)</label><br>
         </div>
+        <div>
+            <span>Email:</span>
+            <input type="text" id="emailPaypal" name="emailPaypal"/>
+            <span>Password:</span>
+            <input type="password" id="passwordPaypal" name="passwordPaypal"/>
+        </div>
     </div>
 </div>
 <div class="sticky-bottom">
     <p>Totale:</p>
     <div class="button-buy">
-        <a class="effect1" href="index.php">Compra!<span class="bg"></span></a>
+        <a class="effect1" href="">Compra!<span class="bg"></span></a>
     </div>
 </div>
