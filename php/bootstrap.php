@@ -17,8 +17,13 @@
     if(isUserLoggedIn()) {
         if(!isset($_SESSION["sessionCartToken"])){
             $_SESSION["sessionCartToken"]=rand(0,700);
-            $templateParams["cartnumber"] = count($dbh->getCarrello($_SESSION["nomeutente"]));
         }
+        $templateParams["cart"] = $dbh->getCarrello($_SESSION["nomeutente"]);
+            $tot = 0;
+            foreach($templateParams["cart"] as $element) {
+                $tot = $tot + $element["Quantita"];
+            }
+            $templateParams["cartnumber"] = $tot;
         $mode = $dbh->getMode($_SESSION["email"]);
         if($mode[0]["DarkMode"] == 0) {
             $templateParams["mode"] = "light_mode";
@@ -28,5 +33,6 @@
 
     } else {
         $templateParams["mode"] = "light_mode";
+        $templateParams["cartnumber"] = 0;
     }
 ?>

@@ -35,7 +35,7 @@
             <span class="removable"><a href="index.php"><?php echo $templateParams["webtitle"]; ?></a></span>
             <?php if(isUserLoggedIn()): ?>
                 <div class="account"><a><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $_SESSION["nomeutente"]; ?></p></a></div>
-                <div class="cart"><a href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p><span class="badge"><?php echo $templateParams["cartnumber"]; ?></span></a></div>
+                <div class="cart"><a href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p><span class="badge"></span></a></div>
             <?php elseif(basename($_SERVER['PHP_SELF'])=="login.php"): ?>
                 <div class="login"><a href="sign.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Registrati</p></a></div>
             <?php else: ?>
@@ -44,6 +44,42 @@
             <div class="menu"><a><img src="../icons/menu.png" alt="General menu logo" class="icon" /><p>Menu</p></a></div>
         </nav>
     </header>
+    
+    <ul class="notify">
+        <li>
+            Close
+        </li>
+        <li>
+            text
+        </li>
+        <li class="new">
+            lor
+        </li>
+        <li>
+            text
+        </li>
+        <li>
+            text
+        </li>
+        <li>
+            text
+        </li>
+        <li>
+            text
+        </li>
+        <li>
+            text
+        </li>
+        <li>
+            text
+        </li>
+        <li>
+            text
+        </li>
+        <li>
+            Ciao;
+        </li>
+    </ul>
     <!--Menù categorie a comparsa-->
     <nav>
     <ul class="menu">
@@ -76,7 +112,7 @@
                         <span class="text_A_nav">Storico</span>
                     </a>
                 </li>
-                <li class="list">
+                <li id="messaggi" class="list">
                     <a href="#">
                         <span class="icon_A_nav"><img src="../icons/message.png" alt="My messages logo"/></span>
                         <span class="text_A_nav">Messaggi</span>

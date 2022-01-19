@@ -8,7 +8,7 @@
         </tr>
         <?php foreach($templateParams["ordini"] as $ordine): ?>
         <tr>
-        <td><button type="button" name="<?php echo $ordine["IdDettaglioOrdine"];?>" title="Rimuovi elemento" class="remove_button">X</button><a href="#"><img src="<?php echo $ordine["URL"];?>" alt="Product image" /></a><p><?php echo $ordine["NomeProdotto"];?> Taglia:<?php echo $ordine["Taglia"];?> Colore:<?php echo $ordine["Colore"];?></p></td>
+        <td><button type="button" name="<?php echo $ordine["IdDettaglioOrdine"];?>" title="Rimuovi elemento" class="remove_button">X</button><a href="#"><img src="<?php echo UPLOAD_DIR.$ordine["URL"];?>" alt="Product image" /></a><p><?php echo $ordine["NomeProdotto"];?> Taglia:<?php echo $ordine["Taglia"];?> Colore:<?php echo $ordine["Colore"];?></p></td>
             <td class="price"><?php echo $ordine["Prezzo"]; ?></td>
                 <td>
                     <div class="quantity buttons_added">

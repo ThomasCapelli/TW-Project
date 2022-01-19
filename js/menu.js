@@ -1,5 +1,7 @@
+
 $(document).ready(function(){
     var menu = $("ul.menu");
+    var notify = $("ul.notify");
     $("header > nav > div.menu").click(function () {
         if(menu.hasClass("visible")) {
             menu.removeClass("visible");
@@ -12,5 +14,15 @@ $(document).ready(function(){
     $(window).scroll(function(){
         menu.removeClass("visible");
         $("header > nav > div.menu a").empty().append('<img src="../icons/menu.png" alt="General menu open icon" class="icon" /><p>Menu</p>');
+    });
+    $("ul.notify li:first-of-type").click(function () { 
+        notify.removeClass("visible");
+    });
+    $("#messaggi").click(function () {
+        if(notify.hasClass("visible")) {
+            notify.removeClass("visible");
+        } else {
+            notify.addClass("visible");
+        }
     });
 });

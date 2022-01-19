@@ -34,13 +34,10 @@ header > nav > div.cart, header > nav > div.menu{
 }
 header > nav > div.cart span{
   position: absolute;
-  top: 5px;
+  top: 4px;
   background-color: green;
   border-radius: 100%;
-  padding: 1px 4px;
-  font-size: 11px;
-  color: white;
-
+  padding: 4px;
 }
 header > nav > div.login , header > nav > div.account {
   float: left;

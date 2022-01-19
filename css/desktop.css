@@ -94,8 +94,8 @@ body > header > nav > div.login, body > header > nav >div.account{
   background-color: var(--header-main-button);
 }
 header > nav > div.cart span{
-  top: 5px;
-  right: 170px;
+  top: 13px;
+  right: 178px;
 
 }
 header > nav > div > a {
