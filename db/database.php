@@ -103,7 +103,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     public function getCarrello($utente) {
-        $stmt = $this->db->prepare("SELECT * FROM dettaglio_ordine dp,prodotto p,immagine_opzione i WHERE dp.NomeUtente = ? AND dp.IdProdotto = p.IdProdotto AND i.IdProdotto=p.IdProdotto");
+        $stmt = $this->db->prepare("SELECT * FROM dettaglio_ordine dp,prodotto p,immagine_opzione i WHERE dp.NomeUtente = ? AND dp.IdProdotto = p.IdProdotto AND dp.IdCategoria = p.IdCategoria AND i.IdProdotto=p.IdProdotto");
         $stmt->bind_param("s", $utente);
         $stmt->execute();
         $result = $stmt->get_result();

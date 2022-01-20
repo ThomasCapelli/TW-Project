@@ -17,7 +17,22 @@ $(document).ready(function(){
         var idProd = $_GET.get('productId');
         var idCat = $_GET.get('categoryId');
         var ajaxurl = '../php/order.php';
-        var data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
+        var data;
+        console.log(activeSize);
+        console.log(activeColor);
+        if(activeSize==null){
+            console.log("YO");
+            if(activeColor==''){
+                console.log("FRA");
+                data =  {'color': "default",'size': "def", 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
+            }
+            else{
+                data =  {'color': activeColor,'size': "def", 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
+            }
+        }
+        else{
+            data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
+        }
         $.post(ajaxurl, data).done(function() {showSnackBar()});
         addMessage(activeColor,activeSize);
     });
