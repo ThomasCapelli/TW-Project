@@ -74,6 +74,7 @@ body > nav.stickynav > ul{
   width: 100%;
   white-space: nowrap;
   overflow: auto;
+  z-index: 3;
 }
 body > nav.stickynav ul li{
   text-decoration: none;

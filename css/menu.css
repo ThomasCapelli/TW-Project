@@ -1,4 +1,4 @@
-body > nav div.accordion {
+body div.accordion {
     position: fixed;
     background-color: var(--body_background);
     left: 0;
@@ -8,7 +8,7 @@ body > nav div.accordion {
     z-index: 3;
     transition: 0.15s; 
 }
-body > nav > div.accordion > button {
+body > div.accordion > button {
     border-bottom: 1px solid var(--dropmenu-border);
     color: var(--text);
     cursor: pointer;
@@ -18,31 +18,31 @@ body > nav > div.accordion > button {
     border: none;
     outline: none;
 }
-body > nav > div.accordion > button:hover {
+body > div.accordion > button:hover {
     background-color: var(--white);
 }
-body > nav > div.accordion ul {
+body > div.accordion ul {
     width: 90%;
     margin: 0 5%;
     list-style: none;
     color: var(--text);
     display: none;
 }
-body > nav div.accordion > ul > li:first-of-type, body > nav > div.accordion > button {
+body > div.accordion > ul > li:first-of-type, body > nav > div.accordion > button {
     border-top: 1px solid var(--text);
 }
-body > nav div.accordion ul > li {
+body > div.accordion ul > li {
     margin: 0px 10px 0px 10px;
     border-bottom: 1px solid var(--dropmenu-border);
 }
-body > nav div.accordion > ul > li:hover {
+body > div.accordion > ul > li:hover {
     font-weight: bold;
     background-color: var(--white);
 }
-body > nav div.accordion > ul > li:last-of-type a{
+body div.accordion > ul > li:last-of-type a{
     color: var(--form-error);
 }
-body > nav div.accordion ul > li > a {
+body div.accordion ul > li > a {
     text-decoration: none;
     color: var(--text);
     display: block;
@@ -64,7 +64,7 @@ ul.notify, ul.history {
     height: 0;
     top: 0;
     overflow-y: scroll;
-    z-index: 1;
+    z-index: 2;
 }
 ul.notify li:not(:first-of-type),  ul.history li:not(:first-of-type){
     padding: 10px 5px 0 5px;

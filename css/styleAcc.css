@@ -33,7 +33,7 @@
     list-style: none;
     width: 66px;
     height: 70px;
-    z-index: 2;
+    z-index: 1;
 }
 .account_navigation ul li a {
     position: relative;
@@ -70,7 +70,6 @@
 .account_navigation ul li.active a .text_A_nav{
     opacity: 1;
     transform: translateY(10px);
-
 }
 .indicator{
     position: absolute;
@@ -82,6 +81,7 @@
     border-radius: 50%;
     border: 6px solid var(--account_nav_background);
     transition: 0.5s;
+    display: none;
 }
 .indicator::before{
     content: '';
