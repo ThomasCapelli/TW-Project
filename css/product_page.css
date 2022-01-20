@@ -1,3 +1,6 @@
+#products >header > h2 {
+    color: var(--text);
+}
 #products ul {
     list-style: none;
 }

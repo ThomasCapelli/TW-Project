@@ -46,8 +46,8 @@ header > nav > div > a {
   color: var(--text);
   text-decoration: none;
 }
-header > nav > div > a:hover{
-  background-color: var(--header-hover);
+header > nav > div > a:hover p{
+  color: var(--header-hover);
 }
 header > nav > div > a:hover > img{
   transform: rotate(360deg);

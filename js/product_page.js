@@ -1,6 +1,6 @@
 function addMessage(activeColor,activeSize) {
     var list = $('ul.notify');
-        $("<li>Hai aggiunto a carrello: "+$(".productName").text()+" Taglia:"+activeSize+" Colore:"+activeColor+"</li>").insertAfter("ul.notify li:first-of-type");
+        $("<li class='new'>Hai aggiunto a carrello: "+$(".productName").text()+" Taglia:"+activeSize+" Colore:"+activeColor+"</li>").insertAfter("ul.notify li:first-of-type");
 }
 function showSnackBar() {
     $("div.snackbar").css("display","initial");
