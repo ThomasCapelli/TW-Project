@@ -35,6 +35,9 @@
         $templateParams["mode"] = "light_mode";
         $templateParams["cartnumber"] = 0;
     }
-    $templateParams["storico"] = $dbh->getOrders($_SESSION["nomeutente"]);
-    $templateParams["ordini"] = $dbh->getCarrello($_SESSION["nomeutente"]);
+    if(isset($_SESSION["sessionCartToken"])){
+        $templateParams["storico"] = $dbh->getOrders($_SESSION["nomeutente"]);
+        $templateParams["ordini"] = $dbh->getCarrello($_SESSION["nomeutente"]);
+    }
+    
 ?>

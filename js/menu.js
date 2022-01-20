@@ -23,6 +23,7 @@ $(document).ready(function(){
         history.removeClass("visible");
     });
     $("#storico").click(function () {
+        notify.removeClass("visible");
         if(history.hasClass("visible")) {
             history.removeClass("visible");
         } else {
@@ -30,6 +31,7 @@ $(document).ready(function(){
         }
     });
     $("#messaggi").click(function () {
+        history.removeClass("visible");
         if(notify.hasClass("visible")) {
             notify.removeClass("visible");
         } else {
