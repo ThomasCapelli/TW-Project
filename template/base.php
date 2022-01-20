@@ -65,7 +65,6 @@
         <?php endforeach; ?>
     </ul>
     <!--Menù categorie a comparsa-->
-    <nav>
     <div class="accordion">
         <button>
                 Categorie
@@ -83,7 +82,7 @@
                 <a href="product.php?categoryName=Saldi">Saldi</a>
             </li>     
         </ul>
-    </nav>
+    </div>
     <!--Menù a comparsa quando si clicca sull'icona account-->
     <div class="account_background">
         <div class="account_navigation">
