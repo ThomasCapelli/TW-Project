@@ -29,4 +29,9 @@
     } else {
         $templateParams["mode"] = "light_mode";
     }
+    if(isset($_SESSION["sessionCartToken"])){
+        $templateParams["storico"] = $dbh->getOrders($_SESSION["nomeutente"]);
+        $templateParams["ordini"] = $dbh->getCarrello($_SESSION["nomeutente"]);
+    }
+    
 ?>

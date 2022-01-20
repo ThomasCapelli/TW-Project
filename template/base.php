@@ -44,41 +44,25 @@
             <div class="menu"><a><img src="../icons/menu.png" alt="General menu logo" class="icon" /><p>Menu</p></a></div>
         </nav>
     </header>
-    
+    <ul class="history">
+        <li>
+            Close
+        </li>
+        <?php foreach($templateParams["storico"] as $storico):?>
+        <li>
+            <?php echo "ID Ordine: ".$storico["IdOrdine"]." Stato: ".$storico["Stato"]; ?>
+        </li>
+        <?php endforeach; ?>
+    </ul>
     <ul class="notify">
         <li>
             Close
         </li>
+        <?php foreach($templateParams["ordini"] as $ordine):?>
         <li>
-            text
+            <?php echo "Hai aggiunto a carrello: ".$ordine["NomeProdotto"]." Taglia: ".$ordine["Taglia"]." Colore: ".$ordine["Colore"]; ?>
         </li>
-        <li class="new">
-            lor
-        </li>
-        <li>
-            text
-        </li>
-        <li>
-            text
-        </li>
-        <li>
-            text
-        </li>
-        <li>
-            text
-        </li>
-        <li>
-            text
-        </li>
-        <li>
-            text
-        </li>
-        <li>
-            text
-        </li>
-        <li>
-            Ciao;
-        </li>
+        <?php endforeach; ?>
     </ul>
     <!--Menù categorie a comparsa-->
     <nav>
@@ -110,14 +94,14 @@
                         <span class="text_A_nav">Profilo</span>
                     </a>
                 </li>
-                <li class="list">
-                    <a href="notify.php">
+                <li class="list" id="storico">
+                    <a href=#>
                         <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/></span>
                         <span class="text_A_nav">Storico</span>
                     </a>
                 </li>
                 <li id="messaggi" class="list">
-                    <a href="#">
+                    <a href=#>
                         <span class="icon_A_nav"><img src="../icons/message.png" alt="My messages logo"/></span>
                         <span class="text_A_nav">Messaggi</span>
                     </a>

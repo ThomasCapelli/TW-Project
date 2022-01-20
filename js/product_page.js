@@ -8,5 +8,11 @@ $(document).ready(function(){
         var ajaxurl = '../php/order.php';
         var data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
         $.post(ajaxurl, data);
+        addMessage(activeColor,activeSize);
+      
     });
+    function addMessage(activeColor,activeSize) {
+        var list = $('ul.notify');
+            $("<li>Hai aggiunto a carrello:"+$(".productName").text()+" Taglia:"+activeSize+" Colore:"+activeColor+"</li>").insertAfter("ul.notify li:first-of-type");
+    }
 });

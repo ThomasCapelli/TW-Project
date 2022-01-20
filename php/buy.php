@@ -8,5 +8,6 @@
         $_POST["cartStatus"]=false;
         $dbh->updateOrder($_SESSION["nomeutente"],$_POST["total"],$_SESSION["sessionCartToken"]);
         $_SESSION["sessionCartToken"]=rand(0,700);
+        require '../template/base.php';
     }
 ?>

@@ -128,6 +128,13 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function getOrders($nome){
+        $stmt = $this->db->prepare("SELECT * FROM ordine WHERE NomeUtente = ?");
+        $stmt->bind_param("s",$nome);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function getImage($idProdotto,$idCategoria,$idProduttore,$colore){
         $stmt = $this->db->prepare("SELECT * FROM immagine_opzione WHERE IdCategoria = ? AND IdProduttore = ? AND IdProdotto = ? AND Colore = ?");
         $stmt->bind_param("iiis",$idProdotto,$idCategoria,$idProduttore,$colore);
