@@ -211,13 +211,15 @@ main > section > h2{
   position: fixed;
   bottom: 0;
   z-index: 4;
-  background-color: #333;
+  background-color: var(--snackbar-bg);
   padding: 15px 0;
   color: var(--text);
   width: 70%;
   margin: 10px 15%;
   border-radius: 5px;
   text-align: center;
+  display: none;
+  color: var(--white);
 }
 /*  BODY FOOTER */
 

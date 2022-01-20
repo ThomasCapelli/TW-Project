@@ -121,7 +121,7 @@
             </ul>
         </div>
     </div>
-    <div class="snackbar">Some text some message..</div>
+    <div class="snackbar"></div>
     <!-- Menù categorie -->
     <?php if($templateParams["nome"] != "../template/login-form.php" && $templateParams["nome"] != "../template/signUp-form.php" && $templateParams["nome"] != "../template/shopping_cart.php") :?>
         <nav class="stickynav">
