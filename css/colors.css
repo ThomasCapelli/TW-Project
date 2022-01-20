@@ -98,6 +98,12 @@
     --form-focus-shadow: #56acf37a;
     --cart: rgb(12, 104, 12);
     --cart-hover: rgb(20, 170, 20);
-    --white: white;
     --dropmenu-border: rgb(231, 231, 231);
+    --singleproduct-imgslected: coral;
+    --product-img-bg: rgb(216, 216, 216);
+    --product-hover-shadow: rgba(0,0,0,0.2);
+    --productcard-hover: blanchedalmond;
+    --snackbar-bg: #333;
+    --black: black;
+    --white: white;
 }
