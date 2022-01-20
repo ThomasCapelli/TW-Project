@@ -35,7 +35,7 @@ header > nav > div.cart, header > nav > div.menu{
 header > nav > div.cart span{
   position: absolute;
   top: 4px;
-  background-color: green;
+  background-color: var(--cart);
   border-radius: 100%;
   padding: 4px;
 }
@@ -46,8 +46,8 @@ header > nav > div > a {
   color: var(--text);
   text-decoration: none;
 }
-header > nav > div > a:hover > p{
-  color: var(--header-hover);
+header > nav > div > a:hover{
+  background-color: var(--header-hover);
 }
 header > nav > div > a:hover > img{
   transform: rotate(360deg);
@@ -172,7 +172,7 @@ main > section > h2{
 }
 #forsale > ul > li > a article:hover {
   transition: 0.5s;
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 12px 0 var(--product-hover-shadow);
 }
 #forsale > ul > li > a article:hover div{
   transition: 0.5s;
@@ -201,7 +201,7 @@ main > section > h2{
 }
 #forsale > ul > li a p:not(:first-of-type) {
   font-weight: bold;
-  color: #eb0037;
+  color: var(--form-error);
   display: inline;
   margin-left: 5px;
 }
@@ -212,7 +212,7 @@ main > section > h2{
   z-index: 4;
   background-color: #333;
   padding: 15px 0;
-  color: white;
+  color: var(--text);
   width: 70%;
   margin: 10px 15%;
   border-radius: 5px;

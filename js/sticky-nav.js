@@ -9,32 +9,22 @@ function selected() {
     }
 }
 function StickNav(navbar, sticky) {
+    var cartButton = $("#cartbutton");
     if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+        navbar.addClass("sticky")
         $("main").addClass("content");
-        $("#cartbutton").css("display", "initial");
+        cartButton.css("display", "initial");
     } else {
-        navbar.classList.remove("sticky");
+        navbar.removeClass("sticky");
         $("main").removeClass("content");
-        $("#cartbutton").css("display", "none");
-    }
-}
-function adaptHeader() {
-    if($(window).width() > 768 || ($(window).width() < 768 && $(".cart").val() === undefined)) {
-        $(".logo").css("margin-left", "0");
-    } else if($(window).width() <= 768) {
-        $(".logo").css("margin-left", "55px");
+        cartButton.css("display", "none");
     }
 }
 $(document).ready(function(){
-    var navbar = document.getElementById("stickyNav");
-    var sticky = navbar.offsetTop;
-    adaptHeader();
-    window.onresize = function() {
-        adaptHeader();
-    };
+    var navbar = $("#stickyNav");
+    var offset = navbar.offset().top;
     window.onscroll = function() {
-        StickNav(navbar, sticky);
+        StickNav(navbar, offset);
     };
     selected();
 });

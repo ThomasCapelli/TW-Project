@@ -25,14 +25,31 @@
     --filter_hover: 100%;
     --box_shadow_1a: #0000001a;
     --box_shadow_cc: #000000cc;
-    --grey: grey;
-    --default: black;
     --account_nav_background: #d0d3d4;
     --account_nav_main: hsl(192, 100%, 14%);
     --account_nav_text: white;
     --buy-btn-text: white;
     --qty-btn-hover: #52ab98;
     --sticky-cart-bottom: #52ab98;
+    --form-error: #de071c;
+    --form-bg-error: #fef0f0;
+    --form-correct: #5cc253;
+    --form-bg-correct: #e0fbde;
+    --form-bg-button: #0070c9;
+    --form-bg-button-disabled: #006fc95b;
+    --form-focus-shadow: #56acf37a;
+    --cart: rgb(12, 104, 12);
+    --cart-hover: rgb(20, 170, 20);
+    --dropmenu-border: rgb(231, 231, 231);
+    --singleproduct-imgslected: coral;
+    --product-img-bg: rgb(216, 216, 216);
+    --product-hover-shadow: rgba(0,0,0,0.2);
+    --productcard-hover: blanchedalmond;
+    --snackbar-bg: #333;
+    --grey: grey;
+    --default: black;
+    --white: white;
+    --black: black;
 }
 
 /*colors dark-mode*/
@@ -72,4 +89,15 @@
     --buy-btn-text: black;
     --qty-btn-hover: #8a2cdcb6;
     --sticky-cart-bottom: #892CDC;
+    --form-error: #de071c;
+    --form-bg-error: #fef0f0;
+    --form-correct: #5cc253;
+    --form-bg-correct: #e0fbde;
+    --form-bg-button: #0070c9;
+    --form-bg-button-disabled: #006fc95b;
+    --form-focus-shadow: #56acf37a;
+    --cart: rgb(12, 104, 12);
+    --cart-hover: rgb(20, 170, 20);
+    --white: white;
+    --dropmenu-border: rgb(231, 231, 231);
 }

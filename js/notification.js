@@ -14,4 +14,7 @@ $(document).ready(function(){
     $(".addToCart").click(function(){
         ajaxBadge();
     });
+    window.setInterval(function() {
+        $("div.snackbar").css("display","none");
+    }, 4000);
 });

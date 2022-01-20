@@ -19,7 +19,7 @@ $(document).ready(function(){
         remove();
     });
     $(".size li").click(function () {
-        $(".size").removeClass("visible");
+        remove()
     });
     $(window).scroll(function(){
         remove();

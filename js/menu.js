@@ -1,6 +1,8 @@
-
+function hideElement(element){
+    element.removeClass("slide").next().slideUp(); 
+    }
 $(document).ready(function(){
-    var menu = $("ul.menu");
+    var menu = $("div.accordion");
     var notify = $("ul.notify");
     $("header > nav > div.menu").click(function () {
         if(menu.hasClass("visible")) {
@@ -23,6 +25,15 @@ $(document).ready(function(){
             notify.removeClass("visible");
         } else {
             notify.addClass("visible");
+        }
+    });
+    $("div.accordion > button").click(function(){
+        if($(this).hasClass("slide")){
+            hideElement($(this));
+        }
+        else {
+            //hideElement($("div.accordion > button.slide"));
+            $(this).addClass("slide").next().slideDown();
         }
     });
 });

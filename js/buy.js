@@ -1,3 +1,14 @@
+function addPaypal(){
+    if($('#paypal').is(":checked")){
+        $(".footer div div:last-of-type").show(); 
+    }
+    else{
+        $(".footer div div:last-of-type").css("display","none");
+    }
+}
+function reload() {
+    $("body").load("../php/cart.php").fadeIn("slow");
+}
 $(document).ready(function(){
     $(".footer div div:last-of-type").css("display","none");
     $('.button-buy').click(function() {
@@ -44,14 +55,7 @@ $(document).ready(function(){
     });
     $('#paypal').change(addPaypal);
     $("input[name='pagamento']").change(addPaypal);
-    function addPaypal(){
-        if($('#paypal').is(":checked")){
-            $(".footer div div:last-of-type").show(); 
-        }
-        else{
-            $(".footer div div:last-of-type").css("display","none");
-        }
-    }
+    
     $(".remove_button").click(function(){
         var idDO = $(this).attr("name");
         var ajaxurl = '../php/buy.php';
@@ -59,8 +63,4 @@ $(document).ready(function(){
         $.post(ajaxurl, data);
         success: reload();
     });
-    function reload() {
-        $("body").load("../php/cart.php").fadeIn("slow");
-    }
-
 });

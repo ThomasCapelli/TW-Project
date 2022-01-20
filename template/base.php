@@ -82,19 +82,23 @@
     </ul>
     <!--Menù categorie a comparsa-->
     <nav>
-    <ul class="menu">
-        <li>
-            <a href="product.php?categoryName=All">Tutti i prodotti</a>
-        </li>
-        <?php foreach($templateParams["categorie"] as $categoria): ?>
-        <li>
-            <a href="product.php?categoryName=<?php echo $categoria["NomeCategoria"];?>"><?php echo $categoria["NomeCategoria"];?></a>
-        </li>
-        <?php endforeach; ?>
-        <li>
-            <a href="product.php?categoryName=Saldi">Saldi</a>
-        </li>
-    </ul>
+    <div class="accordion">
+        <button>
+                Categorie
+        </button>
+        <ul>
+            <li>
+                <a href="product.php?categoryName=All">Tutti i prodotti</a>
+            </li>
+            <?php foreach($templateParams["categorie"] as $categoria): ?>
+            <li>
+                <a href="product.php?categoryName=<?php echo $categoria["NomeCategoria"];?>"><?php echo $categoria["NomeCategoria"];?></a>
+            </li>
+            <?php endforeach; ?>
+            <li>
+                <a href="product.php?categoryName=Saldi">Saldi</a>
+            </li>     
+        </ul>
     </nav>
     <!--Menù a comparsa quando si clicca sull'icona account-->
     <div class="account_background">

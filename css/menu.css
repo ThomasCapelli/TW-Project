@@ -1,6 +1,5 @@
-body > nav ul.menu {
+body > nav div.accordion {
     position: fixed;
-    list-style: none;
     background-color: var(--body_background);
     left: 0;
     width: 100%;
@@ -9,20 +8,41 @@ body > nav ul.menu {
     z-index: 3;
     transition: 0.15s; 
 }
-body > nav ul.menu li:first-of-type {
+body > nav > div.accordion > button {
+    border-bottom: 1px solid var(--dropmenu-border);
+    color: var(--text);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+body > nav > div.accordion > button:hover {
+    background-color: var(--white);
+}
+body > nav > div.accordion ul {
+    width: 90%;
+    margin: 0 5%;
+    list-style: none;
+    color: var(--text);
+    display: none;
+}
+body > nav div.accordion > ul > li:first-of-type, body > nav > div.accordion > button {
     border-top: 1px solid var(--text);
 }
-body > nav ul.menu li {
+body > nav div.accordion ul > li {
     margin: 0px 10px 0px 10px;
+    border-bottom: 1px solid var(--dropmenu-border);
 }
-body > nav ul.menu li:hover {
+body > nav div.accordion > ul > li:hover {
     font-weight: bold;
-    background-color: white;
+    background-color: var(--white);
 }
-body > nav ul.menu > li:last-of-type a{
-    color: red;
+body > nav div.accordion > ul > li:last-of-type a{
+    color: var(--form-error);
 }
-body > nav ul.menu > li > a {
+body > nav div.accordion ul > li > a {
     text-decoration: none;
     color: var(--text);
     display: block;
@@ -37,8 +57,8 @@ ul.notify {
     list-style: none;
     max-height: 100%;
     width: 100%;
-    background-color: white;
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+    background-color: var(--white);
+    box-shadow: 0 8px 12px 0 var(--product-hover-shadow);
     border-radius: 10px;
     position: absolute;
     height: 0;
@@ -51,13 +71,13 @@ ul.notify li:not(:first-of-type){
     height: 100px;
 }
 ul.notify li {
-    border-bottom: 1px solid rgb(231, 231, 231);
+    border-bottom: 1px solid var(--dropmenu-border);
 }
 ul.notify li:first-of-type {
     padding: 10px 5px;
 }
 .new {
-    border-left: 5px solid green;
+    border-left: 5px solid var(--cart);
 }
 @media screen and (min-width: 768px) {
     ul.notify {
@@ -67,7 +87,7 @@ ul.notify li:first-of-type {
         top: 200px;
     }
     ul.notify li:not(:first-of-type){
-        border-bottom: 1px solid rgb(231, 231, 231);
+        border-bottom: 1px solid var(--dropmenu-border);
         padding: 10px 5px 0 15px;
         height: 100px;
     }

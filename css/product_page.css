@@ -22,7 +22,7 @@
     width: 100%;
     height: 150px;
     padding: 20px 0;
-    background-color: rgb(216, 216, 216);
+    background-color: var(--product-img-bg);
 }
 #products ul > li > a > article > section {
     background-color: var(--product-text-background);
@@ -31,7 +31,7 @@
 }
 #products ul > li > a article:hover {
     transition: 0.5s;
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+    box-shadow: 0 8px 12px 0 var(--product-hover-shadow)
 }
 #products ul > li > a article:hover div {
     transition: 0.5s;
@@ -54,7 +54,7 @@
     color: var(--grey);
 }
 #products > ul > li> a del + p {
-    color: red !important;
+    color: var(--form-error) !important;
 }
 #products ul > li > a p:not(:first-of-type) {
     font-weight: bold;
@@ -67,13 +67,13 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color:rgb(12, 104, 12);
+    background-color:var(--cart);
     cursor: pointer;
     padding: 15px;
     border-radius: 100px;
 }
 #cartbutton:hover {
-    background-color: rgb(20, 170, 20);
+    background-color: var(--cart-hover);
 }
 #cartbutton img {
     width: 50px;

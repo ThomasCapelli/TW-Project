@@ -18,10 +18,10 @@ main > article > header > div > img {
 }
 main > article > header > ul {
     text-overflow: ellipsis;
-    background-color: var(--body_background);
+    background-color: var(--product-img-bg);
 }
 main > article > header > ul > li {
-    border: 1px solid black;
+    border: 1px solid var(--grey);
     margin: 5px 2.5px 5px 2.5px;
     padding: 1%;
     width: 60px;
@@ -39,10 +39,10 @@ main > article > header > ul > li > img {
     border-radius: 10px;
 }
 main > article > header > ul > li:hover {
-    border-color: coral;
+    border-color: var(--singleproduct-imgslected);
 }
 .imageselected {
-    border-color: coral;
+    border-color: var(--singleproduct-imgslected);
 }
 main > article > header > div > img {
     max-width: 100%;
@@ -63,7 +63,7 @@ main > article > section > del {
     color: var(--grey);
 }
 main > article > section > p:not(:first-of-type) {
-    color: red;
+    color: var(--form-error);
 }
 main > article > footer {
     text-align: center;
@@ -78,18 +78,18 @@ main > article > footer > button {
     cursor: pointer;
 }
 main > article > footer > button:first-of-type{
-    border: 1px solid black;
+    border: 1px solid var(--black);
 }
 main > article > footer > button:last-of-type {
     border: none;
     display: inline-block;
-    color: white;
-    background-color: black;
+    color: var(--white);
+    background-color: var(--black);
     border-radius: 40px;
 }
 ul.size {
     position: fixed;
-    background-color: white;
+    background-color: var(--body_background);
     list-style: none;
     top: 0;
     left: 0;
@@ -108,10 +108,10 @@ ul.size > li:first-of-type {
 main > article > footer > ul.size > li {
     text-align: center;
     padding: 10px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(----dropmenu-border);
 }
 main > article > footer > ul.size > li:hover {
-    background-color: blanchedalmond;
+    background-color: var(--productcard-hover);
 }
 main > article > footer > ul.size > li > label{
     display: inline-block;
@@ -123,7 +123,7 @@ main > article > footer > ul.size > li > input {
     margin: 0;
 }
 main > article > footer button:hover {
-    background-color: gray;
+    background-color: var(--grey);
 }
 .colors {
     text-overflow: ellipsis;
@@ -139,10 +139,10 @@ main > article > footer button:hover {
     margin: auto;
     padding: 10px;
     border-radius: 1000px;
-    border: 1px solid black;
+    border: 1px solid var(--black);
 }
 .activate {
-    background-color: blanchedalmond;
+    background-color: var(--productcard-hover);
 }
 @media screen and (min-width: 768px) {
     main > article {

@@ -26,15 +26,15 @@ main > form {
     color: var(--grey);
   }
   .isError {
-    border: 1px solid #de071c;
-    background-color: #fef0f0;
+    border: 1px solid var(--form-error);
+    background-color: var(--form-bg-error);
   }
   .isError ~ label {
-    color: #de071c;
+    color: var(--form-error);
   }
   .isCorrect {
-    border: 1px solid #5cc253;
-    background-color: #e0fbde;
+    border: 1px solid var(--form-correct);
+    background-color: var(--form-bg-correct);
   }
   main > form > ul > li > input {
     box-sizing: border-box;
@@ -47,18 +47,18 @@ main > form {
   }
   main > form > ul > li > input[type=submit] {
     padding-top: 0;
-    background-color: #0070c9;
-    color: white;
+    background-color: var(--form-bg-button);
+    color: var(--white);
     cursor: pointer;
   }
   main > form > ul > li > input[type=submit]:disabled {
-    background-color: #006fc95b;
+    background-color: var(--form-bg-button-disabled);
     color: var(--grey);
   }
   main > form > ul > li > input:focus {
-    border: 1px solid #0070c9;
+    border: 1px solid var(--form-bg-button);
     outline: 0;
-    box-shadow: 0 0 0 3px #56acf37a;
+    box-shadow: 0 0 0 3px var(--form-focus-shadow);
   }
   main > form > ul > li > a {
     text-decoration: none;
@@ -84,7 +84,7 @@ main > form {
   }
   #error {
     padding-top: 5px;
-    color: #de071c;
+    color: var(--form-error);
   }
 
 @media screen and (min-width: 768px) {
