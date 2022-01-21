@@ -173,7 +173,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     public function getSizeFromOrders() {
-        $stmt = $this->db->prepare("SELECT * FROM Taglia t, dettaglio_ordine do WHERE t.IdProdotto = do.IdProdotto AND t.IdCategoria = do.IdCategoria AND t.Colore = do.Colore AND t.Nome_taglia = do.Taglia");
+        $stmt = $this->db->prepare("SELECT t.Quantita FROM Taglia t, dettaglio_ordine do WHERE t.IdProdotto = do.IdProdotto AND t.IdCategoria = do.IdCategoria AND t.Colore = do.Colore AND t.Nome_taglia = do.Taglia");
         $stmt->execute();
         $result = $stmt->get_result();
 

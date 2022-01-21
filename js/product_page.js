@@ -21,6 +21,7 @@ $(document).ready(function(){
         var idCat = $_GET.get('categoryId');
         var ajaxurl = '../php/order.php';
         var data;
+        console.log(Qty);
         if(Qty-cont==-1){
             console.log("errore");
         }
