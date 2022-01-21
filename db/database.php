@@ -172,6 +172,13 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function getSizeFromOrders() {
+        $stmt = $this->db->prepare("SELECT * FROM Taglia t, dettaglio_ordine do WHERE t.IdProdotto = do.IdProdotto AND t.IdCategoria = do.IdCategoria AND t.Colore = do.Colore AND t.Nome_taglia = do.Taglia");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 
     public function getImages($idprodotto, $idcategoria, $colore) {
         $stmt = $this->db->prepare("SELECT URL FROM immagine_opzione WHERE IdProdotto = ? AND IdCategoria = ? AND Colore = ?");
@@ -210,6 +217,29 @@ class DatabaseHelper{
     }
     public function getProducers(){
         $stmt = $this->db->prepare("SELECT * FROM produttore");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function getProductQuantity($idprodotto, $idcategoria){
+        $stmt = $this->db->prepare("SELECT QuantitaProd FROM prodotto WHERE IdProdotto = ? AND IdCategoria = ?");
+        $stmt->bind_param("ii", $idprodotto, $idcategoria);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function updateProductQuantity($idDO){
+        $stmt = $this->db->prepare("UPDATE taglia
+        INNER JOIN dettaglio_ordine ON taglia.IdProdotto = dettaglio_ordine.IdProdotto AND taglia.IdCategoria = dettaglio_ordine.IdCategoria AND taglia.Nome_taglia = dettaglio_ordine.Taglia
+        SET taglia.Quantita =taglia.Quantita -  dettaglio_ordine.Quantita
+        WHERE dettaglio_ordine.IdDettaglioOrdine = ?");
+        $stmt->bind_param("i",$idDO);
+        $stmt->execute();
+    }
+    public function getOrderDetails($utente) {
+        $stmt = $this->db->prepare("SELECT * FROM dettaglio_ordine WHERE NomeUtente = ?");
+        $stmt->bind_param("s", $utente);
         $stmt->execute();
         $result = $stmt->get_result();
 

@@ -12,7 +12,7 @@
             </ul>
         </header>
         <section>
-            <h2 class="productName"><?php echo $templateParams["prodotto"][0]["NomeProdotto"]; ?></h2>
+            <h2 class="productName" name="<?php echo $templateParams["quantita"][0]["QuantitaProd"];?>"><?php echo $templateParams["prodotto"][0]["NomeProdotto"]; ?></h2>
             <p><?php echo $templateParams["prodotto"][0]["Descrizione"]; ?></p>
             <?php if($templateParams["prodotto"][0]["Sconto"] != 0):?>
                 <del><?php echo $templateParams["prodotto"][0]["Prezzo"]; ?>&#8364;</del>
@@ -41,7 +41,7 @@
                 <?php foreach($templateParams["taglie"] as $taglia):?>
                 <li>
                     <label for="<?php echo $taglia["Nome_taglia"];?>"><?php echo $taglia["Nome_taglia"];?></label>
-                    <input type="radio" name="size" id="<?php echo $taglia["Nome_taglia"];?>" value="<?php echo $taglia["Nome_taglia"];?>"/>
+                    <input type="radio" name="size" id="<?php echo $taglia["Nome_taglia"]." ".$taglia["Quantita"];?>" value="<?php echo $taglia["Nome_taglia"];?>"/>
                 </li>
                 <?php endforeach;?>
             </ul>
