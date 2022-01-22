@@ -54,6 +54,6 @@
 <div class="sticky-bottom">
     <p>Totale:</p>
     <div class="button-buy">
-        <a class="effect1" href="">Compra!<span class="bg"></span></a>
+        <a class="effect1" href=#>Compra!<span class="bg"></span></a>
     </div>
 </div>

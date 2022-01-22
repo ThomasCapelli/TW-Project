@@ -2,9 +2,9 @@ function addMessage(activeColor,activeSize) {
     var list = $('ul.notify');
         $("<li class='new'>Hai aggiunto a carrello: "+$(".productName").text()+" Taglia:"+activeSize+" Colore:"+activeColor+"</li>").insertAfter("ul.notify li:first-of-type");
 }
-function showSnackBar() {
+function showSnackBar(testo) {
     $("div.snackbar").css("display","initial");
-    $("div.snackbar").text("Oggetto aggiunto correttamente al carrello");
+    $("div.snackbar").text(testo);
     window.setInterval(function() {
         $("div.snackbar").hide();
     }, 4000);
@@ -23,11 +23,11 @@ $(document).ready(function(){
         var data;
         console.log(Qty);
         if(Qty-cont==-1){
-            console.log("errore");
+            showSnackBar("Taglia e colore scelto non disponibile")
         }
         else{
             data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
-            $.post(ajaxurl, data).done(function() {showSnackBar()});
+            $.post(ajaxurl, data).done(function() {showSnackBar("Oggetto aggiunto correttamente al carrello")});
             addMessage(activeColor,activeSize);
             cont++;
         }

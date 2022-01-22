@@ -9,6 +9,13 @@ function addPaypal(){
 function reload() {
     $("body").load("../php/cart.php").fadeIn("slow");
 }
+function showSnackBar(testo) {
+    $("div.snackbar").css("display","initial");
+    $("div.snackbar").text(testo);
+    window.setInterval(function() {
+        $("div.snackbar").hide();
+    }, 4000);
+}
 $(document).ready(function(){
     $(".footer div div:last-of-type").css("display","none");
     $('.button-buy').click(function() {
@@ -23,12 +30,10 @@ $(document).ready(function(){
                 total = parseFloat(total);
                 var data =  {'cartStatus': cartStatus, 'total': total};
                 $.post(ajaxurl, data);
-                location.href="../php/index.php";
+                showSnackBar("Ordine in elaborazione");
             }
             else{
-                var ajaxurl = '../php/buy.php';
-                var data =  {'erroreInserimento': "Errore nell'inserimento di pagamento e spedizione"};
-                $.post(ajaxurl, data);
+                showSnackBar("Errore nell'inserimento della spedizione o pagamento");
             }  
         }
         else{
@@ -43,12 +48,10 @@ $(document).ready(function(){
                 total = parseFloat(total);
                 var data =  {'cartStatus': cartStatus, 'total': total};
                 $.post(ajaxurl, data);
-                location.href="../php/index.php";
+                showSnackBar("Ordine in elaborazione");
             }
             else{
-                var ajaxurl = '../php/buy.php';
-                var data =  {'erroreInserimento': "Errore nell'inserimento di pagamento e spedizione"};
-                $.post(ajaxurl, data);
+                showSnackBar("Errore nell'inserimento della spedizione o pagamento");
             }  
         }
        

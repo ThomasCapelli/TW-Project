@@ -222,13 +222,6 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function getProductQuantity($idprodotto, $idcategoria){
-        $stmt = $this->db->prepare("SELECT QuantitaProd FROM prodotto WHERE IdProdotto = ? AND IdCategoria = ?");
-        $stmt->bind_param("ii", $idprodotto, $idcategoria);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_all(MYSQLI_ASSOC);
-    }
     public function updateProductQuantity($idDO){
         $stmt = $this->db->prepare("UPDATE taglia
         INNER JOIN dettaglio_ordine ON taglia.IdProdotto = dettaglio_ordine.IdProdotto AND taglia.IdCategoria = dettaglio_ordine.IdCategoria AND taglia.Nome_taglia = dettaglio_ordine.Taglia
