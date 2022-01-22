@@ -52,9 +52,9 @@ $(document).ready(function(){
         }});
     });
     $("article header ul li").click(function () {
-        $("header > div").empty().append($(this).html());
+        $("article header > div").empty().append($(this).html());
     });
-    $("button:first-of-type").click(function () {
+    $("article button:first-of-type").click(function () {
         if($(".size").css("display") == "none") {
             $(".size").css("display", "block");
         } else {
