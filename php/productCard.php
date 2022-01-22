@@ -25,6 +25,5 @@
     }
     $templateParams["taglie"] =  $dbh->getSize($idprodotto, $idcategoria, $templateParams["maincolor"][0]["Colore"]); 
     $templateParams["images"] = $dbh->getImages($idprodotto, $idcategoria, $templateParams["maincolor"][0]["Colore"]);
-    
     require '../template/base.php';
 ?>

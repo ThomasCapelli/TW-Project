@@ -10,7 +10,7 @@
     }
     function registerLoggedUser($user){
         $_SESSION["email"] = $user["Email"];
-        $_SESSION["nomeutente"] = $user["Nome"]; 
+        $_SESSION["nomeutente"] = $user["Email"]; 
     }
     function isUserLoggedIn(){
         return !empty($_SESSION["email"]);
