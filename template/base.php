@@ -31,17 +31,17 @@
     <header>
         <!-- Menù iniziale con logo e login-->
         <nav>
-            <div class="logo"><a href="index.php" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a></div>
-            <span class="removable"><a href="index.php"><?php echo $templateParams["webtitle"]; ?></a></span>
+            <a class="logo" href="index.php" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a>
+            <a class="removable" href="index.php"><h1><?php echo $templateParams["webtitle"]; ?></h1></a>
             <?php if(isUserLoggedIn()): ?>
-                <div class="account"><a><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $_SESSION["nomeutente"]; ?></p></a></div>
-                <div class="cart"><a href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><p>Carrello</p><span class="badge"></span></a></div>
+                <a class="account"><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $_SESSION["nomeutente"]; ?></p></a>
+                <a class="cart" href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><?php if($templateParams["cartnumber"] > 0):?><span class="badge"></span><?php endif;?><p>Carrello</p></a>
             <?php elseif(basename($_SERVER['PHP_SELF'])=="login.php"): ?>
-                <div class="login"><a href="sign.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Registrati</p></a></div>
+                <a class="login" href="sign.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Registrati</p></a>
             <?php else: ?>
-                <div class="login"><a href="login.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Accedi</p></a></div>
+                <a class="login" href="login.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Accedi</p></a>
             <?php endif; ?> 
-            <div class="menu"><a><img src="../icons/menu.png" alt="General menu logo" class="icon" /><p>Menu</p></a></div>
+            <a class="menu"><img src="../icons/menu.png" alt="General menu logo" class="icon" /><p>Menu</p></a>
         </nav>
     </header>
     <ul class="history">
@@ -82,6 +82,7 @@
                 <a href="product.php?categoryName=Saldi">Saldi</a>
             </li>     
         </ul>
+        <a href="">Contatti</a>
     </div>
     <!--Menù a comparsa quando si clicca sull'icona account-->
     <div class="account_background">
@@ -95,17 +96,17 @@
                 </li>
                 <li class="list" id="storico">
                     <a href=#>
-                        <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/></span>
+                        <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/><?php if($templateParams["cartnumber"] > 0):?><span class="badge"></span><?php endif;?></span>
                         <span class="text_A_nav">Storico</span>
                     </a>
                 </li>
                 <li id="messaggi" class="list">
                     <a href=#>
-                        <span class="icon_A_nav"><img src="../icons/message.png" alt="My messages logo"/></span>
+                        <span class="icon_A_nav"><img src="../icons/message.png" alt="My messages logo"/><?php if($templateParams["cartnumber"] > 0):?><span class="badge"></span><?php endif;?></span>
                         <span class="text_A_nav">Messaggi</span>
                     </a>
                 </li>
-                <li id="light"  class="list">
+                <li id="light" class="list">
                     <a href=#>
                         <span class="icon_A_nav"><img src="../icons/candle.png" alt="Light logo"/></span>
                         <span class="text_A_nav">Dark mode</span>
@@ -144,15 +145,15 @@
         </section>
         <section>
             <h3>Trovaci su</h3>
-            <a href="#"><div><img src="../icons/artboard.png" alt="Medieval Instagram Logo"/></div><p>Pittura</p></a>
-            <a href="#"><div><img src="../icons/manuscript.png" alt="Medieval Facebook Logo"/></div><p>Faccialibro</p></a>
-            <a href="#"><div><img src="../icons/carrier-pigeon.png" alt="Medieval Twitter Logo"/></div><p>Cinguettio</p></a>
+            <a href="https://www.instagram.com/" target="_blank"><div><img src="../icons/artboard.png" alt="Medieval Instagram Logo"/></div><p>Pittura</p></a>
+            <a href="https://www.facebook.com/" target="_blank"><div><img src="../icons/manuscript.png" alt="Medieval Facebook Logo"/></div><p>Faccialibro</p></a>
+            <a href="https://twitter.com/?lang=en" target="_blank"><div><img src="../icons/carrier-pigeon.png" alt="Medieval Twitter Logo"/></div><p>Cinguettio</p></a>
         </section>
         <section>
             <h3>Metodi di pagamento</h3>
-            <a href="#"><div><img src="../icons/gem_color.png" alt="Gem Payment"/></div></a>
-            <a href="#"><div><img src="../icons/paypal.png" alt="Paypal Logo"/></div></a>
-            <a href="#"><div><img src="../icons/money-bag_color.png" alt="Cash Payment"/></div></a>
+            <div><img src="../icons/gem_color.png" alt="Gem Payment"/></div>
+            <div><img src="../icons/paypal.png" alt="Paypal Logo"/></div>
+            <div><img src="../icons/money-bag_color.png" alt="Cash Payment"/></div>
         </section>    
     </footer>
 </body>

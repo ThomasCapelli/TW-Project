@@ -32,6 +32,10 @@
             $templateParams["prodotto"]=$dbh->getProductById($_POST["idProdotto"],$_POST["idCategoria"]);
             $prodotto=$templateParams["prodotto"][0];
             $dbh->placeOrder($_POST["idCategoria"],$prodotto["IdProduttore"],$_POST["idProdotto"],$idDettaglioOrdine,$quantita, $_POST["size"], $_POST["color"], $_SESSION["nomeutente"],$_SESSION["sessionCartToken"]);
+            $fp = fopen('../php/result.json', 'w');
+            fwrite($fp, json_encode(count($dbh->getCarrello($_SESSION["nomeutente"]))));
+            fclose($fp);     
         }
-    }         
+        
+    }    
 ?>

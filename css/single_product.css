@@ -50,6 +50,7 @@ main > article > header > div > img {
     margin: auto;
 }
 main > article > section {
+    color: var(--text);
     margin: 5px;
 }
 main > article > section > h2 {
@@ -91,24 +92,21 @@ ul.size {
     position: fixed;
     background-color: var(--body_background);
     list-style: none;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
-    height: 0;
+    height: 100%;
     overflow-y: scroll;
-    z-index: 1;
-    transition: 0.3s; 
-}
-.visible {
-    height: 100% !important;
+    z-index: 3;
 }
 ul.size > li:first-of-type {
     text-align: left;
 }
 main > article > footer > ul.size > li {
     text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid var(----dropmenu-border);
+    padding: 15px;
+    border-bottom: 1px solid var(--grey);
 }
 main > article > footer > ul.size > li:hover {
     background-color: var(--productcard-hover);
@@ -118,9 +116,7 @@ main > article > footer > ul.size > li > label{
     width: 100%;
 }
 main > article > footer > ul.size > li > input {
-    display: inline-block;
-    width: 100%;
-    margin: 0;
+    display: none;
 }
 main > article > footer button:hover {
     background-color: var(--grey);
@@ -132,17 +128,21 @@ main > article > footer button:hover {
     margin: 5px 2.5px 5px 2.5px;
     display: inline-block;
     cursor: pointer;
+    color: var(--text);
 }
 .colors > li > a > img {
-    width: 30px;
+    width: 50px;
+    height: 50px;
     display: block;
     margin: auto;
     padding: 10px;
     border-radius: 1000px;
     border: 1px solid var(--black);
+    background-color: var(--product-img-bg);
+    object-fit: cover;
 }
 .activate {
-    background-color: var(--productcard-hover);
+    border-color: var(--singleproduct-imgslected) !important;
 }
 @media screen and (min-width: 768px) {
     main > article {

@@ -9,6 +9,7 @@ body div.accordion {
     transition: 0.15s; 
 }
 body > div.accordion > button {
+    background-color: inherit;
     border-bottom: 1px solid var(--dropmenu-border);
     color: var(--text);
     cursor: pointer;
@@ -17,8 +18,9 @@ body > div.accordion > button {
     text-align: left;
     border: none;
     outline: none;
+    font-size: 18px;
 }
-body > div.accordion > button:hover {
+body > div.accordion > button:hover, body > div.accordion > a:hover {
     background-color: var(--white);
 }
 body > div.accordion ul {
@@ -47,6 +49,13 @@ body div.accordion ul > li > a {
     color: var(--text);
     display: block;
     padding: 20px;
+}
+div.accordion a {
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    padding: 18px;
+    font-size: 18px;
 }
 .visible {
     height: 100% !important;

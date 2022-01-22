@@ -22,46 +22,47 @@ header > nav {
   vertical-align: middle;
   box-sizing: border-box;
 }
-header > nav > div {
+header > nav > a{
   display: inline-block;
   text-align: center;
   margin: 3.5px 2px;
   width: 50px;
   height: 50px;
 }
-header > nav > div.cart, header > nav > div.menu{
+header > nav > a.cart, header > nav > a.menu{
   float: right
 }
-header > nav > div.cart span{
+header > nav > a.cart span{
   position: absolute;
   top: 4px;
+  right: 10px;
   background-color: var(--cart);
   border-radius: 100%;
   padding: 4px;
 }
-header > nav > div.login , header > nav > div.account {
+header > nav > a.login , header > nav > a.account {
   float: left;
 }
-header > nav > div > a {
+header > nav > a {
   color: var(--text);
   text-decoration: none;
 }
-header > nav > div > a:hover p{
+header > nav > a:hover p{
   color: var(--header-hover);
 }
-header > nav > div > a:hover > img{
+header > nav > a:hover > img{
   transform: rotate(360deg);
   transition-duration: 1s;
 }
-header > nav > div > a > img {
+header > nav > a > img {
   max-width: 60%;
   max-height: 60%;
 }
-header > nav > div.logo > a > img {
+header > nav > a.logo > img {
   max-width: 100%;
   max-height: 100%;
 }
-header > nav > div > a > p {
+header > nav > a > p {
   font-size: 12px;
   cursor: pointer;
 }
@@ -94,6 +95,7 @@ body > nav.stickynav ul li a {
   text-decoration: none;
   color: var(--text);
   overflow: hidden;
+  padding: 5px;
 }
 body > nav.stickynav ul li img {
   padding-top: 5px;
@@ -381,7 +383,7 @@ main section:first-of-type div:not(:first-of-type){
   display: none;
 }
 .sticky li p {
-  padding: 15px 0;
+  padding: 20px 0;
 }
 /* Class added to Main tag to prevent "lags" when scrolling */
 .content {

@@ -5,7 +5,9 @@
             </div>
             <ul class="images">
                 <?php foreach($templateParams["images"] as $image): ?>
-                <li>
+                <li <?php if($image["URL"] == $templateParams["images"][0]["URL"]):?>
+                    class="imageselected"
+                    <?php endif;?>>
                     <img src="<?php echo UPLOAD_DIR.$image["URL"]; ?>" alt="">
                 </li>
                 <?php endforeach; ?>
@@ -23,12 +25,12 @@
         </section>
         <footer>
             <ul class="colors">
-            <?php foreach($templateParams["opzioni"] as $opzione):?>
+            <?php foreach($templateParams["opzioni"] as $key=>$opzione):?>
                 <li>
                     <a href="../php/productCard.php?productId=<?php echo $templateParams["prodotto"][0]["IdProdotto"];?>&categoryId=<?php echo $templateParams["prodotto"][0]["IdCategoria"];?>&colore=<?php echo $opzione["Colore"];?>">
                     <img <?php if($templateParams["maincolor"][0]["Colore"] == $opzione["Colore"]): ?>
                         <?php echo "class='activate'"; ?>
-                        <?php endif;?> src="../Icons/candle.png" alt=""></a>
+                        <?php endif;?> src="<?php echo UPLOAD_DIR.$templateParams["imgopzione"][$key];?>" alt=""/></a>
                     <p <?php if($templateParams["maincolor"][0]["Colore"] == $opzione["Colore"]): ?> <?php echo "class='colorName'"; ?><?php endif;?>><?php echo $opzione["Colore"];?></p>
                 </li>
             <?php endforeach;?>

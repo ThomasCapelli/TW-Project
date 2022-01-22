@@ -125,3 +125,10 @@
     transform: translateX(calc(66px * 4));
     filter: hue-rotate(360deg);
 }
+.badge {
+    position:absolute;
+    top: 6px;
+    background-color: var(--form-error);
+    border-radius: 100%;
+    padding: 4px;
+}

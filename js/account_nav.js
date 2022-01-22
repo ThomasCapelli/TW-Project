@@ -1,6 +1,6 @@
 function closeAll() {
     $("body > ul").each(function() {
-        removeVisible($(this));
+        removeVisibleSection($(this));
     }); 
 }
 function onClose() {
@@ -11,17 +11,23 @@ function onClose() {
         $(this).removeClass("active");
     });
 }
-function removeVisible(element) {
+function removeVisibleSection(element) {
     element.removeClass("visible");
+    let li = element.children();
+    li.each(function(){
+        if($(this).hasClass("new")) {
+            $(this).removeClass("new");
+        }
+    });
 }
 function showList(current) {
     if(current.hasClass("visible")) {
-        current.removeClass("visible");
+        removeVisibleSection(current);
     } else {
         current.addClass("visible");
     }
     current.find(">:first-child").click(function() {
-        removeVisible(current);
+        removeVisibleSection(current);
     });
 }
 function showAccNav(){
@@ -38,10 +44,10 @@ function activeLink(current){
     current.prevAll().removeClass("active");
     if(current.is("#messaggi")) {
         showList($("ul.notify"));
-        removeVisible($("ul.history"));
+        removeVisibleSection($("ul.history"));
     } else if(current.is("#storico")) {
         showList($("ul.history"));
-        removeVisible($("ul.notify"));
+        removeVisibleSection($("ul.notify"));
     } else {
         closeAll();
     }

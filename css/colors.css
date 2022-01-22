@@ -4,12 +4,13 @@
     --header-background: #fff;
     --text: #000;
     --header-hover: #5a65fd;
+    --header-login-hover: #5a65fd;
     --header-main-button: hsla(236, 98%, 67%, 0.15);
     --slider_background: #ffffff;
     --sticky-selected-color: white;
     --stickynav-background:hsla(236, 98%, 67%, 0.15);
     --stickynav-border: rgba(255, 255, 255, 0.473);
-    --sale-background: #2b6777;
+    --sale-background: #075472;
     --sale-hover: rgba(90,101,253,0.5);
     --product-text-background: white;
     --product-background: #c8d8e4;
@@ -56,6 +57,7 @@
 .dark_mode {
     --header-main-button: #0070c9;
     --header-hover: #5a65fd;
+    --header-login-hover: aqua;
     --body_background: #121212f8;
     --header-background: #121212;
     --text: #c9d1d9;
@@ -69,7 +71,7 @@
     --product-img-background: #313030;
     --product-background: #080808;
     --product-text: #c9c6c6;
-    --product-text-background: #121212f8;
+    --product-text-background: #0a032ff8;
     --product-title: white;
     --product-button: #03a2f6;
     --product-link: white;
@@ -100,7 +102,7 @@
     --cart-hover: rgb(20, 170, 20);
     --dropmenu-border: rgb(231, 231, 231);
     --singleproduct-imgslected: coral;
-    --product-img-bg: rgb(216, 216, 216);
+    --product-img-bg: rgb(73, 73, 73);
     --product-hover-shadow: rgba(0,0,0,0.2);
     --productcard-hover: blanchedalmond;
     --snackbar-bg: #333;

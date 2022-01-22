@@ -5,7 +5,7 @@
         <?php foreach($templateParams["bestseller"] as $prodotto): ?>
             <div class="Containers">
               <div class="MessageInfo"><?php echo $i;?>/<?php echo count($templateParams["bestseller"]);?></div>
-              <img src="../icons/catapult_large.jpg">
+              <a href="../php/productCard.php?productId=<?php echo $prodotto["IdProdotto"];?>&categoryId=<?php echo $prodotto["IdCategoria"];?>"><img src="../icons/catapult_large.jpg"></a>
               <div class="Info"><?php echo $prodotto["Descrizione_Breve"];?></div>
             </div> 
             <?php $i++; ?>
