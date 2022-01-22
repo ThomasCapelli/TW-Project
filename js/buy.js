@@ -31,6 +31,7 @@ $(document).ready(function(){
                 var data =  {'cartStatus': cartStatus, 'total': total};
                 $.post(ajaxurl, data);
                 showSnackBar("Ordine in elaborazione");
+                reload();
             }
             else{
                 showSnackBar("Errore nell'inserimento della spedizione o pagamento");
@@ -49,6 +50,7 @@ $(document).ready(function(){
                 var data =  {'cartStatus': cartStatus, 'total': total};
                 $.post(ajaxurl, data);
                 showSnackBar("Ordine in elaborazione");
+                reload();
             }
             else{
                 showSnackBar("Errore nell'inserimento della spedizione o pagamento");
