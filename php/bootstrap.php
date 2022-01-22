@@ -33,5 +33,8 @@
         $templateParams["storico"] = $dbh->getOrders($_SESSION["nomeutente"]);
         $templateParams["ordini"] = $dbh->getCarrello($_SESSION["nomeutente"]);
     }
+    if(isUserLoggedIn()) {
+        $templateParams["utente"] = $dbh->getName($_SESSION["email"]);
+    }
     
 ?>

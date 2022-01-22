@@ -14,11 +14,13 @@ $(document).ready(function(){
         window.$_GET = new URLSearchParams(location.search);
         var activeColor = $(".colorName").text();
         var activeSize = $("input[name='size']:checked").val();
+        console.log(activeSize);
         var activeSizeQty =$("input[name='size']:checked").attr('id').split(" ");
         var Qty = parseInt(activeSizeQty[1]);
         var idProd = $_GET.get('productId');
         var idCat = $_GET.get('categoryId');
         var data;
+        var ajaxurl = '../php/order.php';
         console.log(Qty);
         if(Qty-cont==-1){
             showSnackBar("Taglia e colore scelto non disponibile")
@@ -52,9 +54,9 @@ $(document).ready(function(){
         }});
     });
     $("article header ul li").click(function () {
-        $("header > div").empty().append($(this).html());
+        $("article header > div").empty().append($(this).html());
     });
-    $("button:first-of-type").click(function () {
+    $("article button:first-of-type").click(function () {
         if($(".size").css("display") == "none") {
             $(".size").css("display", "block");
         } else {
@@ -70,6 +72,7 @@ $(document).ready(function(){
         if(!$(this).is(":first-of-type")) {
             $("button:first-of-type").text($(this).text());
         }
+        $(this).children().last().attr("checked", "checked");
         $(".size").css("display", "none");
     });
 });

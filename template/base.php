@@ -34,7 +34,7 @@
             <a class="logo" href="index.php" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a>
             <a class="removable" href="index.php"><h1><?php echo $templateParams["webtitle"]; ?></h1></a>
             <?php if(isUserLoggedIn()): ?>
-                <a class="account"><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $_SESSION["nomeutente"]; ?></p></a>
+                <a class="account"><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $templateParams["utente"][0]["Nome"]; ?></p></a>
                 <a class="cart" href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><?php if($templateParams["cartnumber"] > 0):?><span class="badge"></span><?php endif;?><p>Carrello</p></a>
             <?php elseif(basename($_SERVER['PHP_SELF'])=="login.php"): ?>
                 <a class="login" href="sign.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Registrati</p></a>

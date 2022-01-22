@@ -22,6 +22,14 @@ class DatabaseHelper{
         $stmt->bind_param('is', $mode, $email);
         return $stmt->execute();;
     }
+    public function getName($email) {
+        $stmt = $this->db->prepare("SELECT Nome FROM utente WHERE Email = ?");
+        $stmt->bind_param('s',$email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function getMode($email) {
         $stmt = $this->db->prepare("SELECT DarkMode FROM utente WHERE Email = ?");
         $stmt->bind_param('s',$email);
@@ -237,6 +245,9 @@ class DatabaseHelper{
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function setNotifica($text, $data) {
+        
     }
 }
 ?>

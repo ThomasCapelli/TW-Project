@@ -107,6 +107,7 @@ main > article > footer > ul.size > li {
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid var(--grey);
+    color: var(--text);
 }
 main > article > footer > ul.size > li:hover {
     background-color: var(--productcard-hover);
