@@ -68,4 +68,23 @@ $(document).ready(function(){
             onClose();
         });    
     }
+    $(".progress").each(function (){
+        var time=Math.floor(Math.random() * 10000) + 1000;
+        const changeProgress = (progress) => {
+            $(this).css("width",`${progress}%`);
+            if(progress==100){
+                var closestElement = targetElement.closest("li");
+                console.log(closestElement.attr("name"));
+                var ajaxurl = '../php/notify.php';
+                var data =  {'changeOrderStatus': 1, 'idO': parseInt(closestElement.attr("name"))};
+                $.post(ajaxurl, data); 
+            }
+        };
+        var targetElement = $(this);
+        setTimeout(() => changeProgress(22),time);
+        setTimeout(() => changeProgress(45), time+1000);
+        setTimeout(() => changeProgress(85), time+1500);
+        setTimeout(() => changeProgress(100), time+1500);
+        
+    });
 });

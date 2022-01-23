@@ -130,14 +130,14 @@ class DatabaseHelper{
         return $stmt->execute();
     }
     public function getOrder($nome){
-        $stmt = $this->db->prepare("SELECT * FROM ordine WHERE NomeUtente = ? AND Stato <> 'elaborazione'");
+        $stmt = $this->db->prepare("SELECT * FROM ordine WHERE NomeUtente = ? AND Stato <> 'elaborazione' AND Stato <> 'consegnato' ");
         $stmt->bind_param("s",$nome);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     public function getOrders($nome){
-        $stmt = $this->db->prepare("SELECT * FROM ordine WHERE NomeUtente = ?");
+        $stmt = $this->db->prepare("SELECT * FROM ordine WHERE NomeUtente = ? AND Stato='elaborazione'");
         $stmt->bind_param("s",$nome);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -246,8 +246,15 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function setNotifica($text, $data) {
-        
+    public function changeOrderStatus($idO,$nome){
+        $stmt = $this->db->prepare("UPDATE ordine SET Stato = 'consegnato' WHERE NomeUtente = ? AND IdOrdine = ?");
+        $stmt->bind_param("si", $nome, $idO);
+        $stmt->execute();
+    }
+    public function setOrderNotification($idO,$nome){
+        $stmt = $this->db->prepare("INSERT INTO notifica VALUES(CONCAT('Ordine consegnato: ',?),DEFAULT,'no',?)");
+        $stmt->bind_param("is",$idO,$nome);
+        $stmt->execute();
     }
 }
 ?>

@@ -6,14 +6,16 @@
             <th>Quantità</th>
             <th>Totale</th>
         </tr>
-        <?php $cont=0; ?>
+        <?php
+            $cont=0; ?>
         <?php foreach($templateParams["ordini"] as $ordine): ?>
         <tr>
         <td><button type="button" name="<?php echo $ordine["IdDettaglioOrdine"];?>" title="Rimuovi elemento" class="remove_button">X</button><a href="#"><img src="<?php echo UPLOAD_DIR.$ordine["URL"];?>" alt="Product image" /></a><p><?php echo $ordine["NomeProdotto"];?> Taglia:<?php echo $ordine["Taglia"];?> Colore:<?php echo $ordine["Colore"];?></p></td>
             <td class="price"><?php echo $ordine["Prezzo"]; ?></td>
                 <td>
                     <div class="quantity buttons_added">
-                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="<?php echo $templateParams["taglie"][$cont]["Quantita"]; $cont++;?>" name="quantity" value="<?php echo $ordine["Quantita"]; ?>" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="<?php echo $templateParams["taglie"][$cont]["Quantita"]; ?>" name="quantity" value="<?php echo $ordine["Quantita"]; ?>" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                        <?php $cont=$cont +1;?>
                     </div>
                 </td>
             <td name="Totale"></td>

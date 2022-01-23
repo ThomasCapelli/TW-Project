@@ -49,8 +49,11 @@
             Close
         </li>
         <?php foreach($templateParams["storico"] as $storico):?>
-        <li>
+        <li name="<?php echo $storico["IdOrdine"]?>">
             <?php echo "ID Ordine: ".$storico["IdOrdine"]." Stato: ".$storico["Stato"]; ?>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
         </li>
         <?php endforeach; ?>
     </ul>
