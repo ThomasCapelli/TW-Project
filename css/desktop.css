@@ -101,6 +101,9 @@ header > nav > a.cart span{
   top: 13px;
   right: 175px;
 }
+header > nav > a.account span {
+  top: 13px;
+}
 header > nav > a:hover {
   color: var(--header-hover);
 }

@@ -22,6 +22,14 @@ class DatabaseHelper{
         $stmt->bind_param('is', $mode, $email);
         return $stmt->execute();;
     }
+    public function getName($email) {
+        $stmt = $this->db->prepare("SELECT Nome FROM utente WHERE Email = ?");
+        $stmt->bind_param('s',$email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function getMode($email) {
         $stmt = $this->db->prepare("SELECT DarkMode FROM utente WHERE Email = ?");
         $stmt->bind_param('s',$email);
@@ -237,6 +245,27 @@ class DatabaseHelper{
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function setNotifica($text, $data, $utente) {
+        $stmt = $this->db->prepare("INSERT INTO notifica 
+        VALUES (?, ?, 'no', ?)");
+        $stmt->bind_param("sss", $text, $data, $utente);
+        $stmt->execute();
+    }
+    public function getNotifiche($utente) {
+        $stmt = $this->db->prepare("SELECT * FROM `notifica` WHERE NomeUtente = ?  ORDER BY Letta = 'no' DESC");
+        $stmt->bind_param("s", $utente);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function setLette($utente) {
+        $stmt = $this->db->prepare("UPDATE notifica
+        SET Letta = 'si'
+        WHERE NomeUtente = ?");
+        $stmt->bind_param("s", $utente);
+        $stmt->execute();
     }
 }
 ?>

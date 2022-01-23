@@ -1,5 +1,10 @@
-function addMessage(activeColor,activeSize) {
-    $("<li class='new'>Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"</li>").insertAfter("ul.notify li:first-of-type");
+function addBadge() {
+    $("a.account").append(`<span class="badge"></span>`);
+    $("#messaggi a span:first-of-type").append(`<span class="badge"></span>`);
+}
+function addMessage(activeColor,activeSize, date) {
+    $("<li class='new'>Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"<br/>"+date+"</li>").insertAfter("ul.notify li:first-of-type");
+    addBadge();
 }
 function showSnackBar(testo) {
     $("div.snackbar").css("display","initial");
@@ -8,53 +13,57 @@ function showSnackBar(testo) {
         $("div.snackbar").hide();
     }, 4000);
 }
+function getDate() {
+    var d = new Date();
+    var strDate = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
+    return strDate;
+}
+function setNotifica($testo, $size, $color) {
+    let date = getDate();
+    $.ajax({
+        method: "POST",
+        url: '../php/notify.php',
+        data: {notifica: $testo, date: date},
+        success: function (){
+            addMessage($size, $color, date);
+        }
+    });
+}
 var cont=1;
 $(document).ready(function(){
     $('.addToCart').click(function() {
         window.$_GET = new URLSearchParams(location.search);
         var activeColor = $(".colorName").text();
         var activeSize = $("input[name='size']:checked").val();
+        console.log(activeSize);
         var activeSizeQty =$("input[name='size']:checked").attr('id').split(" ");
         var Qty = parseInt(activeSizeQty[1]);
         var idProd = $_GET.get('productId');
         var idCat = $_GET.get('categoryId');
-        var data;
-        console.log(Qty);
+        var dati;
+        let testo;
         if(Qty-cont==-1){
             showSnackBar("Taglia e colore scelto non disponibile")
         }
         else{
-            data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
-            $.post(ajaxurl, data).done(function() {showSnackBar("Oggetto aggiunto correttamente al carrello")});
-            addMessage(activeColor,activeSize);
-            cont++;
+            testo = "Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"";
+            dati =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
+            $.ajax({
+                method: "POST",
+                url: '../php/order.php',
+                data: {color: activeColor, size: activeSize, idProdotto: parseInt(idProd), idCategoria: parseInt(idCat)},
+                success: function (){
+                    showSnackBar("Oggetto aggiunto correttamente al carrello");
+                    cont++;
+                    setNotifica(testo, activeSize, activeColor);
+                }
+            });
         }
-        $.ajax({
-            type: "POST",
-            url: '../php/order.php',
-            data: data,
-            success: function (){
-                showSnackBar();
-                addMessage(activeColor,activeSize);
-            }
-          });
-        $.ajax({url: "../php/result.json", success: function(result){
-            console.log(result);
-            if(result > 0) {
-                console.log(!$("a.cart").children().hasClass("badge"));
-                if(!$("a.cart").children().hasClass("badge")) {
-                    $("a.cart").append(`<span class="badge"></span>`);
-                }
-                if(!$("#messaggi span.icon_A_nav").children().hasClass("badge")) {
-                    $("#messaggi span.icon_A_nav").append(`<span class="badge"></span>`);
-                }
-            }
-        }});
     });
     $("article header ul li").click(function () {
-        $("header > div").empty().append($(this).html());
+        $("article header > div").empty().append($(this).html());
     });
-    $("button:first-of-type").click(function () {
+    $("article button:first-of-type").click(function () {
         if($(".size").css("display") == "none") {
             $(".size").css("display", "block");
         } else {
@@ -70,6 +79,7 @@ $(document).ready(function(){
         if(!$(this).is(":first-of-type")) {
             $("button:first-of-type").text($(this).text());
         }
+        $(this).children().last().attr("checked", "checked");
         $(".size").css("display", "none");
     });
 });
