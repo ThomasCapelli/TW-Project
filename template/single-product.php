@@ -35,15 +35,15 @@
                 </li>
             <?php endforeach;?>
             </ul>
-            <button type="button">Seleziona taglia</button>
+            <button class="tagliaButton" type="button">Seleziona taglia</button>
             <ul class="size">
                 <li>
                     <p>X</p>
                 </li>
                 <?php foreach($templateParams["taglie"] as $taglia):?>
                 <li>
-                    <label for="<?php echo $taglia["Nome_taglia"];?>"><?php echo $taglia["Nome_taglia"];?></label>
-                    <input type="radio" name="size" id="<?php echo $taglia["Nome_taglia"]." ".$taglia["Quantita"];?>" value="<?php echo $taglia["Nome_taglia"];?>"/>
+                    <label for="<?php echo $taglia["Nome_taglia"];?>"><?php echo $taglia["Nome_taglia"]." quantità rimasta ".$taglia["Quantita"];?></label>
+                    <input type="radio" name="size" id="<?php echo $taglia["Nome_taglia"];?>" value="<?php echo $taglia["Nome_taglia"];?>"/>
                 </li>
                 <?php endforeach;?>
             </ul>
