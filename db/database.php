@@ -254,6 +254,25 @@ class DatabaseHelper{
     public function setOrderNotification($idO,$nome){
         $stmt = $this->db->prepare("INSERT INTO notifica VALUES(CONCAT('Ordine consegnato: ',?),DEFAULT,'no',?)");
         $stmt->bind_param("is",$idO,$nome);
+    public function setNotifica($text, $data, $utente) {
+        $stmt = $this->db->prepare("INSERT INTO notifica 
+        VALUES (?, ?, 'no', ?)");
+        $stmt->bind_param("sss", $text, $data, $utente);
+        $stmt->execute();
+    }
+    public function getNotifiche($utente) {
+        $stmt = $this->db->prepare("SELECT * FROM `notifica` WHERE NomeUtente = ?  ORDER BY Letta = 'no' DESC");
+        $stmt->bind_param("s", $utente);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function setLette($utente) {
+        $stmt = $this->db->prepare("UPDATE notifica
+        SET Letta = 'si'
+        WHERE NomeUtente = ?");
+        $stmt->bind_param("s", $utente);
         $stmt->execute();
     }
 }

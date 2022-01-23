@@ -9,7 +9,6 @@
     
         echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
     }
-  
     if(isset($_POST["color"]) && isset($_POST["size"])) {
         $idDettaglioOrdine = rand(0,500);
         $quantita = 1;
@@ -29,13 +28,9 @@
             }
         }
         if($flag==1){
-            $templateParams["prodotto"]=$dbh->getProductById($_POST["idProdotto"],$_POST["idCategoria"]);
+            $templateParams["prodotto"]=$dbh->getProductById($_POST["idProdotto"], $_POST["idCategoria"]);
             $prodotto=$templateParams["prodotto"][0];
-            $dbh->placeOrder($_POST["idCategoria"],$prodotto["IdProduttore"],$_POST["idProdotto"],$idDettaglioOrdine,$quantita, $_POST["size"], $_POST["color"], $_SESSION["nomeutente"],$_SESSION["sessionCartToken"]);
-            $fp = fopen('../php/result.json', 'w');
-            fwrite($fp, json_encode(count($dbh->getCarrello($_SESSION["nomeutente"]))));
-            fclose($fp);     
-        }
-        
-    }    
+            $dbh->placeOrder($_POST["idCategoria"], $prodotto["IdProduttore"], $_POST["idProdotto"],$idDettaglioOrdine,$quantita, $_POST["size"], $_POST["color"], $_SESSION["nomeutente"], $_SESSION["sessionCartToken"]);     
+        }   
+    }
 ?>

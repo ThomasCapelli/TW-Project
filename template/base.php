@@ -34,8 +34,8 @@
             <a class="logo" href="index.php" ><img src="../icons/Logo.png" alt="Website logo" class="icon" /></a>
             <a class="removable" href="index.php"><h1><?php echo $templateParams["webtitle"]; ?></h1></a>
             <?php if(isUserLoggedIn()): ?>
-                <a class="account"><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $templateParams["utente"][0]["Nome"]; ?></p></a>
-                <a class="cart" href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><?php if($templateParams["cartnumber"] > 0):?><span class="badge"></span><?php endif;?><p>Carrello</p></a>
+                <a class="account"><img src="../icons/Login_modern.png" alt="User logo" class="icon" /><p><?php echo $templateParams["utente"][0]["Nome"]; ?></p><?php if(isUserLoggedIn() && $templateParams["numero"] > 0):?><span class="badge"></span><?php endif;?></a>
+                <a class="cart" href="cart.php" ><img src="../icons/Carrello_modern.png" alt="Cart logo" class="icon" /><?php if(count($templateParams["ordini"]) > 0):?><span class="badge"></span><?php endif;?><p>Carrello</p></a>
             <?php elseif(basename($_SERVER['PHP_SELF'])=="login.php"): ?>
                 <a class="login" href="sign.php"><img src="../icons/Login_modern.png" alt="Login logo" class="icon" /><p>Registrati</p></a>
             <?php else: ?>
@@ -61,9 +61,9 @@
         <li>
             Close
         </li>
-        <?php foreach($templateParams["ordini"] as $ordine):?>
-        <li>
-            <?php echo "Hai aggiunto a carrello: ".$ordine["NomeProdotto"]." Taglia: ".$ordine["Taglia"]." Colore: ".$ordine["Colore"]; ?>
+        <?php foreach($templateParams["notifiche"] as $notifica):?>
+        <li <?php if($notifica["Letta"] == "no"): ?> class="new" <?php endif;?>>
+            <?php echo $notifica["Testo"]; ?> <br/><?php echo $notifica["Data"]; ?>
         </li>
         <?php endforeach; ?>
     </ul>
@@ -99,13 +99,13 @@
                 </li>
                 <li class="list" id="storico">
                     <a href=#>
-                        <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/><?php if($templateParams["cartnumber"] > 0):?><span class="badge"></span><?php endif;?></span>
+                        <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/><?php if(isUserLoggedIn() && $templateParams["numero"] > 0):?><span class="badge"></span><?php endif;?></span>
                         <span class="text_A_nav">Storico</span>
                     </a>
                 </li>
                 <li id="messaggi" class="list">
                     <a href=#>
-                        <span class="icon_A_nav"><img src="../icons/message.png" alt="My messages logo"/><?php if($templateParams["cartnumber"] > 0):?><span class="badge"></span><?php endif;?></span>
+                        <span class="icon_A_nav"><img src="../icons/message.png" alt="My messages logo"/><?php if(isUserLoggedIn() && $templateParams["numero"] > 0):?><span class="badge"></span><?php endif;?></span>
                         <span class="text_A_nav">Messaggi</span>
                     </a>
                 </li>

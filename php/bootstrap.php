@@ -3,21 +3,13 @@
     define("UPLOAD_DIR", "../icons/");
     require_once("../db/database.php");
     require_once("../utils/functions.php");
-    $dbh = new DatabaseHelper("localhost", "root", "", "e_commerce", 8111);
+    $dbh = new DatabaseHelper("localhost", "root", "", "e_commerce", 3306);
     $templateParams["webtitle"] = "NewEvo";
     $templateParams["categorie"] = $dbh->getCategories();
     if(isUserLoggedIn()) {
         if(!isset($_SESSION["sessionCartToken"])){
             $_SESSION["sessionCartToken"]=rand(0,700);
         }
-        $templateParams["cart"] = $dbh->getCarrello($_SESSION["nomeutente"]);
-        $tot = 0;
-        foreach($templateParams["cart"] as $element) {
-            $tot = $tot + $element["Quantita"];
-        }
-        $templateParams["cartnumber"] = $tot;
-    } else {
-        $templateParams["cartnumber"] = 0;
     }
     if(isUserLoggedIn()) {
         $mode = $dbh->getMode($_SESSION["email"]);
@@ -35,6 +27,13 @@
     }
     if(isUserLoggedIn()) {
         $templateParams["utente"] = $dbh->getName($_SESSION["email"]);
+        $templateParams["notifiche"] = $dbh->getNotifiche($_SESSION["email"]);
+        $templateParams["numero"] = 0;
+        foreach($templateParams["notifiche"] as $notifica) {
+            if($notifica["Letta"] == "no") {
+                $templateParams["numero"] = $templateParams["numero"] + 1;
+            }
+        }
     }
     
 ?>

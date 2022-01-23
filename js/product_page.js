@@ -1,5 +1,10 @@
-function addMessage(activeColor,activeSize) {
-    $("<li class='new'>Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"</li>").insertAfter("ul.notify li:first-of-type");
+function addBadge() {
+    $("a.account").append(`<span class="badge"></span>`);
+    $("#messaggi a span:first-of-type").append(`<span class="badge"></span>`);
+}
+function addMessage(activeColor,activeSize, date) {
+    $("<li class='new'>Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"<br/>"+date+"</li>").insertAfter("ul.notify li:first-of-type");
+    addBadge();
 }
 function showSnackBar(testo) {
     $("div.snackbar").css("display","initial");
@@ -7,6 +12,22 @@ function showSnackBar(testo) {
     window.setInterval(function() {
         $("div.snackbar").hide();
     }, 4000);
+}
+function getDate() {
+    var d = new Date();
+    var strDate = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
+    return strDate;
+}
+function setNotifica($testo, $size, $color) {
+    let date = getDate();
+    $.ajax({
+        method: "POST",
+        url: '../php/notify.php',
+        data: {notifica: $testo, date: date},
+        success: function (){
+            addMessage($size, $color, date);
+        }
+    });
 }
 var cont=1;
 var flag=0;
@@ -69,6 +90,7 @@ $(document).ready(function(){
         if(!$(this).is(":first-of-type")) {
             $(".tagliaButton").text($(this).text());
         }
+        $(this).children().last().attr("checked", "checked");
         flag=1;
         $(".size").css("display", "none");
     });

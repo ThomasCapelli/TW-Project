@@ -1,6 +1,12 @@
+function removeBadge() {
+    $("a.account").children().last().remove();
+    $("#messaggi a span").children().last().remove();
+}
 function closeAll() {
     $("body > ul").each(function() {
-        removeVisibleSection($(this));
+        if($(this).hasClass("visible")) {
+            removeVisibleSection($(this));
+        }
     }); 
 }
 function onClose() {
@@ -14,11 +20,24 @@ function onClose() {
 function removeVisibleSection(element) {
     element.removeClass("visible");
     let li = element.children();
+    let bool = false;
     li.each(function(){
         if($(this).hasClass("new")) {
             $(this).removeClass("new");
+            bool = true;
         }
     });
+    if(bool) {
+        $.ajax({
+            method: "POST",
+            url: "../php/notify.php",
+            data: {
+                letta: "si"
+            }, success: function () {
+                removeBadge();
+            }
+        });
+    }
 }
 function showList(current) {
     if(current.hasClass("visible")) {
