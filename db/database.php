@@ -254,6 +254,8 @@ class DatabaseHelper{
     public function setOrderNotification($idO,$nome){
         $stmt = $this->db->prepare("INSERT INTO notifica VALUES(CONCAT('Ordine consegnato: ',?),DEFAULT,'no',?)");
         $stmt->bind_param("is",$idO,$nome);
+        $stmt->execute();
+    }
     public function setNotifica($text, $data, $utente) {
         $stmt = $this->db->prepare("INSERT INTO notifica 
         VALUES (?, ?, 'no', ?)");

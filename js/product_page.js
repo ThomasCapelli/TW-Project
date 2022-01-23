@@ -52,12 +52,9 @@ $(document).ready(function(){
                 addMessage(activeColor,activeSize);
                 size[3]=activeSizeQty-1;
                 $(".tagliaButton").text(size.join().replace(/,/g," "));
-                flag=0;
             }
             $.ajax({url: "../php/result.json", success: function(result){
-                console.log(result);
                 if(result > 0) {
-                    console.log(!$("a.cart").children().hasClass("badge"));
                     if(!$("a.cart").children().hasClass("badge")) {
                         $("a.cart").append(`<span class="badge"></span>`);
                     }
