@@ -85,7 +85,17 @@
                 <a href="product.php?categoryName=Saldi">Saldi</a>
             </li>     
         </ul>
-        <a href="">Contatti</a>
+        <button>
+                Contatti
+        </button>
+        <ul>
+            <li>
+                Thomas Capelli, <a href="mailto:thomascapelli@gmail.com"> Send Mail</a>
+            </li>
+            <li> 
+                Ciprian Stricescu, <a href="mailto:ciprianstricescu@gmail.com"> Send Mail</a>
+            </li>
+        </ul>
     </div>
     <!--Menù a comparsa quando si clicca sull'icona account-->
     <div class="account_background">
@@ -99,7 +109,7 @@
                 </li>
                 <li class="list" id="storico">
                     <a href=#>
-                        <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/><?php if(isUserLoggedIn() && $templateParams["numero"] > 0):?><span class="badge"></span><?php endif;?></span>
+                        <span class="icon_A_nav"><img src="../icons/fantasy.png" alt="My orders logo"/><?php if(isUserLoggedIn() && count($templateParams["storico"]) > 0):?><span class="badge"></span><?php endif;?></span>
                         <span class="text_A_nav">Storico</span>
                     </a>
                 </li>

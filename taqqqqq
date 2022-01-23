@@ -1,0 +1,751 @@
+[33mcommit 188c6a4fa8fda4224631163c561cf5e8d8cf98cd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Jan 23 14:29:01 2022 +0100
+
+    db query fix
+
+[33mcommit aa8673c62aba9f1eb39eead5eee25c4784401512[m
+Merge: deba091 6de8507
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Jan 23 14:21:08 2022 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit deba091df24bcd6fb94ea9b2745e5fdb735e2dfd[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Jan 23 14:19:09 2022 +0100
+
+    progress bar on history + some fix
+
+[33mcommit 6de8507260b82857db582f1efe507eac50ef64e2[m
+Merge: 228c31c b5b2e47
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sun Jan 23 13:58:50 2022 +0100
+
+    merge
+
+[33mcommit 228c31c7b3f502ad9f663511c255b3a34aac130e[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sun Jan 23 13:55:29 2022 +0100
+
+    notify sistem
+
+[33mcommit b5b2e472a49b0512f94a6c0020a6fd5d2c0b5f09[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sat Jan 22 23:15:28 2022 +0100
+
+    new fix for cart and productpage
+
+[33mcommit 95a5f2e8bb03f0060857e9ee0e1a5908e5a5e07e[m
+Merge: bb57681 896c5a3
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Jan 22 18:29:54 2022 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit bb5768143fda83df3be459ba32f78c2be3e0aec1[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Jan 22 18:29:34 2022 +0100
+
+    updated product card
+
+[33mcommit 896c5a337be55f790ea3a7db20011c4214837c2f[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Jan 22 17:46:37 2022 +0100
+
+    ciao cip
+
+[33mcommit f898966263ae8df6a6d0e49efba6fd7578f0e9cc[m
+Merge: 689ae54 899ac6f
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Jan 22 17:38:35 2022 +0100
+
+    merge
+
+[33mcommit 689ae54ff16f5777a8442623366e93ce48cfff03[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Jan 22 17:36:35 2022 +0100
+
+    updated
+
+[33mcommit 899ac6f19792d034e39f1390e86795cc826ba00a[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sat Jan 22 17:34:49 2022 +0100
+
+    nomutente fix + db changes
+
+[33mcommit 6b25fc1f372dcf88ca129275c184d104bdea959c[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sat Jan 22 16:49:31 2022 +0100
+
+    cart qty final(hope so) fix
+
+[33mcommit 430de239c622ce71e9606e6b5ebc74efb3529040[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Fri Jan 21 19:16:52 2022 +0100
+
+    fix cart quantity on db query
+
+[33mcommit 5a783f716d2fc52d3f6837dd0eae15c771849f39[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Fri Jan 21 18:33:40 2022 +0100
+
+    addes qty check on buy and add to cart
+
+[33mcommit c9a131b0ee42e69834976c2cd542aff6451ed67d[m
+Merge: 8b855c5 a5140f2
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Jan 20 18:13:02 2022 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 8b855c590a435cf5a1e75d3680c97a8d8f5a7243[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Jan 20 18:12:57 2022 +0100
+
+    fix?
+
+[33mcommit a5140f2dfd3359560a40c80918fcd6d2766256be[m
+Merge: a93ccea 1df5191
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 20 18:05:49 2022 +0100
+
+    merge
+
+[33mcommit a93ccea3448226da475b916d13af527626e1d686[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 20 18:04:23 2022 +0100
+
+    f
+
+[33mcommit 1df519105a601f6f4c58d7c0480409ec3e92e0b7[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Jan 20 18:03:42 2022 +0100
+
+    fix get cart query problem adding more stuff
+
+[33mcommit ca76a584bd8478c557631c8c3313449b2029988d[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 20 17:42:29 2022 +0100
+
+    snackbar on notification
+
+[33mcommit d01a8d673cf265e470b481b97a61695097e34d80[m
+Merge: ed9ecdc b46b4b0
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 20 16:50:58 2022 +0100
+
+    merge
+
+[33mcommit ed9ecdcfe7f5dca0d234df93ecfa5db2bbde661a[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 20 16:48:34 2022 +0100
+
+    fixed account nav
+
+[33mcommit b46b4b0c41ccf4ef73a5e81da6cf20472b18c637[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 20 16:16:02 2022 +0100
+
+    refactor to account nav
+
+[33mcommit 35a1eeb8dbe6a8c73bcf8d6da538b6f5e726d5c5[m
+Merge: 10fbe82 dd088c3
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 20 15:10:02 2022 +0100
+
+    merge
+
+[33mcommit 10fbe8250de772027e2305bc08ad2169a755af37[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 20 15:07:46 2022 +0100
+
+    colors
+
+[33mcommit dd088c39397a428a68f35e0c5cee3a4af44cfb94[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Jan 20 14:59:50 2022 +0100
+
+    messages and history modal fix
+
+[33mcommit fe7474f73e7c75e5d5f9b676baabbdb11d11d70d[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Wed Jan 19 16:43:55 2022 +0100
+
+    added history + cart insert messages
+
+[33mcommit 4d024246c171efee0e6e9f1e5ecc44f55dbfcee0[m
+Merge: 2a7eaa3 985cc43
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Wed Jan 19 14:03:59 2022 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 2a7eaa35374bb7b63b83d05ba726a4f6c2b82c02[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Wed Jan 19 14:03:47 2022 +0100
+
+    changes
+
+[33mcommit 985cc43af26df4b3cda04b8013b35c76eb4491a7[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Tue Jan 18 14:20:41 2022 +0100
+
+    added paypal "login" on cart + if not all payment parameters are set the page doesnt go to home page
+
+[33mcommit 84a69aa0e1e395994efe283690bef936605ef6f3[m
+Merge: 32fbbf7 15882c4
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Jan 17 18:19:08 2022 +0100
+
+    gMerge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 32fbbf7123d37d6186ef8508fa597cff3d546218[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Jan 17 18:18:56 2022 +0100
+
+    started notification
+
+[33mcommit 15882c4b6596b9a6c995c17134cb6eb68b4d8a18[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Jan 17 14:14:53 2022 +0100
+
+    migrated product card js into own page + fix on total for each element in cart
+
+[33mcommit d1fa3ad3ac75c0aa4ef12c4fc65969054bededf1[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Jan 17 13:12:10 2022 +0100
+
+    fixed tot if more than one element of same in cart
+
+[33mcommit de55fe6a9cc76b5ebf8b473d86bf50ff0437639c[m
+Merge: 42cb27c 220a670
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Jan 17 03:17:02 2022 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 42cb27c6318e726cc93752bbf07c54706231726b[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Jan 17 03:16:54 2022 +0100
+
+    implementation of remove button in cart page (  html + js + php)
+
+[33mcommit 220a67071ce083ec0cc3c4ab49df7f8e87aa8b35[m
+Merge: e2cef66 98f6251
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sun Jan 16 18:31:41 2022 +0100
+
+    merge
+
+[33mcommit e2cef66f14e9f1b41a4a8ce9f4f2fffc5e7e4be2[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sun Jan 16 18:29:30 2022 +0100
+
+    dynamic productcard, simple admin form, new images
+
+[33mcommit 98f625197b5255bbfd0de474c6f1214d49983274[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Jan 16 01:33:24 2022 +0100
+
+    First cart quantity fix (TODO html update)
+
+[33mcommit 19af63ca8c45977f094a4602cffb712885da0d40[m
+Merge: 8d5bd5d 6fd3877
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Jan 16 01:02:51 2022 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 6fd38770b62fde0552c6a3f6772f0fc411582a55[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Jan 15 17:35:08 2022 +0100
+
+    fixed carousel and header menu
+
+[33mcommit 8d5bd5db10b39be80f418f5c00051c901fa44d93[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Fri Jan 14 23:05:59 2022 +0100
+
+    implementation of cart features ( buy , add to cart)
+
+[33mcommit ec8952d7b81fb11867c0818e7fd009b6b354a86c[m
+Merge: ee58bca dce52e6
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Fri Jan 14 21:11:25 2022 +0100
+
+    merge
+
+[33mcommit ee58bca4fafc05e776714bb4f4b62a5cfc392b6b[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Fri Jan 14 21:09:36 2022 +0100
+
+    fixed things
+
+[33mcommit dce52e6b803971258300e9212a3a4ff5f64b8fb3[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 13 18:17:35 2022 +0100
+
+    added Category Menu in the header, fixed sizes, colors and others in product page
+
+[33mcommit 7d959281e4c6f4019830a1855bd8680d10c7d260[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Tue Jan 11 17:07:29 2022 +0100
+
+    register query fix + product to cart link fix
+
+[33mcommit c653ecfae42bdbac7d08fbc74588564f0eff852d[m
+Merge: a61c297 9afe97b
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Tue Jan 11 16:31:43 2022 +0100
+
+    merge
+
+[33mcommit a61c29765352c30571d2b577fddc5b179ccf09d5[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Tue Jan 11 16:28:39 2022 +0100
+
+    gitignore
+
+[33mcommit 6c3fae0e56dfd179b9697035dce1baeb71aca257[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Tue Jan 11 16:27:52 2022 +0100
+
+    product card and others
+
+[33mcommit 9afe97bf8638f0362d8f4293c867c40065b72142[m
+Merge: d347ea4 b4d3da6
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Tue Jan 11 16:24:24 2022 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit d347ea4e93a7ba1c1734aa85f3362d36bca224bb[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Tue Jan 11 16:24:17 2022 +0100
+
+    git ignore fix + shopping cart fix
+
+[33mcommit b4d3da66990e7f038af25d8bc0f963d45ef22d10[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Jan 8 15:52:05 2022 +0100
+
+    product card in php
+
+[33mcommit 090270ae1d164a639b0409b55721f5136ef4ec78[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 6 16:22:06 2022 +0100
+
+    fixes
+
+[33mcommit 2fbc7cde149bec5d38ce7bff7330c5df9025de8b[m
+Merge: c7425a6 950d2d1
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 6 11:51:44 2022 +0100
+
+    merge
+
+[33mcommit c7425a691ce5d6745940b13dc9357a7d21d676f7[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Jan 6 11:46:01 2022 +0100
+
+    signUp logic and added new element to have a consistency between the webpage and the database
+
+[33mcommit 950d2d13678a53bd63d8a5fa42a7546794dd32bb[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Jan 6 02:40:15 2022 +0100
+
+    Fixed account nav + migrated cart to php
+
+[33mcommit d64ab2e135d99b4985768a63f0ff49a3dd5b7182[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Wed Jan 5 15:07:05 2022 +0100
+
+    added php, queries and changes to css
+
+[33mcommit f31de80dfe9f2ba394ebc1f086358993e9600194[m
+Merge: c066ca5 da0052a
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Tue Jan 4 17:13:10 2022 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit c066ca55e24debd93122a1776135cef86862df2d[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Tue Jan 4 17:13:06 2022 +0100
+
+    added php
+
+[33mcommit da0052a442600eac8f5c69a7d49cd4a5d3b92740[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Tue Jan 4 11:21:14 2022 +0100
+
+    shopping cart stile change + added sticky bottom part
+
+[33mcommit 38bf397c2f739351ec259e9c8c1ddec9d870a63e[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Jan 2 21:43:43 2022 +0100
+
+    Modified cart style + added shipping + payment method TODO: fix buy button on mobile version
+
+[33mcommit c50d2d47420432a21501914b354491e0f1e51357[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sun Jan 2 17:51:00 2022 +0100
+
+    added a first product card. Changes all around the project
+
+[33mcommit 1a510d5e80262263d09f0e099d8abc982b8cb723[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Tue Dec 28 13:19:11 2021 +0100
+
+    changes
+
+[33mcommit e1a04e9e574a9aeb7f3ba20aea90c14d3df5c229[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sun Dec 26 23:58:36 2021 +0100
+
+    fixed the darkmode button
+
+[33mcommit 4da83ee88a894f2f9399906e219d92acb2adf319[m
+Merge: 01841b9 46a36b3
+Author: ThomasCapelli <thomas.capelli@studio.ubnibo.it>
+Date:   Sun Dec 26 20:43:41 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 01841b971b07730b7eb2f47befbb717a5c27076e[m
+Author: ThomasCapelli <thomas.capelli@studio.ubnibo.it>
+Date:   Sun Dec 26 20:43:29 2021 +0100
+
+    login logic + style on error/correct
+
+[33mcommit 46a36b387614ba4c69ca116760d2cb1134bae08b[m
+Merge: c5c8a2f 9d07b6e
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Dec 26 16:39:31 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit c5c8a2fa98bac426d20d616b62c94ae509a5ab0e[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Dec 26 16:39:25 2021 +0100
+
+    modified cart page
+
+[33mcommit 39e5dce34ec3232c6249dd69fc71a1b84f44402e[m
+Merge: d61c48d 9d07b6e
+Author: ThomasCapelli <thomas.capelli@studio.ubnibo.it>
+Date:   Sat Dec 25 20:01:38 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 9d07b6e2b2073c4bc72dd22678197e1e9bb4fa6d[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Dec 25 19:55:56 2021 +0100
+
+    fixed visual details
+
+[33mcommit 98a3281f95d837fe6fa287da787d88b00ec34ee6[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Fri Dec 24 13:48:51 2021 +0100
+
+    Added init for db injection + modal acc nav and drop down
+
+[33mcommit d61c48dd29c79f835bd2022343675129958d5a0c[m
+Author: ThomasCapelli <thomas.capelli@studio.ubnibo.it>
+Date:   Thu Dec 23 14:42:13 2021 +0100
+
+    removed unused icons and images
+
+[33mcommit 6963b856015519bbe1048e5f65447bd49fedbabd[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Dec 23 14:00:59 2021 +0100
+
+    just some design fixes
+
+[33mcommit 35b23ed1eccd5522292098850d4c0c5ab796558f[m
+Merge: 1d716b6 9f7c409
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Dec 20 18:39:16 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 1d716b6a1511f7a132ddd004015338ec2a6ededb[m
+Merge: ff17c42 0c7c088
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Dec 20 18:39:04 2021 +0100
+
+    Merge branch 'main'
+
+[33mcommit 9f7c4092fcf84383963992d47c2dbd419c71c8f8[m
+Author: ThomasCapelli <thomas.capelli@studio.ubnibo.it>
+Date:   Mon Dec 20 18:27:37 2021 +0100
+
+    cart button now appears when scrolling down
+
+[33mcommit ff17c422d5a2dddda3b786391fea17d6addcda5f[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Dec 20 15:57:23 2021 +0100
+
+    Added shopping cart page
+
+[33mcommit 0c7c088374acc99e9207ce13fa0ec87b28abac15[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Dec 20 10:42:47 2021 +0100
+
+    added a temporary cart link, to do!
+
+[33mcommit 950e717fc8f897edbfd84ede6a59b3dffe73357c[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Dec 20 10:22:26 2021 +0100
+
+    added some content to product page
+
+[33mcommit d8aca23223166b30ea47c3e65eb093caf89380ac[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Dec 20 10:08:35 2021 +0100
+
+    restyle of the html code, changed the dark mode logic with a little gift for cip ;), added an example product page to discuss about
+
+[33mcommit 0bdcece430e210d7b6e4c4b7a0b6f359965ccc04[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sat Dec 18 15:26:30 2021 +0100
+
+    mobile view fix for account nav
+
+[33mcommit 3fc523707c11146017621cf99e3a1f1117f2a1f5[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sat Dec 18 15:07:37 2021 +0100
+
+    Added account nav desktop version + fixed js file for it + modified gem and coin img on footer
+
+[33mcommit 1ee6ecd76053efc90a64d481cd846e7c25dba9c9[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sat Dec 18 10:56:35 2021 +0100
+
+    created account navigation mobile version
+
+[33mcommit 0a9985c8e52dbe1cf2f781bba504a8394cdedff7[m
+Merge: 1a4ee59 4eeab1f
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Dec 16 18:54:04 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 4eeab1f43d89a33c4ff33a5759c495113852b812[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Dec 16 18:53:12 2021 +0100
+
+    added login and register pages, modified a bit the style of the main page
+
+[33mcommit 1a4ee599c665917d034bdd1a5adcfacf79e27a57[m
+Merge: 748383b 55e6125
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Dec 13 15:54:39 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 55e61254efb0c4ce2e1bca48b21019d4603b0c3d[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Dec 13 15:54:33 2021 +0100
+
+    fixed a bug
+
+[33mcommit 748383b8bbbd41b3c46ee4e6d6bf54c66268b904[m
+Merge: 137fb0e b911fba
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Dec 13 15:21:22 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 137fb0ef0cc759c647a1fd0c9a5a5c692506a374[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Dec 13 15:21:16 2021 +0100
+
+    Cleaning code
+
+[33mcommit b911fba155d6d6de0472f8f16ddc226eb879ef0d[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Dec 13 15:19:57 2021 +0100
+
+    merge resolved
+
+[33mcommit 4f05e2a2fc09a5b9bfa9d239ad48836da8c46986[m
+Merge: 509c1a1 a2a060e
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Dec 13 15:10:28 2021 +0100
+
+    merge
+
+[33mcommit 509c1a19630684da6eee3dde16c4c6100f5dbd4e[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Dec 13 15:08:57 2021 +0100
+
+    modern home update
+
+[33mcommit a2a060e64637993cdbe0c35cb0e386bda61cd166[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Dec 13 14:52:33 2021 +0100
+
+    Added grid like system for on sale products on bigger screen sizes
+
+[33mcommit 0ef15f423097624f7bdf8354d477501a50762fc4[m
+Merge: 46a352c 268dfdb
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sat Dec 11 19:20:13 2021 +0100
+
+    Put together the work of two geniuses to finally make a good dark mode
+
+[33mcommit 268dfdba6e50ebb294aeacf25ab688b03b7ec2c5[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Dec 11 17:56:53 2021 +0100
+
+    added vars to an easy switch between dark and light mode
+
+[33mcommit 46a352cee4a0bc5fdb77cfac41c10d7f5ceb4ae3[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sat Dec 11 17:55:12 2021 +0100
+
+    added dark mode
+
+[33mcommit 37c02b0d8818a177658901df96f0fcef8d23234c[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Sat Dec 11 15:13:30 2021 +0100
+
+    completed homepage
+
+[33mcommit eeb9aa0331f04e6df7d9ce37638ba3bbe94ce5e2[m
+Merge: 4846860 1f3d610
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Dec 9 10:23:10 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 4846860b44200572cb944e23899531719f7df7c9[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Thu Dec 9 10:23:05 2021 +0100
+
+    fixes
+
+[33mcommit 1f3d610ad9d6a53615b3a2224175839ff35553a9[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Dec 9 10:21:25 2021 +0100
+
+    Added filter effects to footer because cape is a genius and I love the navbar effects
+
+[33mcommit 3696f02d853c2e2f6ccb392a389ecbca4fd77e9b[m
+Merge: 22679bf 7db8018
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Dec 9 09:57:33 2021 +0100
+
+    Merge branch 'main' of https://github.com/ThomasCapelli/TW-Project
+
+[33mcommit 22679bfd1c1a99e2ec65c5418f002b6b86dc2979[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Thu Dec 9 09:57:25 2021 +0100
+
+    Changed design to body footer
+
+[33mcommit 7db8018d982fa7211d700ac8db1e36d2866ffe64[m
+Author: ThomasCapelli <thomas.capelli@studio.ubnibo.it>
+Date:   Thu Dec 9 09:31:05 2021 +0100
+
+    temporary complete style of the sticky navbar and the js code to make it work
+
+[33mcommit af59c75e7d4a6b274c9cc76c016045073e84a7dc[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Wed Dec 8 13:28:16 2021 +0100
+
+    Added bottom border on icon link hover + changed style to footer
+
+[33mcommit 4899aa5782ff37a544e995605749ee62b72b68c9[m
+Merge: c3e21b3 3367d5e
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Wed Dec 8 12:16:28 2021 +0100
+
+    Merge conflict resolved
+
+[33mcommit c3e21b3fc6d2363c2650fdbf23c13e82ae37a66f[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Wed Dec 8 12:14:26 2021 +0100
+
+    Done footer
+
+[33mcommit 3367d5eb24b939f0eca7bdc40b9922d32346d775[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Wed Dec 8 12:12:03 2021 +0100
+
+    fixed the sticky nav and the carousel. Added new icons ancd changed the style of the main menu
+
+[33mcommit 0fd3204cf48d5e86635f699db35c01c9b48949b8[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Tue Dec 7 14:04:50 2021 +0100
+
+    fixed the navbar
+
+[33mcommit cc2afea072d9d0f5bbbd7156c785c9189ed5a225[m
+Merge: 0f488cb 5ea75ad
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Tue Dec 7 13:59:36 2021 +0100
+
+    resolved merge conflict
+
+[33mcommit 0f488cb282a24f1d5206490b81058a7574973ecf[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Tue Dec 7 13:57:41 2021 +0100
+
+    Added js amnd css for image carousel and sticky nav
+
+[33mcommit 5ea75add4049917415a7a191e7f19518e0d68334[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Tue Dec 7 13:57:16 2021 +0100
+
+    added a section for special prices products and the relative CSS
+
+[33mcommit 1b524989ebd6c560a79284b50d2627aaf29735f7[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Mon Dec 6 13:32:40 2021 +0100
+
+    Changed css values for second section on home and added buttons for the first one
+
+[33mcommit 56fe66656569806de17f95f86ca5cf72caf9418f[m
+Author: ThomasCapelli <thomas.capelli@studo.unibo.it>
+Date:   Mon Dec 6 13:21:10 2021 +0100
+
+    added a first example of fixed navbar
+
+[33mcommit dc613da376e5ee72531721099765870c70faa5a0[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Sun Dec 5 14:44:02 2021 +0100
+
+    Added home html without bootstrap and css file for it
+
+[33mcommit 68173d20ee939581ec63264b759789b9c54864fa[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Fri Dec 3 16:13:18 2021 +0100
+
+    Added carousel to home page + js and jquery for header navabar
+
+[33mcommit 83ca848945fd806da747bfeb00a7da035fb77042[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Fri Dec 3 15:11:18 2021 +0100
+
+    First draft for html home page + added favicon to icons directory
+
+[33mcommit c7cd663472ed73a1a78649f9111a9dbd2f57e608[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Fri Dec 3 12:04:36 2021 +0100
+
+    Added balsamiq mockup for a general idea of the web app
+
+[33mcommit f06b06d7d64e2a8491aab20de5f8dcc1c1a7c2aa[m
+Author: Ciprian <ciprianstricescu@gmail.com>
+Date:   Fri Dec 3 12:02:45 2021 +0100
+
+    Added a bunch of icons that maybe will be used on final project
+
+[33mcommit 91b5935b92750f79600478285c4b5b2007d4e047[m
+Author: ThomasCapelli <73821509+ThomasCapelli@users.noreply.github.com>
+Date:   Fri Dec 3 11:43:34 2021 +0100
+
+    Initial commit

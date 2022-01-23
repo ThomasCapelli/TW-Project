@@ -2,10 +2,10 @@
         <h2>Più venduti</h2>
         <div class="slideshow-container fade">
         <?php $i = 1; ?>
-        <?php foreach($templateParams["bestseller"] as $prodotto): ?>
+        <?php foreach($templateParams["bestseller"] as $key=>$prodotto): ?>
             <div class="Containers">
               <div class="MessageInfo"><?php echo $i;?>/<?php echo count($templateParams["bestseller"]);?></div>
-              <a href="../php/productCard.php?productId=<?php echo $prodotto["IdProdotto"];?>&categoryId=<?php echo $prodotto["IdCategoria"];?>"><img src="../icons/catapult_large.jpg"></a>
+              <a href="../php/productCard.php?productId=<?php echo $prodotto["IdProdotto"];?>&categoryId=<?php echo $prodotto["IdCategoria"];?>"><img src="<?php echo UPLOAD_DIR.$templateParams["imagesBest"][$key][0]["URL"];?>"></a>
               <div class="Info"><?php echo $prodotto["Descrizione_Breve"];?></div>
             </div> 
             <?php $i++; ?>

@@ -1,12 +1,12 @@
 
 <ul>
-    <?php foreach($templateParams["prodotti"] as $prodotto):?>
+    <?php foreach($templateParams["prodotti"] as $key=>$prodotto):?>
     <li>
         <a href="../php/productCard.php?productId=<?php echo $prodotto["IdProdotto"];?>&categoryId=<?php echo $prodotto["IdCategoria"];?>" >
             <article>
                 <header>
                     <div>
-                        <img src="../icons/fleur-de-lis.png"/>
+                        <img src="<?php echo UPLOAD_DIR.$templateParams["images"][$key][0]["URL"];?>"/>
                     </div>
                 </header>
                 <section>

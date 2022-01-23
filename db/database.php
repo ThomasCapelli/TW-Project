@@ -102,9 +102,9 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function getFirstOption($idProdotto) {
-        $stmt = $this->db->prepare("SELECT Colore FROM opzioni_prodotto WHERE IdProdotto = ? LIMIT 1");
-        $stmt->bind_param("i", $idProdotto);
+    public function getFirstOption($idProdotto, $idcategoria) {
+        $stmt = $this->db->prepare("SELECT Colore FROM opzioni_prodotto WHERE IdProdotto = ? AND IdCategoria = ? LIMIT 1");
+        $stmt->bind_param("ii", $idProdotto, $idcategoria);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -143,9 +143,9 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function getImage($idProdotto,$idCategoria,$idProduttore,$colore){
-        $stmt = $this->db->prepare("SELECT * FROM immagine_opzione WHERE IdCategoria = ? AND IdProduttore = ? AND IdProdotto = ? AND Colore = ?");
-        $stmt->bind_param("iiis",$idProdotto,$idCategoria,$idProduttore,$colore);
+    public function getImage($idProdotto, $idCategoria, $colore){
+        $stmt = $this->db->prepare("SELECT URL FROM immagine_opzione WHERE IdCategoria = ? AND IdProdotto = ? AND Colore = ? LIMIT 1");
+        $stmt->bind_param("iis", $idCategoria,$idProdotto,$colore);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);

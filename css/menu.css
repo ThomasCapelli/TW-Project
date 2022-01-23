@@ -37,11 +37,11 @@ body > div.accordion ul > li {
     margin: 0px 10px 0px 10px;
     border-bottom: 1px solid var(--dropmenu-border);
 }
-body > div.accordion > ul > li:hover {
+body > div.accordion > ul:first-of-type > li:hover {
     font-weight: bold;
     background-color: var(--white);
 }
-body div.accordion > ul > li:last-of-type a{
+body div.accordion > ul:first-of-type > li:last-of-type a{
     color: var(--form-error);
 }
 body div.accordion ul > li > a {
@@ -50,12 +50,8 @@ body div.accordion ul > li > a {
     display: block;
     padding: 20px;
 }
-div.accordion a {
-    text-decoration: none;
-    color: var(--text);
-    display: block;
-    padding: 18px;
-    font-size: 18px;
+body div.accordion ul:not(:first-of-type) > li > a {
+    color: var(--header-hover);
 }
 .visible {
     height: 100% !important;

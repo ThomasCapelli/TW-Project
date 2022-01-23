@@ -1,6 +1,13 @@
+function checkBadge(current) {
+    console.log(current.children().last().hasClass("badge"));
+    if(!current.children().last().hasClass("badge")) {
+        current.append(`<span class="badge"></span>`);
+    }
+}
 function addBadge() {
-    $("a.account").append(`<span class="badge"></span>`);
-    $("#messaggi a span:first-of-type").append(`<span class="badge"></span>`);
+    checkBadge($("a.cart"));
+    checkBadge($("a.account"));
+    checkBadge( $("#messaggi a span:first-of-type"));
 }
 function addMessage(activeColor,activeSize, date) {
     $("<li class='new'>Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"<br/>"+date+"</li>").insertAfter("ul.notify li:first-of-type");
@@ -47,24 +54,22 @@ $(document).ready(function(){
                 showSnackBar("Taglia e colore scelto non disponibile");
             }
             else{
-                data =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
-                $.post(ajaxurl, data).done(function() {showSnackBar("Oggetto aggiunto correttamente al carrello")});
-                addMessage(activeColor,activeSize);
+                testo = "Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"";
+                dati =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
+                $.ajax({
+                    method: "POST",
+                    url: '../php/order.php',
+                    data: {color: activeColor, size: activeSize, idProdotto: parseInt(idProd), idCategoria: parseInt(idCat)},
+                    success: function (){
+                        showSnackBar("Oggetto aggiunto correttamente al carrello");
+                        cont++;
+                        setNotifica(testo, activeSize, activeColor);
+                    }
+                });
                 size[3]=activeSizeQty-1;
                 $(".tagliaButton").text(size.join().replace(/,/g," "));
             }
-            $.ajax({url: "../php/result.json", success: function(result){
-                if(result > 0) {
-                    if(!$("a.cart").children().hasClass("badge")) {
-                        $("a.cart").append(`<span class="badge"></span>`);
-                    }
-                    if(!$("#messaggi span.icon_A_nav").children().hasClass("badge")) {
-                        $("#messaggi span.icon_A_nav").append(`<span class="badge"></span>`);
-                    }
-                }
-            }});
-        }
-        else{
+        } else{
             showSnackBar("Taglia non scelta");
         }
     });
