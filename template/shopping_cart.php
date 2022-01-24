@@ -43,7 +43,7 @@
             <input type="radio" id="gemme" name="pagamento" value="Gemme"/>
             <label for="gemme">Gemme (Pagamento alla consegna)</label><br>
             <input type="radio" id="paypal" name="pagamento" value="Paypal"/>
-            <label for="Paypal">Paypal (**Strumento del demonio utilizzabile solo previa benedizione del vescovo locale)</label><br>
+            <label for="paypal">Paypal (**Strumento del demonio utilizzabile solo previa benedizione del vescovo locale)</label><br>
         </div>
         <div>
             <span>Email:</span>

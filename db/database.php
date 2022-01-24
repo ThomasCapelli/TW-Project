@@ -256,10 +256,10 @@ class DatabaseHelper{
         $stmt->bind_param("is",$idO,$nome);
         $stmt->execute();
     }
-    public function setNotifica($text, $data, $utente) {
+    public function setNotifica($text, $utente) {
         $stmt = $this->db->prepare("INSERT INTO notifica 
-        VALUES (?, ?, 'no', ?)");
-        $stmt->bind_param("sss", $text, $data, $utente);
+        VALUES (?, DEFAULT, 'no', ?)");
+        $stmt->bind_param("ss", $text, $utente);
         $stmt->execute();
     }
     public function getNotifiche($utente) {
@@ -280,6 +280,9 @@ class DatabaseHelper{
     public function isAdmin($email) {
         $stmt = $this->db->prepare("SELECT Admin FROM `utente` WHERE NomeUtente = ?");
         $stmt->bind_param("s", $email);
+    public function getQuantity($idProdotto,$idCategoria,$taglia,$colore){
+        $stmt = $this->db->prepare("SELECT * FROM taglia WHERE IdProdotto = ? and IdCategoria=? and Nome_taglia=? and Colore=?");
+        $stmt->bind_param("iiss", $idProdotto,$idCategoria,$taglia,$colore);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
@@ -312,6 +315,14 @@ class DatabaseHelper{
     function getLastId($idcategoria) {
         $stmt = $this->db->prepare("SELECT IdProdotto FROM prodotto WHERE IdCategoria = ? ORDER BY IdProdotto DESC LIMIT 1");
         $stmt->bind_param("i", $idcategoria);
+    public function updateODQty($sign,$utente,$idDO){
+        $stmt = $this->db->prepare("UPDATE dettaglio_ordine SET Quantita = Quantita + ? WHERE NomeUtente = ? AND IdDettaglioOrdine = ?");
+        $stmt->bind_param("isi", $sign,$utente,$idDO);
+        $stmt->execute();
+    }
+    public function getUtente($utente){
+        $stmt = $this->db->prepare("SELECT NomeUtente,Indirizzo,DataNascita FROM utente WHERE NomeUtente=?");
+        $stmt->bind_param("s", $utente);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);

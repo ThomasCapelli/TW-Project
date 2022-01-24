@@ -8,7 +8,7 @@
                 <li <?php if($image["URL"] == $templateParams["images"][0]["URL"]):?>
                     class="imageselected"
                     <?php endif;?>>
-                    <img src="<?php echo UPLOAD_DIR.$image["URL"]; ?>" alt="">
+                    <img src="<?php echo UPLOAD_DIR.$image["URL"]; ?>" alt="<?php echo $templateParams["prodotto"][0]["NomeProdotto"]; ?>">
                 </li>
                 <?php endforeach; ?>
             </ul>
@@ -30,7 +30,7 @@
                     <a href="../php/productCard.php?productId=<?php echo $templateParams["prodotto"][0]["IdProdotto"];?>&categoryId=<?php echo $templateParams["prodotto"][0]["IdCategoria"];?>&colore=<?php echo $opzione["Colore"];?>">
                     <img <?php if($templateParams["maincolor"][0]["Colore"] == $opzione["Colore"]): ?>
                         <?php echo "class='activate'"; ?>
-                        <?php endif;?> src="<?php echo UPLOAD_DIR.$templateParams["imgopzione"][$key];?>" alt=""/></a>
+                        <?php endif;?> src="<?php echo UPLOAD_DIR.$templateParams["imgopzione"][$key];?>" alt="<?php echo $templateParams["prodotto"][0]["NomeProdotto"]." ".$opzione["Colore"]; ?> "/></a>
                     <p <?php if($templateParams["maincolor"][0]["Colore"] == $opzione["Colore"]): ?> <?php echo "class='colorName'"; ?><?php endif;?>><?php echo $opzione["Colore"];?></p>
                 </li>
             <?php endforeach;?>
@@ -47,6 +47,11 @@
                 </li>
                 <?php endforeach;?>
             </ul>
-                <button class="addToCart" type="button">Aggiungi al carrello</button>
+                <button class="addToCart" type="button"><?php if(!isUserLoggedIn()):?>
+                    <?php echo "Accedi per poter comprare";?>
+                    <?php else:?>
+                        Aggiungi al carrello
+                    <?php endif;?>
+                </button>
         </footer>
 </article>

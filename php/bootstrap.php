@@ -3,7 +3,7 @@
     define("UPLOAD_DIR", "../icons/");
     require_once("../db/database.php");
     require_once("../utils/functions.php");
-    $dbh = new DatabaseHelper("localhost", "root", "", "e_commerce", 3306);
+    $dbh = new DatabaseHelper("localhost", "root", "", "e_commerce", 8111);
     $templateParams["webtitle"] = "NewEvo";
     $templateParams["categorie"] = $dbh->getCategories();
     if(isUserLoggedIn()) {
@@ -18,6 +18,15 @@
         } else {
             $templateParams["mode"] = "dark_mode";
         }
+    } else {
+        $templateParams["mode"] = "light_mode";
+    }
+    if(isset($_SESSION["sessionCartToken"])){
+        $templateParams["storico"] = $dbh->getOrders($_SESSION["nomeutente"]);
+        $templateParams["ordini"] = $dbh->getCarrello($_SESSION["nomeutente"]);
+    }
+    if(isUserLoggedIn()) {
+        $templateParams["profilo"]=$dbh->getUtente($_SESSION["nomeutente"]);
         $templateParams["utente"] = $dbh->getName($_SESSION["email"]);
         $templateParams["notifiche"] = $dbh->getNotifiche($_SESSION["email"]);
         $templateParams["numero"] = 0;
