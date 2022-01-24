@@ -30,8 +30,8 @@ $(document).ready(function(){
                 total = parseFloat(total);
                 var data =  {'cartStatus': cartStatus, 'total': total};
                 $.post(ajaxurl, data);
-                showSnackBar("Ordine in elaborazione");
                 reload();
+                showSnackBar("Ordine in elaborazione");
             }
             else{
                 showSnackBar("Errore nell'inserimento della spedizione o pagamento");
@@ -49,8 +49,8 @@ $(document).ready(function(){
                 total = parseFloat(total);
                 var data =  {'cartStatus': cartStatus, 'total': total};
                 $.post(ajaxurl, data);
-                showSnackBar("Ordine in elaborazione");
                 reload();
+                showSnackBar("Ordine in elaborazione");
             }
             else{
                 showSnackBar("Errore nell'inserimento della spedizione o pagamento");

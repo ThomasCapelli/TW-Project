@@ -259,7 +259,7 @@ class DatabaseHelper{
     public function setNotifica($text, $utente) {
         $stmt = $this->db->prepare("INSERT INTO notifica 
         VALUES (?, DEFAULT, 'no', ?)");
-        $stmt->bind_param("sss", $text, $utente);
+        $stmt->bind_param("ss", $text, $utente);
         $stmt->execute();
     }
     public function getNotifiche($utente) {
@@ -275,6 +275,18 @@ class DatabaseHelper{
         SET Letta = 'si'
         WHERE NomeUtente = ?");
         $stmt->bind_param("s", $utente);
+        $stmt->execute();
+    }
+    public function getQuantity($idProdotto,$idCategoria,$taglia,$colore){
+        $stmt = $this->db->prepare("SELECT * FROM taglia WHERE IdProdotto = ? and IdCategoria=? and Nome_taglia=? and Colore=?");
+        $stmt->bind_param("iiss", $idProdotto,$idCategoria,$taglia,$colore);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function updateODQty($sign,$utente,$idDO){
+        $stmt = $this->db->prepare("UPDATE dettaglio_ordine SET Quantita = Quantita + ? WHERE NomeUtente = ? AND IdDettaglioOrdine = ?");
+        $stmt->bind_param("isi", $sign,$utente,$idDO);
         $stmt->execute();
     }
 }
