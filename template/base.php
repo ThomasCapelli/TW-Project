@@ -102,7 +102,7 @@
         <div class="account_navigation">
             <ul>
                 <li class="list">
-                    <a href=#>
+                    <a href="adminselection.php">
                         <span class="icon_A_nav"><img src="../icons/prince.png" alt="My account logo"/></span>
                         <span class="text_A_nav">Profilo</span>
                     </a>

@@ -1,5 +1,8 @@
 <form action="#" method="POST">
             <h2>Inserisci</h2>
+            <?php if(isset($templateParams["erroreInserimento"])): ?>
+                <p><?php echo $templateParams["erroreInserimento"]; ?></p>
+            <?php endif; ?>
             <ul>
                 <li>
                     <label for="nomeprodotto">NomeProdotto</label>
@@ -15,8 +18,8 @@
                 </li>
                 <li>
                 <?php foreach($templateParams["categorie"] as $categoria): ?>
-                    <input type="radio" id="<?php echo $categoria["NomeCategoria"]; ?>" name="radio" <?php 
-                    ?> /><label for="<?php echo $categoria["NomeCategoria"]; ?>"><?php echo $categoria["NomeCategoria"]; ?></label>
+                    <input type="radio" id="categoria" name="categoria" value="<?php echo $categoria["IdCategoria"];?>" />
+                    <label for="categoria"><?php echo $categoria["NomeCategoria"]; ?></label>
                     <?php endforeach; ?>
                 </li>
                 <li>
@@ -33,9 +36,21 @@
                     <input type="number" id="sconto" name="sconto" required/>
                 </li>
                 <li>
+                    <label for="colore">Colore</label>
+                    <input type="text" id="colore" name="colore" required/>
+                </li>
+                <li>
+                    <label for="taglia">Taglia</label>
+                    <input type="text" id="taglia" name="taglia" required/>
+                </li>
+                <li>
+                    <label for="quantita">Quantità</label>
+                    <input type="number" id="quantita" name="quantita" min="0" step="1" required/>
+                </li>
+                <li>
                 <?php foreach($templateParams["produttori"] as $produttore): ?>
-                    <input type="radio" id="<?php echo $produttore["Nome"]; ?>" name="radio" <?php 
-                    ?> /><label for="<?php echo  $produttore["Nome"]; ?>"><?php echo  $produttore["Nome"]; ?></label>
+                    <input type="radio" id="produttore" name="produttore" value="<?php echo $produttore["IdProduttore"];?>" />
+                    <label for="produttore"><?php echo $produttore["Nome"]; ?></label>
                     <?php endforeach; ?>
                 </li>
                 <li>

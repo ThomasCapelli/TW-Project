@@ -277,5 +277,64 @@ class DatabaseHelper{
         $stmt->bind_param("s", $utente);
         $stmt->execute();
     }
+    public function isAdmin($email) {
+        $stmt = $this->db->prepare("SELECT Admin FROM `utente` WHERE NomeUtente = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    function newProduct($idprodotto, $idcategoria, $idproduttore, $nome, $prezzo, $descrizione, $descrizioneBreve, $sconto) {
+        $stmt = $this->db->prepare("INSERT INTO prodotto
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("iiisissi",$idcategoria, $idproduttore, $idprodotto, $nome, $prezzo, $descrizione, $descrizioneBreve, $sconto);
+        return $stmt->execute();
+
+    }
+    function newColor($idcategoria, $idproduttore, $idprodotto, $colore) {
+        $stmt = $this->db->prepare("INSERT INTO opzioni_prodotto
+        VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("iiis", $idcategoria, $idproduttore, $idprodotto, $colore);
+        $stmt->execute();
+    }
+    function newTaglia($nomeTaglia, $quantita, $idcategoria, $idproduttore, $idprodotto, $colore) {
+        $stmt = $this->db->prepare("INSERT INTO taglia
+        VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("siiiis", $nomeTaglia, $quantita, $idcategoria, $idproduttore, $idprodotto, $colore);
+        $stmt->execute();
+    }
+    function newImgOpzione($URL, $idcategoria, $idproduttore, $idprodotto, $colore) {
+        $stmt = $this->db->prepare("INSERT INTO immagine_opzione
+        VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("siiis", $URL, $idcategoria, $idproduttore, $idprodotto, $colore);
+        $stmt->execute();
+    }
+    function getLastId($idcategoria) {
+        $stmt = $this->db->prepare("SELECT IdProdotto FROM prodotto WHERE IdCategoria = ? ORDER BY IdProdotto DESC LIMIT 1");
+        $stmt->bind_param("i", $idcategoria);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    function deleteProduct($idprodotto, $idcategoria) {
+        $stmt = $this->db->prepare("DELETE FROM `prodotto` WHERE `IdCategoria` = ? AND `IdProdotto` = ?");
+        $stmt->bind_param("ii", $idcategoria, $idprodotto);
+        return $stmt->execute();
+    }
+    function deleteImg($idprodotto, $idcategoria) {
+        $stmt = $this->db->prepare("DELETE FROM `immagine_opzione` WHERE `IdCategoria` = ? AND `IdProdotto` = ?");
+        $stmt->bind_param("ii", $idcategoria, $idprodotto);
+        return $stmt->execute();
+    }
+    function deletetaglia($idprodotto, $idcategoria) {
+        $stmt = $this->db->prepare("DELETE FROM `taglia` WHERE `IdCategoria` = ? AND `IdProdotto` = ?");
+        $stmt->bind_param("ii", $idcategoria, $idprodotto);
+        return $stmt->execute();
+    }
+    function deleteOpzione($idprodotto, $idcategoria) {
+        $stmt = $this->db->prepare("DELETE FROM `opzioni_prodotto` WHERE `IdCategoria` = ? AND `IdProdotto` = ?");
+        $stmt->bind_param("ii", $idcategoria, $idprodotto);
+        return $stmt->execute();
+    }
 }
 ?>

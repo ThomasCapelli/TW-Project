@@ -18,14 +18,6 @@
         } else {
             $templateParams["mode"] = "dark_mode";
         }
-    } else {
-        $templateParams["mode"] = "light_mode";
-    }
-    if(isset($_SESSION["sessionCartToken"])){
-        $templateParams["storico"] = $dbh->getOrders($_SESSION["nomeutente"]);
-        $templateParams["ordini"] = $dbh->getCarrello($_SESSION["nomeutente"]);
-    }
-    if(isUserLoggedIn()) {
         $templateParams["utente"] = $dbh->getName($_SESSION["email"]);
         $templateParams["notifiche"] = $dbh->getNotifiche($_SESSION["email"]);
         $templateParams["numero"] = 0;
@@ -34,6 +26,11 @@
                 $templateParams["numero"] = $templateParams["numero"] + 1;
             }
         }
+        if(isset($_SESSION["sessionCartToken"])){
+            $templateParams["storico"] = $dbh->getOrders($_SESSION["nomeutente"]);
+            $templateParams["ordini"] = $dbh->getCarrello($_SESSION["nomeutente"]);
+        }
+    } else {
+        $templateParams["mode"] = "light_mode";
     }
-    
 ?>

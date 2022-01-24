@@ -13,7 +13,12 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 }
 
 if(isUserLoggedIn()){
-    header("Location:"."index.php");
+    $admin = $dbh->isAdmin($_SESSION["email"]);
+    if($admin[0]["Admin"] == 1) {
+        header("Location:"."adminselection.php");
+    } else {
+        header("Location:"."index.php");
+    }
 }
 else{
     $templateParams["titolo"] = "NewEvo - Login";
