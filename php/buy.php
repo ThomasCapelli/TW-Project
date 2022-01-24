@@ -42,6 +42,11 @@
             $dbh->clearCart();
             $_POST["cartStatus"]=false;
             $dbh->updateOrder($_SESSION["nomeutente"],$_POST["total"],$_SESSION["sessionCartToken"]);
+            $text="Utente: ".$_SESSION["nomeutente"]." ha confermato l'ordine n: ".$_SESSION["sessionCartToken"];
+            $utente="ciprianstricescu@gmail.com";
+            $dbh->setNotifica($text,$utente);
+            $utente="thomascapelli@gmail.com";
+            $dbh->setNotifica($text,$utente);
             $_SESSION["sessionCartToken"]=rand(0,700);
         }
     }

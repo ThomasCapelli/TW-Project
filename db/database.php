@@ -280,6 +280,10 @@ class DatabaseHelper{
     public function isAdmin($email) {
         $stmt = $this->db->prepare("SELECT Admin FROM `utente` WHERE NomeUtente = ?");
         $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function getQuantity($idProdotto,$idCategoria,$taglia,$colore){
         $stmt = $this->db->prepare("SELECT * FROM taglia WHERE IdProdotto = ? and IdCategoria=? and Nome_taglia=? and Colore=?");
         $stmt->bind_param("iiss", $idProdotto,$idCategoria,$taglia,$colore);
@@ -315,6 +319,10 @@ class DatabaseHelper{
     function getLastId($idcategoria) {
         $stmt = $this->db->prepare("SELECT IdProdotto FROM prodotto WHERE IdCategoria = ? ORDER BY IdProdotto DESC LIMIT 1");
         $stmt->bind_param("i", $idcategoria);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     public function updateODQty($sign,$utente,$idDO){
         $stmt = $this->db->prepare("UPDATE dettaglio_ordine SET Quantita = Quantita + ? WHERE NomeUtente = ? AND IdDettaglioOrdine = ?");
         $stmt->bind_param("isi", $sign,$utente,$idDO);
@@ -346,6 +354,12 @@ class DatabaseHelper{
         $stmt = $this->db->prepare("DELETE FROM `opzioni_prodotto` WHERE `IdCategoria` = ? AND `IdProdotto` = ?");
         $stmt->bind_param("ii", $idcategoria, $idprodotto);
         return $stmt->execute();
+    }
+    public function getQtyZero(){
+        $stmt = $this->db->prepare("SELECT * FROM prodotto p,taglia t WHERE t.Quantita=0 and p.IdProdotto=t.IdProdotto and p.IdCategoria=t.IdCategoria");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 ?>

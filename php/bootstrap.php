@@ -29,6 +29,17 @@
         $templateParams["profilo"]=$dbh->getUtente($_SESSION["nomeutente"]);
         $templateParams["utente"] = $dbh->getName($_SESSION["email"]);
         $templateParams["notifiche"] = $dbh->getNotifiche($_SESSION["email"]);
+        $templateParams["admin"]=$dbh->isAdmin($_SESSION["nomeutente"]);
+        if($templateParams["admin"][0]["Admin"]==1){
+            if(!isset( $_SESSION["admin"])){
+                $_SESSION["admin"]=1;
+                $templateParams["notificaQty"]=$dbh->getQtyZero();
+                foreach($templateParams["notificaQty"] as $notifica){
+                    $text="Esaurito: ".$notifica["NomeProdotto"]." Taglia: ".$notifica["Nome_taglia"]." Colore: ".$notifica["Colore"];
+                    $dbh->setNotifica($text,$_SESSION["nomeutente"]);
+                }
+            }
+        }
         $templateParams["numero"] = 0;
         foreach($templateParams["notifiche"] as $notifica) {
             if($notifica["Letta"] == "no") {

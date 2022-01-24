@@ -120,7 +120,11 @@
         <div class="account_navigation">
             <ul>
                 <li class="list" id="profilo">
-                    <a href=#>
+                    <a href=<?php if(isset($_SESSION["admin"])):?>
+                        "<?php echo "../php/adminselection.php";?>">
+                        <?php else:?>
+                            #>
+                        <?php endif;?>
                         <span class="icon_A_nav"><img src="../icons/prince.png" alt="My account logo"/></span>
                         <span class="text_A_nav">Profilo</span>
                     </a>
