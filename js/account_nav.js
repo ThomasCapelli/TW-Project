@@ -17,6 +17,13 @@ function onClose() {
         $(this).removeClass("active");
     });
 }
+function showSnackBar(testo) {
+    $("div.snackbar").css("display","initial");
+    $("div.snackbar").text(testo);
+    window.setInterval(function() {
+        $("div.snackbar").hide();
+    }, 4000);
+}
 function removeVisibleSection(element) {
     element.removeClass("visible");
     let li = element.children();
@@ -93,10 +100,10 @@ $(document).ready(function(){
             $(this).css("width",`${progress}%`);
             if(progress==100){
                 var closestElement = targetElement.closest("li");
-                console.log(closestElement.attr("name"));
                 var ajaxurl = '../php/notify.php';
                 var data =  {'changeOrderStatus': 1, 'idO': parseInt(closestElement.attr("name"))};
                 $.post(ajaxurl, data); 
+                showSnackBar("Ordine n: "+parseInt(closestElement.attr("name"))+" consegnato!");
             }
         };
         var targetElement = $(this);

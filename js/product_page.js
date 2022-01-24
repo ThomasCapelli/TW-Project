@@ -13,19 +13,13 @@ function showSnackBar(testo) {
         $("div.snackbar").hide();
     }, 4000);
 }
-function getDate() {
-    var d = new Date();
-    var strDate = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
-    return strDate;
-}
 function setNotifica($testo, $size, $color) {
-    let date = getDate();
     $.ajax({
         method: "POST",
         url: '../php/notify.php',
-        data: {notifica: $testo, date: date},
+        data: {notifica: $testo},
         success: function (){
-            addMessage($size, $color, date);
+            addMessage($size, $color);
         }
     });
 }

@@ -256,10 +256,10 @@ class DatabaseHelper{
         $stmt->bind_param("is",$idO,$nome);
         $stmt->execute();
     }
-    public function setNotifica($text, $data, $utente) {
+    public function setNotifica($text, $utente) {
         $stmt = $this->db->prepare("INSERT INTO notifica 
-        VALUES (?, ?, 'no', ?)");
-        $stmt->bind_param("sss", $text, $data, $utente);
+        VALUES (?, DEFAULT, 'no', ?)");
+        $stmt->bind_param("sss", $text, $utente);
         $stmt->execute();
     }
     public function getNotifiche($utente) {
