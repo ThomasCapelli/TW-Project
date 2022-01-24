@@ -21,7 +21,7 @@
     if(isset($_GET["colore"])) {
         $templateParams["maincolor"] = array(array("Colore" => $_GET["colore"]));
     } else {
-        $templateParams["maincolor"] = $dbh->getFirstOption($idprodotto);
+        $templateParams["maincolor"] = $dbh->getFirstOption($idprodotto, $idcategoria);
     }
     $templateParams["taglie"] =  $dbh->getSize($idprodotto, $idcategoria, $templateParams["maincolor"][0]["Colore"]); 
     $templateParams["images"] = $dbh->getImages($idprodotto, $idcategoria, $templateParams["maincolor"][0]["Colore"]);
