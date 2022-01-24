@@ -26,6 +26,7 @@
         $templateParams["ordini"] = $dbh->getCarrello($_SESSION["nomeutente"]);
     }
     if(isUserLoggedIn()) {
+        $templateParams["profilo"]=$dbh->getUtente($_SESSION["nomeutente"]);
         $templateParams["utente"] = $dbh->getName($_SESSION["email"]);
         $templateParams["notifiche"] = $dbh->getNotifiche($_SESSION["email"]);
         $templateParams["numero"] = 0;

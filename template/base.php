@@ -44,6 +44,22 @@
             <a class="menu"><img src="../icons/menu.png" alt="General menu logo" class="icon" /><p>Menu</p></a>
         </nav>
     </header>
+    <ul class="profile">
+        <li>
+            Close
+        </li>
+        <?php foreach($templateParams["profilo"] as $profilo):?>
+        <li name="<?php echo $profilo["NomeUtente"]?>">
+            <?php echo "Nome utente: ".$profilo["NomeUtente"]; ?>
+        </li>
+        <li>
+            <?php echo "Data di nascita: ".$profilo["DataNascita"];?>
+        </li>
+        <li>
+            <?php echo "Indirizzo predefinito di consegna: ".$profilo["Indirizzo"];?>
+        </li>
+        <?php endforeach; ?>
+    </ul>
     <ul class="history">
         <li>
             Close
@@ -101,7 +117,7 @@
     <div class="account_background">
         <div class="account_navigation">
             <ul>
-                <li class="list">
+                <li class="list" id="profilo">
                     <a href=#>
                         <span class="icon_A_nav"><img src="../icons/prince.png" alt="My account logo"/></span>
                         <span class="text_A_nav">Profilo</span>

@@ -289,5 +289,12 @@ class DatabaseHelper{
         $stmt->bind_param("isi", $sign,$utente,$idDO);
         $stmt->execute();
     }
+    public function getUtente($utente){
+        $stmt = $this->db->prepare("SELECT NomeUtente,Indirizzo,DataNascita FROM utente WHERE NomeUtente=?");
+        $stmt->bind_param("s", $utente);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 ?>

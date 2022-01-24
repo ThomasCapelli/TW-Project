@@ -71,9 +71,15 @@ function activeLink(current){
     if(current.is("#messaggi")) {
         showList($("ul.notify"));
         removeVisibleSection($("ul.history"));
+        removeVisibleSection($("ul.profile"));
     } else if(current.is("#storico")) {
         showList($("ul.history"));
         removeVisibleSection($("ul.notify"));
+        removeVisibleSection($("ul.profile"));
+    } else if(current.is("#profilo")){
+        showList($("ul.profile"));
+        removeVisibleSection($("ul.notify"));
+        removeVisibleSection($("ul.hisotry"));
     } else {
         closeAll();
     }
