@@ -6,7 +6,7 @@
             <article>
                 <header>
                     <div>
-                        <img src="<?php echo UPLOAD_DIR.$templateParams["images"][$key][0]["URL"];?>"/>
+                        <img src="<?php echo UPLOAD_DIR.$templateParams["images"][$key][0]["URL"];?>" alt="<?php $prodotto["NomeProdotto"];?> image"/>
                     </div>
                 </header>
                 <section>

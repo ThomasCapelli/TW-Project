@@ -44,12 +44,13 @@
             <a class="menu"><img src="../icons/menu.png" alt="General menu logo" class="icon" /><p>Menu</p></a>
         </nav>
     </header>
+    <?php if(isUserLoggedIn()):?>
     <ul class="profile">
         <li>
             Close
         </li>
         <?php foreach($templateParams["profilo"] as $profilo):?>
-        <li name="<?php echo $profilo["NomeUtente"]?>">
+        <li id="<?php echo $profilo["NomeUtente"]?>">
             <?php echo "Nome utente: ".$profilo["NomeUtente"]; ?>
         </li>
         <li>
@@ -83,6 +84,7 @@
         </li>
         <?php endforeach; ?>
     </ul>
+    <?php endif;?>
     <!--Menù categorie a comparsa-->
     <div class="accordion">
         <button>

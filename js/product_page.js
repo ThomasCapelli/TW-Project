@@ -34,38 +34,45 @@ var cont=1;
 var flag=0;
 $(document).ready(function(){
     $('.addToCart').click(function() {
-        window.$_GET = new URLSearchParams(location.search);
-        if(flag==1){
-            var activeColor = $(".colorName").text();
-            var size = $(".tagliaButton").text().trim().split(" ");
-            var activeSize = size[0];
-            var activeSizeQty = parseInt(size[3]);
-            var idProd = $_GET.get('productId');
-            var idCat = $_GET.get('categoryId');
-            var data;
-            var ajaxurl = '../php/order.php';
-            if(activeSizeQty==0){
-                showSnackBar("Taglia e colore scelto non disponibile");
-            }
-            else{
-                testo = "Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"";
-                dati =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
-                $.ajax({
-                    method: "POST",
-                    url: '../php/order.php',
-                    data: {color: activeColor, size: activeSize, idProdotto: parseInt(idProd), idCategoria: parseInt(idCat)},
-                    success: function (){
-                        showSnackBar("Oggetto aggiunto correttamente al carrello");
-                        cont++;
-                        setNotifica(testo, activeSize, activeColor);
-                    }
-                });
-                size[3]=activeSizeQty-1;
-                $(".tagliaButton").text(size.join().replace(/,/g," "));
+        var textString="Accedi per poter comprare";
+        if($('.addToCart').text().trim()==textString.trim()){
+            showSnackBar("Accedi per poter comprare");
+        }
+        else{
+            window.$_GET = new URLSearchParams(location.search);
+            if(flag==1){
+                var activeColor = $(".colorName").text();
+                var size = $(".tagliaButton").text().trim().split(" ");
+                var activeSize = size[0];
+                var activeSizeQty = parseInt(size[3]);
+                var idProd = $_GET.get('productId');
+                var idCat = $_GET.get('categoryId');
+                var data;
+                var ajaxurl = '../php/order.php';
+                if(activeSizeQty==0){
+                    showSnackBar("Taglia e colore scelto non disponibile");
+                }
+                else{
+                    testo = "Hai aggiunto a carrello: "+$(".productName").text()+" Taglia: "+activeSize+" Colore: "+activeColor+"";
+                    dati =  {'color': activeColor,'size': activeSize, 'idProdotto': parseInt(idProd), "idCategoria": parseInt(idCat)};
+                    $.ajax({
+                        method: "POST",
+                        url: '../php/order.php',
+                        data: {color: activeColor, size: activeSize, idProdotto: parseInt(idProd), idCategoria: parseInt(idCat)},
+                        success: function (){
+                            showSnackBar("Oggetto aggiunto correttamente al carrello");
+                            cont++;
+                            setNotifica(testo, activeSize, activeColor);
+                        }
+                    });
+                    size[3]=activeSizeQty-1;
+                    $(".tagliaButton").text(size.join().replace(/,/g," "));
             }
         } else{
             showSnackBar("Taglia non scelta");
         }
+    }
+        
     });
     $("article header ul li").click(function () {
         $("article header > div").empty().append($(this).html());
