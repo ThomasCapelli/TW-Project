@@ -361,5 +361,16 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function getAllProd(){
+        $stmt = $this->db->prepare("SELECT * FROM prodotto p,taglia t,immagine_opzione i WHERE p.IdProdotto=t.IdProdotto and p.IdCategoria=t.IdCategoria and i.IdProdotto=p.IdProdotto and i.IdCategoria=p.IdCategoria and i.Colore=t.Colore group by t.Colore,t.Nome_Taglia,t.IdProdotto,t.IdCategoria");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function updateSizeQty($idP,$idC,$color,$size){
+        $stmt = $this->db->prepare("UPDATE taglia SET Quantita = Quantita + 1 WHERE Nome_taglia=? AND IdProdotto=? AND IdCategoria=? AND Colore=?");
+        $stmt->bind_param("siis",$size, $idP,$idC,$color);
+        $stmt->execute();
+    }
 }
 ?>
