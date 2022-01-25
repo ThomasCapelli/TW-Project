@@ -1,5 +1,4 @@
 function checkBadge(current) {
-    console.log(current.children().last().hasClass("badge"));
     if(!current.children().last().hasClass("badge")) {
         current.append(`<span class="badge"></span>`);
     }
@@ -91,10 +90,11 @@ $(document).ready(function(){
     });
     $(".size li").click(function () {
         if(!$(this).is(":first-of-type")) {
+            console.log($(this).text());
             $(".tagliaButton").text($(this).text());
+            $(this).children().last().attr("checked", "checked");
+            flag=1;
         }
-        $(this).children().last().attr("checked", "checked");
-        flag=1;
         $(".size").css("display", "none");
     });
 });
