@@ -61,7 +61,6 @@ function canEnable(input) {
     return canEnable;
 }
 $(document).ready(function(e){
-    e.preventDefault();
     var input = $("main form input");
     input.focus(function(){
         $(this).prev().addClass("moved");
