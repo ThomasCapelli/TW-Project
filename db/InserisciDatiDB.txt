@@ -1,0 +1,1051 @@
+INSERT INTO CATEGORIA
+VALUES (1, "Attrezzi", "Attrezzi.png");
+INSERT INTO CATEGORIA
+VALUES (2, "Armi", "Armi.png");
+INSERT INTO CATEGORIA
+VALUES (3, "Bestiame", "Bestiame.png");
+INSERT INTO CATEGORIA
+VALUES (4, "Feudi", "Regni.png");
+
+INSERT INTO PRODUTTORE
+VALUES (1, "Italia", "Borgia");
+INSERT INTO PRODUTTORE
+VALUES (2, "Italia", "Medici");
+INSERT INTO PRODUTTORE
+VALUES (3, "Italia", "Sforza");
+INSERT INTO PRODUTTORE
+VALUES (4, "Italia", "Malatesta");
+INSERT INTO PRODUTTORE
+VALUES (5, "Italia", "Borghese");
+INSERT INTO PRODUTTORE
+VALUES (6, "Austria", "Borbone");
+INSERT INTO PRODUTTORE
+VALUES (7, "Francia", "Champagne");
+INSERT INTO PRODUTTORE
+VALUES (8, "Francia", "d'Orleans");
+
+INSERT INTO PRODOTTO
+VALUES (1, 1, 1, "Aratro semplice in legno", 499.99, "Aratro semplice in legno per una rotazione triennale classica ma efficace","Aratro in legno", 20);
+INSERT INTO PRODOTTO
+VALUES (1, 1, 2, "Aratro semplice in ferro", 600.0, "Aratro semplice in ferro: resistente alle intemperie, perfetto per terreni ostici", "Aratro in ferro", 30);
+INSERT INTO PRODOTTO
+VALUES (1, 3, 3,"Aratro semplice in bronzo", 999.99, "Aratro Semplice in bronzo: un fedele compagno per la vita che trova il petrolio con un solo solco!", "Aratro un bronzo", 0);
+INSERT INTO PRODOTTO
+VALUES (1, 1, 4,"Aratro a bastone", 299.99, "Aratro a bastone per i tradizionalisti", "Aratro a bastone", 0);
+INSERT INTO PRODOTTO
+VALUES (1, 7, 5,"Aratro ad uncino", 248.0, "Aratro con uncino in metallo: simula il comportamento della zappa", "Aratro con uncino", 70);
+INSERT INTO PRODOTTO
+VALUES (1, 4, 6,"Aratro salta-ceppo", 1250.0, "Terreno difficle con pietre e ceppi in mezzo? La soluzione c'è e si chiama ARATRO SALTA-CEPPO!", "Aratro Salta-Ceppo", 0);
+INSERT INTO PRODOTTO
+VALUES (1, 5, 7,"Aratro a larghezza variabile", 1600.0, "Aratro a larghezza variabile per soddisfare ogni esigenza", "Aratro variabile", 90);
+
+INSERT INTO PRODOTTO
+VALUES (2, 6, 1, "Arco semplice", 50.0, "Arco in legno di quercia con corda resistente. Gittata di circa 30 metri", "Arco semplice", 0);
+INSERT INTO PRODOTTO
+VALUES (2, 6, 2, "Arco lungo", 75.0, "Arco di grandi dimensioni(190cm) per colpire i tuoi bersagli fino a 75 metri di distanza", "Arco lungo", 7);
+INSERT INTO PRODOTTO
+VALUES (2, 5, 3, "Arco composto", 112.0, "Arma da getto letale con gittata fino a 100 metri. Utilizza nervi di animali, osso e corno su un nucleo di vari legni pregiati diversi", "Arco composto", 0);
+INSERT INTO PRODOTTO
+VALUES (2, 3, 4, "Frecce", 15.0, "10 frecce in legno con punta di ferro", "Frecce", 10);
+INSERT INTO PRODOTTO
+VALUES (2, 8, 5, "Arco e frecce", 60.0, "Bundle arco semplice + frecce","Arco+Frecce", 0);
+INSERT INTO PRODOTTO
+VALUES (2, 8, 6, "Balestra", 200.0, "Balestra automatica, quando vuoi colpire fino a 50 metri senza fare fatica", "Balestra", 50);
+INSERT INTO PRODOTTO
+VALUES (2, 3, 7, "Spada corta in ferro", 25.0, "La classica spada in ferro", "Spada corta",0);
+INSERT INTO PRODOTTO
+VALUES (2, 1, 8, "Spada lunga in ferro", 35.0, "Spada in ferro di 150 cm", "Spada lunga", 0);
+INSERT INTO PRODOTTO
+VALUES (2, 2, 9, "Scudo in legno", 20.0, "Scudo semplice in legno di betulla", "Scudo", 0);
+INSERT INTO PRODOTTO
+VALUES (2, 4, 10,"Spada e scudo", 40.0, "Bundle Spada corta + scudo in legno per ogni evenienza", "Spada+Scudo", 98);
+
+INSERT INTO PRODOTTO
+VALUES (3, 1, 1, "Mucca pura italiana", 100.0, "Mucca di origini italiane. Per un latte più delicato e una carne deliziosa", "Mucca italiana", 0);
+INSERT INTO PRODOTTO
+VALUES (3, 1, 2, "Pecora Merino", 80.0, "Pecora per ottenere una lana merino a filamento fine di ottima qualità", "Pecora Merino italiana", 0);
+INSERT INTO PRODOTTO
+VALUES (3, 7, 3, "Bue grosso", 120.0, "Bue molto molto grosso", "bue grosso", 0);
+INSERT INTO PRODOTTO
+VALUES (3, 5, 4, "Gallina semplice", 30.0, "Gallina italiana allevamento Amadori. Produce tante uova al giorno!", "Gallina semplice", 0);
+INSERT INTO PRODOTTO
+VALUES (3, 5, 5, "Gallina d'oro", 1000.0, "Gallina molto rara che produce uova d'oro", "Gallina dalle uova d'oro", 1);
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 6, 1, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 6, 1, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 6, 1, "Verde");
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 6, 2, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 6, 2, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 6, 2, "Verde");
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 5, 3, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 5, 3, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 5, 3, "Verde");
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 3, 4, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 3, 4, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 3, 4, "Verde");
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 8, 5, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 8, 5, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 8, 5, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 8, 6, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 8, 6, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 8, 6, "Verde");
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 3, 7, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 3, 7, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 3, 7, "Verde");
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 1, 8, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 1, 8, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 1, 8, "Verde");
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 2, 9, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 2, 9, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 2, 9, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 4, 10, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 4, 10, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (2, 4, 10, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 1, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 1, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 1, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 2, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 2, "Ferro");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 2, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 3, 3, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 3, 3, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 3, 3, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 4, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 4, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 1, 4, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1,7, 5, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 7, 5, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 7, 5, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 4, 6, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 4, 6, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 4, 6, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 5, 7, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 5, 7, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (1, 5, 7, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 1, 1, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 1, 1, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 1, 1, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 1, 2, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 1, 2, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 1, 2, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 7, 3, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 7, 3, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 7, 3, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 5, 4, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 5, 4, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 5, 4, "Verde");
+
+
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 5, 5, "Blu");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 5, 5, "Rosso");
+INSERT INTO OPZIONI_PRODOTTO
+VALUES (3, 5, 5, "Verde");
+
+
+
+INSERT INTO taglia 
+VALUES ("S",10,1,1,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,1,1,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,1,1,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,1,2,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,1,1,2,"Ferro");
+INSERT INTO Taglia 
+VALUES ("M",2,1,1,2,"Ferro");
+INSERT INTO Taglia 
+VALUES ("L",50,1,1,2,"Ferro");
+INSERT INTO Taglia 
+VALUES ("XL",11,1,1,2,"Ferro");
+INSERT INTO taglia 
+VALUES ("S",10,1,1,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,1,1,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,1,1,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,1,2,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",1,1,1,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",2,1,1,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,1,1,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,1,1,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,1,1,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,1,1,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,1,1,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,1,1,1,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,1,1,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,1,1,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,1,1,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,1,1,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,1,3,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,1,3,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,1,3,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,3,3,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,1,3,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,1,3,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,1,3,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,1,3,3,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,1,3,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,1,3,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,1,3,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",0,1,3,3,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,1,1,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,1,1,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,1,1,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,1,4,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,1,1,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,1,1,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,1,1,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,1,1,4,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,1,1,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,1,1,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,1,1,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,1,4,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,1,7,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,1,7,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,1,7,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,7,5,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,1,7,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,1,7,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,1,7,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,1,7,5,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,1,7,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,1,7,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,1,7,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,7,5,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,1,4,6,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,1,4,6,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,1,4,6,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,4,6,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,1,4,6,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,1,4,6,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,1,4,6,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,1,4,6,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,1,4,6,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,1,4,6,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,1,4,6,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,4,6,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,1,5,7,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,1,5,7,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,1,5,7,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,5,7,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,1,5,7,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,1,5,7,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,1,5,7,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,1,5,7,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,1,5,7,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,1,5,7,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,1,5,7,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,1,5,7,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,6,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,6,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,6,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,6,1,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,6,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,6,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,6,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,6,1,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,6,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,6,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,6,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,6,1,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,6,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,6,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,6,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,6,2,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,6,2,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,6,2,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,6,2,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,6,2,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,6,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,6,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,6,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,6,2,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,5,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,5,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,5,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,5,3,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,5,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,5,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,5,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,5,3,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,5,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,5,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,5,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,5,3,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,3,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,3,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,3,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,3,4,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,3,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,3,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,3,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,3,4,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,3,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,3,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,3,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,3,4,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,8,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,8,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,8,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,8,5,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,8,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,8,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,8,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,8,5,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,8,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,8,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,8,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,8,5,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,8,6,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,8,6,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,8,6,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,8,6,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,8,6,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,8,6,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,8,6,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,8,6,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,8,6,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,8,6,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,8,6,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,8,6,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,3,7,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,3,7,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,3,7,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,3,7,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,3,7,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,3,7,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,3,7,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,3,7,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,3,7,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,3,7,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,3,7,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,3,7,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,1,8,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,1,8,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,1,8,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,1,8,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,1,8,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,1,8,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,1,8,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,1,8,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,1,8,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,1,8,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,1,8,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,1,8,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,2,9,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,2,9,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,2,9,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,2,9,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,2,9,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,2,9,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,2,9,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,2,9,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,2,9,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,2,9,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,2,9,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,2,9,"Verde");
+
+INSERT INTO taglia 
+VALUES ("S",10,2,4,10,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,2,4,10,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,2,4,10,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,4,10,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,2,4,10,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,2,4,10,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,2,4,10,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,2,4,10,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,2,4,10,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,2,4,10,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,2,4,10,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,2,4,10,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,3,1,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,3,1,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,3,1,1,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,1,1,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,3,1,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,3,1,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,3,1,1,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,3,1,1,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,3,1,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,3,1,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,3,1,1,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,1,1,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,3,1,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,3,1,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,3,1,2,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,1,2,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,3,1,2,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,3,1,2,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,3,1,2,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,3,1,2,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,3,1,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,3,1,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,3,1,2,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,1,2,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,3,7,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,3,7,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,3,7,3,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,7,3,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,3,7,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,3,7,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,3,7,3,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,3,7,3,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,3,7,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,3,7,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,3,7,3,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,7,3,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,3,5,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,3,5,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,3,5,4,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,5,4,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,3,5,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,3,5,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,3,5,4,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,3,5,4,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,3,5,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,3,5,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,3,5,4,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,5,4,"Verde");
+
+
+INSERT INTO taglia 
+VALUES ("S",10,3,5,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("M",20,3,5,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("L",5,3,5,5,"Blu");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,5,5,"Blu");
+INSERT INTO taglia 
+VALUES ("S",5,3,5,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("M",2,3,5,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("L",50,3,5,5,"Rosso");
+INSERT INTO Taglia 
+VALUES ("XL",11,3,5,5,"Rosso");
+INSERT INTO taglia 
+VALUES ("S",10,3,5,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("M",20,3,5,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("L",5,3,5,5,"Verde");
+INSERT INTO Taglia 
+VALUES ("XL",1,3,5,5,"Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 1, 1, 1, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 1, 1, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 1, 1, 1, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 1, 1, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 1, 1, 1, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 1, 3, 3, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 3, 3, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 1, 3, 3, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 3, 3, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 1, 3, 3, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 1, 1, 4, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 1, 4, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 1, 1, 4, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 1, 4, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 1, 1, 4, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 1, 7, 5, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 7, 5, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 1, 7, 5, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 7, 5, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 1, 7, 5, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 1, 4, 6, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 4, 6, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 1, 4, 6, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 4, 6, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 1, 4, 6, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 1, 5, 7, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 5, 7, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 1, 5, 7, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 1, 5, 7, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 1, 5, 7, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("AratroFerro.png", 1, 1, 2, "Ferro");
+INSERT INTO immagine_opzione
+VALUES ("AratroFerro2.jpg", 1, 1, 2, "Ferro");
+INSERT INTO immagine_opzione
+VALUES ("AratroFerroBlu.png", 1, 1, 2, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("AratroFerro2Blu.jpg", 1, 1, 2, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("AratroFerroVerde.png", 1, 1, 2, "Verde");
+
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 6, 1, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 6, 1, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 6, 1, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 6, 1, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 6, 1, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 6, 2, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 6, 2, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 6, 2, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 6, 2, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 6, 2, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 5, 3, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 5, 3, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 5, 3, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 5, 3, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 5, 3, "Verde");
+
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 3, 4, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 3, 4, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 3, 4, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 3, 4, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 3, 4, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 8, 5, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 8, 5, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 8, 5, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 8, 5, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 8, 5, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 8, 6, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 8, 6, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 8, 6, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 8, 6, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 8, 6, "Verde");
+
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 3, 7, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 3, 7, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 3, 7, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 3, 7, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 3, 7, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 1, 8, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 1, 8, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 1, 8, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 1, 8, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 1, 8, "Verde");
+
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 2, 9, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 2, 9, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 2, 9, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 2, 9, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 2, 9, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 2, 4, 10, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 4, 10, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 2, 4, 10, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 2, 4, 10, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 2, 4, 10, "Verde");
+
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 3, 1, 1, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png",3, 1, 1, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png",3, 1, 1, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png",3, 1, 1, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 3, 1, 1, "Verde");
+
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 3, 1, 2, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png",3, 1, 2, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png",3, 1, 2, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png",3, 1, 2, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 3, 1, 2,"Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 3, 7, 3, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 3, 7, 3, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 3, 7, 3, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 3, 7, 3, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 3, 7, 3, "Verde");
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 3, 5, 4, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 3, 5, 4, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 3, 5, 4, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 3, 5, 4, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 3, 5, 4, "Verde");
+
+
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-rosso.png", 3, 5, 5, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 3, 5, 5, "Rosso");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-blu.png", 3, 5, 5, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis.png", 3, 5, 5, "Blu");
+INSERT INTO immagine_opzione
+VALUES ("fleur-de-lis-verde.png", 3, 5, 5, "Verde");
