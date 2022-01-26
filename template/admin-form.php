@@ -1,4 +1,4 @@
-<form action="#" method="POST">
+<form action="upload.php" method="POST" enctype="multipart/form-data">
             <h2>Inserisci</h2>
             <?php if(isset($templateParams["erroreInserimento"])): ?>
                 <p><?php echo $templateParams["erroreInserimento"]; ?></p>

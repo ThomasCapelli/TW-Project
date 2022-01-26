@@ -290,6 +290,7 @@ main > nav > a:hover {
   margin: 0 5%;
   border-spacing: 0;
   border-collapse: collapse;
+  color: var(--text);
 } 
 .admintable td, .admintable th {
   border: 1px solid var(--text);
