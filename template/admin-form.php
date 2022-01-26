@@ -18,8 +18,8 @@
                 </li>
                 <li>
                 <?php foreach($templateParams["categorie"] as $categoria): ?>
-                    <input type="radio" id="categoria" name="categoria" value="<?php echo $categoria["IdCategoria"];?>" />
-                    <label for="categoria"><?php echo $categoria["NomeCategoria"]; ?></label>
+                    <input type="radio" id="categoria<?php echo $categoria["IdCategoria"];?>" name="categoria" value="<?php echo $categoria["IdCategoria"];?>" />
+                    <label for="categoria<?php echo $categoria["IdCategoria"];?>"><?php echo $categoria["NomeCategoria"]; ?></label>
                     <?php endforeach; ?>
                 </li>
                 <li>
@@ -49,8 +49,8 @@
                 </li>
                 <li>
                 <?php foreach($templateParams["produttori"] as $produttore): ?>
-                    <input type="radio" id="produttore" name="produttore" value="<?php echo $produttore["IdProduttore"];?>" />
-                    <label for="produttore"><?php echo $produttore["Nome"]; ?></label>
+                    <input type="radio" id="produttore<?php echo $produttore["IdProduttore"];?>" name="produttore" value="<?php echo $produttore["IdProduttore"];?>" />
+                    <label for="produttore<?php echo $produttore["IdProduttore"];?>"><?php echo $produttore["Nome"]; ?></label>
                     <?php endforeach; ?>
                 </li>
                 <li>
